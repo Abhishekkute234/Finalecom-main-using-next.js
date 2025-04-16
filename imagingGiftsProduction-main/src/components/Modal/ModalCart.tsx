@@ -7,9 +7,10 @@ import * as Icon from "@phosphor-icons/react/dist/ssr";
 
 import { ProductType } from "@/type/ProductType";
 import { useModalCartContext } from "@/context/ModalCartContext";
-import { useCart } from "@/context/CartContext";
+
 import { countdownTime } from "@/store/countdownTime";
 import CountdownTimeType from "@/type/CountdownType";
+import { useCart } from "@/context/CartsContext";
 
 const ModalCart = ({
   serverTimeLeft,
@@ -22,25 +23,16 @@ const ModalCart = ({
   const [activeTab, setActiveTab] = useState<string | undefined>("");
 
   const { isModalOpen, closeModalCart } = useModalCartContext();
-  const { cartState, addToCart, removeFromCart, updateCart } = useCart();
+  const { cart, removeFromCart } = useCart();
+  const totalValue = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   // ---- State for "You May Also Like" products from backend ----
   const [recommendedProducts, setRecommendedProducts] = useState<ProductType[]>(
     []
   );
 
-  // Cart array from context
-  const cartArray = cartState?.cartArray || [];
 
-  // Calculate totals
-  let totalCart = cartArray.reduce(
-    (acc, item) =>
-      acc + (item.priceDetails?.offerPrice || 0) * (item.quantity || 1),
-    0
-  );
-  const moneyForFreeship = 150;
 
-  // Countdown effect
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(countdownTime());
@@ -78,13 +70,12 @@ const ModalCart = ({
   // Add recommended product to cart
   const handleAddToCart = (productItem: ProductType) => {
     // Check if product is already in cart
-    if (!cartArray.find((item) => item.id === productItem.id)) {
-      addToCart(productItem);
-      updateCart(productItem.id, productItem.quantityPurchase || 1, "", "");
-    } else {
-      updateCart(productItem.id, productItem.quantityPurchase || 1, "", "");
-    }
+    console.log("cart Model");
+
   };
+
+
+
 
   const handleActiveTab = (tab: string) => setActiveTab(tab);
 
@@ -120,11 +111,12 @@ const ModalCart = ({
                       </div>
                       <div className="flex items-center gap-2 mt-2">
                         <div className="product-price text-title">
-                          Rs. {product.priceDetails?.offerPrice || 0}
+                          <div>₹{new Intl.NumberFormat('en-IN').format(product.priceDetails?.offerPrice || 0)}</div>
                         </div>
                       </div>
                     </div>
                   </div>
+
                   <div
                     className="text-xl bg-white w-10 h-10 rounded-xl border border-black flex items-center justify-center duration-300 cursor-pointer hover:bg-black hover:text-white"
                     onClick={(e) => {
@@ -136,6 +128,7 @@ const ModalCart = ({
                   </div>
                 </div>
               ))}
+
             </div>
           </div>
 
@@ -172,39 +165,31 @@ const ModalCart = ({
             <div className="heading banner mt-3 px-6">
               <div className="text">
                 Buy{" "}
-                <span className="text-button">
-                  $
-                  {moneyForFreeship - totalCart > 0
-                    ? moneyForFreeship - totalCart
-                    : 0}
-                  .00
-                </span>{" "}
+
                 more to get <span className="text-button">freeship</span>
               </div>
               <div className="tow-bar-block mt-3">
-                <div
-                  className="progress-line"
-                  style={{
-                    width:
-                      totalCart <= moneyForFreeship
-                        ? `${(totalCart / moneyForFreeship) * 100}%`
-                        : "100%",
-                  }}
-                />
+
               </div>
             </div>
 
             {/* Cart items from context */}
+
             <div className="list-product px-6">
-              {cartArray.map((product) => (
+              {cart.map((product) => (
                 <div
-                  key={product.id}
+                  key={product.productId}
                   className="item py-5 flex items-center justify-between gap-3 border-b border-line"
                 >
                   <div className="infor flex items-center gap-3 w-full">
-                    <div className="bg-img w-[100px] aspect-square flex-shrink-0 rounded-lg  overflow-hidden">
+                    <div className="bg-img w-[100px] aspect-square flex-shrink-0 rounded-lg overflow-hidden relative">
+                      {/* Quantity Badge */}
+                      <span className="absolute top-1 right-1 bg-black text-white text-xs font-bold px-2 py-1 rounded-full">
+                        {product.quantity}
+                      </span>
+
                       <Image
-                        src={product.thumbImage || "/placeholder-image.jpg"}
+                        src={(product as any).thumbImage || "/placeholder-image.jpg"}
                         width={300}
                         height={300}
                         alt={product.productName || "Unknown Product"}
@@ -218,7 +203,7 @@ const ModalCart = ({
                         </div>
                         <div
                           className="remove-cart-btn caption1 font-semibold text-red underline cursor-pointer"
-                          onClick={() => removeFromCart(product.id)}
+                          onClick={() => removeFromCart(product.productId)}
                         >
                           Remove
                         </div>
@@ -226,11 +211,11 @@ const ModalCart = ({
 
                       <div className="flex items-center justify-between gap-2 mt-3 w-full">
                         <div className="flex items-center text-secondary2 capitalize">
-                          {product.categories.main || "N/A"}/
-                          {product.categories.sub || "N/A"}
+                          {/* {product.categories.main || "N/A"}/
+              {product.categories.sub || "N/A"} */}
                         </div>
                         <div className="product-price text-title">
-                          Rs.{product.priceDetails?.offerPrice || 0}
+                          <div>₹{new Intl.NumberFormat('en-IN').format(product.price || 0)}</div>
                         </div>
                       </div>
                     </div>
@@ -238,6 +223,7 @@ const ModalCart = ({
                 </div>
               ))}
             </div>
+
 
             {/* Footer */}
             <div className="footer-modal bg-white absolute bottom-0 left-0 w-full">
@@ -267,7 +253,8 @@ const ModalCart = ({
 
               <div className="flex items-center justify-between pt-6 px-6">
                 <div className="heading5">Subtotal</div>
-                <div className="heading5">₹{totalCart}.00</div>
+                <div className="heading5">₹{new Intl.NumberFormat('en-IN').format(totalValue)}.00</div>
+
               </div>
 
               <div className="block-button text-center p-6">
@@ -297,23 +284,20 @@ const ModalCart = ({
 
               {/* Example Tabs */}
               <div
-                className={`tab-item note-block ${
-                  activeTab === "note" ? "active" : ""
-                }`}
+                className={`tab-item note-block ${activeTab === "note" ? "active" : ""
+                  }`}
               >
                 {/* Your Note UI here */}
               </div>
               <div
-                className={`tab-item note-block ${
-                  activeTab === "shipping" ? "active" : ""
-                }`}
+                className={`tab-item note-block ${activeTab === "shipping" ? "active" : ""
+                  }`}
               >
                 {/* Your Shipping UI here */}
               </div>
               <div
-                className={`tab-item note-block ${
-                  activeTab === "coupon" ? "active" : ""
-                }`}
+                className={`tab-item note-block ${activeTab === "coupon" ? "active" : ""
+                  }`}
               >
                 {/* Your Coupon UI here */}
               </div>

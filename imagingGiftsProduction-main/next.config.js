@@ -2,8 +2,8 @@
 const nextConfig = {
     reactStrictMode: true,
     images: {
-        domains: ['res.cloudinary.com'], // Add all external image domains here
-       
+        domains: ['res.cloudinary.com', 'picsum.photos' , 'source.unsplash.com'], // Add all external image domains here
+      
       },
 }
 

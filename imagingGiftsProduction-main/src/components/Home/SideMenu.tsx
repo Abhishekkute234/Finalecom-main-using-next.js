@@ -18,33 +18,42 @@ import { useRouter } from "next/navigation";
 
 interface SideMenuProps {
   className?: string;
+
 }
 
 const categories = [
-  { name: "Photography", icon: <PiGooglePhotosLogoThin />, href: "/shop" },
-  { name: "Videography", icon: <CiVideoOn />, href: "/shop" },
-  { name: "Drones", icon: <PiDroneThin />, href: "/shop" },
-  { name: "Audio", icon: <BsSoundwave />, href: "/shop" },
+  { name: "Photography", names: "Photography", icon: <PiGooglePhotosLogoThin />, href: "/shop" },
+  { name: "Videography", names: "Videography", icon: <CiVideoOn />, href: "/shop" },
+  { name: "Accessories", names: "Accessories", icon: <PiDroneThin />, href: "/shop" },
+  { name: "Lighting", names: "Lighting", icon: <BsSoundwave />, href: "/shop" },
   {
-    name: "Bags & Cases",
+    name: "Drones",
+    names: "Drones",
     icon: <PiHandbagSimpleThin />,
-    href: "/shop/breadcrumb-img",
+    main: "Photography",
+    href: "/shop",
+    isSubCategory: true, // Mark this as a subcategory
   },
   {
     name: "Tripods",
+    names: "Photo Tripod & Supports",
     icon: <PiBabyCarriageThin />,
-    href: "/shop/breadcrumb-img",
+    href: "/shop",
   },
-  { name: "Lights", icon: <TfiLightBulb />, href: "/shop" },
+  { name: "Battery", names: "Battery & Power", main: "Accessories", isSubCategory: true, icon: <TfiLightBulb />, href: "/shop" },
   {
-    name: "Computers",
+    name: "Adapters",
+    names: "Cables & Adapters",
     icon: <PiComputerTowerThin />,
-    href: "/shop/breadcrumb-img",
+    href: "/shop",
   },
   {
-    name: "Headphones",
+    name: "Memory Cards",
+    names: "Memory & Storage",
+    isSubCategory: true, 
+    main: "Photography",
     icon: <PiHeadphonesThin />,
-    href: "/shop/breadcrumb-img",
+    href: "/shop",
   },
 ];
 
@@ -57,14 +66,16 @@ const SideMenu: React.FC<SideMenuProps> = ({ className }) => {
     setIsMounted(true);
   }, []);
 
-  const handleCategoryClick = (categoryName: string, href: string) => {
-    if (!isMounted) return;
-    setLoadingCategory(categoryName);
-    setTimeout(() => {
-      setLoadingCategory(null);
-      router.push(href);
-    }, 300);
+  const handleCategoryRoute = (main: string, sub?: string, subSub?: string) => {
+    // Determine the base category or subcategory
+    let url = `/shop?category=${encodeURIComponent(main)}`;
+    if (sub) url += `&subcategory=${encodeURIComponent(sub)}`;
+    if (subSub) url += `&subSubCategory=${encodeURIComponent(subSub)}`;
+
+    // Redirect to the dynamically constructed URL
+    router.push(url);
   };
+
 
   return (
     <div
@@ -77,20 +88,23 @@ const SideMenu: React.FC<SideMenuProps> = ({ className }) => {
         {categories.map((category) => (
           <button
             key={category.name}
-            className="item py-3 whitespace-nowrap border-b border-line w-full flex items-center justify-between "
-            onClick={() => handleCategoryClick(category.name, category.href)}
+            className="item py-3 whitespace-nowrap border-b border-line w-full flex items-center justify-between"
+            onClick={() =>
+              category.isSubCategory
+                ? handleCategoryRoute(category.main, category.names) // Pass the subcategory
+                : handleCategoryRoute(category?.names) // Pass only the main category
+            }
           >
             <span className="flex items-center gap-2">
               {category.icon}
               <span className="name">{category.name}</span>
             </span>
             {loadingCategory === category.name ? (
-              <span className=" ml-2 w-4 h-4 border-2 border-t-transparent border-[#C7C7C7] rounded-full animate-spin"></span>
+              <span className="ml-2 w-4 h-4 border-2 border-t-transparent border-[#C7C7C7] rounded-full animate-spin"></span>
             ) : (
-            <div className=" ml-2">
-
-              <SlArrowRight size={12} />
-            </div>
+              <div className="ml-2">
+                <SlArrowRight size={12} />
+              </div>
             )}
           </button>
         ))}

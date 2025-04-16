@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
+
 import { ProductType } from "@/type/ProductType";
 import Rate from "@/components/Other/Rate";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,12 +12,13 @@ import * as Icon from "@phosphor-icons/react/dist/ssr";
 import SwiperCore from "swiper/core";
 
 // Context imports
-import { useCart } from "@/context/CartContext";
+
 import { useModalCartContext } from "@/context/ModalCartContext";
 import { useWishlist } from "@/context/WishlistContext";
 import { useModalWishlistContext } from "@/context/ModalWishlistContext";
 import { useCompare } from "@/context/CompareContext";
 import { useModalCompareContext } from "@/context/ModalCompareContext";
+import { useCart } from "@/context/CartsContext";
 
 SwiperCore.use([Navigation, Thumbs]);
 
@@ -36,12 +37,13 @@ const Default: React.FC<Props> = ({ data, productId }) => {
   const [activeTab, setActiveTab] = useState<string>("description");
 
   // Cart & other contexts
-  const { addToCart, updateCart, cartState } = useCart();
+ 
   const { openModalCart } = useModalCartContext();
   const { addToWishlist, removeFromWishlist, wishlistState } = useWishlist();
   const { openModalWishlist } = useModalWishlistContext();
   const { addToCompare, removeFromCompare, compareState } = useCompare();
   const { openModalCompare } = useModalCompareContext();
+  const { cart, updateCart, removeFromCart, addToCart } = useCart();
 
   // Compare the actual product _id to productId from URL
   // to confirm we have the right product
@@ -59,18 +61,9 @@ const Default: React.FC<Props> = ({ data, productId }) => {
       )
     : 0;
 
-  // Variation handlers
-  const handleActiveColor = (item: string) => {
-    setActiveColor(item);
-  };
-
-  const handleActiveSize = (item: string) => {
-    setActiveSize(item);
-  };
-
   const handleIncreaseQuantity = () => {
     if (!productMain) return;
-
+    
     // Ensure quantityPurchase is a number before incrementing
     productMain.quantityPurchase = Number(productMain.quantityPurchase) + 1;
 
@@ -78,8 +71,7 @@ const Default: React.FC<Props> = ({ data, productId }) => {
     updateCart(
       productMain._id,
       productMain.quantityPurchase,
-      activeSize,
-      activeColor
+     
     );
   };
 
@@ -92,41 +84,17 @@ const Default: React.FC<Props> = ({ data, productId }) => {
     updateCart(
       productMain._id,
       productMain.quantityPurchase,
-      activeSize,
-      activeColor
+  
     );
   };
 
   // ADD TO CART
   const handleAddToCart = () => {
-    // Check if product is already in cart by "item.id === productMain._id"
-    const existsInCart = cartState.cartArray.some(
-      (item) => item.id === productMain._id
-    );
+    addToCart(productMain._id, 1); // Add one product to the cart
 
-    // If not in cart, add new
-    if (!existsInCart) {
-      addToCart({
-        ...productMain,
-        // crucial: provide "id" that matches "item.id"
-        id: productMain._id,
-        // pass the current quantityPurchase so the cart sets quantity
-        quantityPurchase: productMain.quantityPurchase,
-      });
-    }
 
-    // Then update the cart (to set size/color or correct quantity)
-    updateCart(
-      productMain._id,
-      productMain.quantityPurchase,
-      activeSize,
-      activeColor
-    );
-
-    // Open the cart modal
     openModalCart();
   };
-
   // Add/Remove from wishlist
   const handleAddToWishlist = () => {
     const inWishlist = wishlistState.wishlistArray.some(
@@ -310,6 +278,7 @@ const Default: React.FC<Props> = ({ data, productId }) => {
               <div className="flex items-center gap-3 flex-wrap mt-5 pb-6 border-b border-line">
                 <div className="product-price heading5">
                   ₹{productMain.priceDetails.offerPrice}.00
+                  
                 </div>
                 <div className="w-px h-4 bg-line"></div>
                 {productMain.priceDetails.mrp && (

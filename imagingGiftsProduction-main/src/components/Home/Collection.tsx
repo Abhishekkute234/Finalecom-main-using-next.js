@@ -4,242 +4,93 @@ import React from "react";
 
 const Collection = () => {
   return (
-    <div className="collection-block md:pt-[60px] pt-10">
-      <div className="container">
-        <div className="heading flex items-center justify-between gap-5 flex-wrap">
-          <div className="heading3">Our Collections</div>
+    <div className="bg-gradient-to-b  to-white py-10 my-10">
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <div className="flex items-center justify-between flex-wrap mb-8">
+          <h2 className="text-2xl font-bold text-gray-800 tracking-wide uppercase border-b-4 border-blue-500 pb-2">
+            Our Collections
+          </h2>
           <Link
             href="/shop"
-            className="text-button pb-0.5 border-b-2 border-black"
+            className="text-blue-600 font-medium hover:text-blue-800 transition-all border-b-2 border-transparent hover:border-blue-500"
           >
             View All
           </Link>
         </div>
-        <div className="list grid xl:grid-cols-4 sm:grid-cols-2 sm:gap-[30px] gap-[20px] md:mt-10 mt-6">
-          {/* Mirrorless Cameras */}
-          <div className="item flex gap-3 px-5 py-6 border border-line rounded-2xl">
-            <Link
-              href="/shop"
-              className="img-product w-[100px] h-[100px] flex-shrink-0"
+
+        {/* Collection List */}
+        <div className="grid xl:grid-cols-4 sm:grid-cols-2 gap-8">
+          {/* Collection Item */}
+          {[
+            {
+              title: "Mirrorless Cameras",
+              image: "/images/collection/marketplace1.png",
+              alt: "Mirrorless Camera",
+              links: ["Sony", "Nikon", "Canon", "Lumix"],
+              category: "All Cameras",
+            },
+            {
+              title: "Camera Lenses",
+              image: "/images/collection/marketplace2.png",
+              alt: "Camera Lenses",
+              links: ["Wide Angle", "Zoom Lenses", "Prime Lenses", "Macro Lenses"],
+              category: "All Lenses",
+            },
+            {
+              title: "Tripods",
+              image: "/images/collection/marketplace3.png",
+              alt: "Tripods",
+              links: ["Travel Tripods", "Professional Tripods", "Flexible Tripods", "Mini Tripods"],
+              category: "All Tripods",
+            },
+            {
+              title: "Camera Accessories",
+              image: "/images/collection/marketplace4.png",
+              alt: "Camera Accessories",
+              links: ["Batteries", "Chargers", "Straps", "Cleaning Kits"],
+              category: "All Accessories",
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="flex gap-4 p-6 bg-white border border-gray-200 shadow-sm rounded-lg hover:shadow-lg transition-shadow"
             >
-              <Image
-                width={5000}
-                height={5000}
-                src="/images/collection/marketplace1.png"
-                className="w-full h-full object-cover"
-                alt="Mirrorless Camera"
-              />
-            </Link>
-            <div className="text-content w-full">
-              <div className="heading6 pb-4">Mirrorless Cameras</div>
-              <ul>
-                <li>
-                  <Link
-                    href="/shop"
-                    className="has-line-before caption1 text-secondary hover:text-black"
-                  >
-                    Sony
-                  </Link>
-                </li>
-                <li className="mt-1">
-                  <Link
-                    href="/shop"
-                    className="has-line-before caption1 text-secondary hover:text-black"
-                  >
-                    Nikon
-                  </Link>
-                </li>
-                <li className="mt-1">
-                  <Link
-                    href="/shop"
-                    className="has-line-before caption1 text-secondary hover:text-black"
-                  >
-                    Canon
-                  </Link>
-                </li>
-                <li className="mt-1">
-                  <Link
-                    href="/shop"
-                    className="has-line-before caption1 text-secondary hover:text-black"
-                  >
-                    Lumix
-                  </Link>
-                </li>
-              </ul>
-              <Link href="/shop" className="flex items-center gap-1.5 mt-4">
-                <span className="text-button has-line-before ">All Cameras</span>
-                <i className="ph-bold ph-caret-double-right text-sm"></i>
+              <Link href="/shop" className="w-24 h-24 flex-shrink-0">
+                <Image
+                  width={5000}
+                  height={5000}
+                  src={item.image}
+                  alt={item.alt}
+                  className="w-full h-full object-cover rounded-md"
+                />
               </Link>
+              <div className="w-full">
+                <h3 className="text-lg font-semibold text-gray-800 mb-3">
+                  {item.title}
+                </h3>
+                <ul className="text-gray-600 space-y-1">
+                  {item.links.map((link, i) => (
+                    <li key={i}>
+                      <Link
+                        href="/shop"
+                        className="hover:text-blue-500 transition-colors"
+                      >
+                        {link}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href="/shop"
+                  className="flex items-center gap-2 mt-4 text-blue-600 font-medium hover:text-blue-800 transition-all"
+                >
+                  <span>{item.category}</span>
+                  <i className="ph-bold ph-caret-double-right text-sm"></i>
+                </Link>
+              </div>
             </div>
-          </div>
-          {/* Camera Lenses */}
-          <div className="item flex gap-3 px-5 py-6 border border-line rounded-2xl">
-            <Link
-              href="/shop"
-              className="img-product w-[100px] h-[100px] flex-shrink-0"
-            >
-              <Image
-                width={5000}
-                height={5000}
-                src="/images/collection/marketplace2.png"
-                className="w-full h-full object-contain"
-                alt="Camera Lenses"
-              />
-            </Link>
-            <div className="text-content w-full">
-              <div className="heading6 pb-4">Camera Lenses</div>
-              <ul>
-                <li>
-                  <Link
-                    href="/shop"
-                    className="has-line-before caption1 text-secondary hover:text-black"
-                  >
-                    Wide Angle
-                  </Link>
-                </li>
-                <li className="mt-1">
-                  <Link
-                    href="/shop"
-                    className="has-line-before caption1 text-secondary hover:text-black"
-                  >
-                    Zoom Lenses
-                  </Link>
-                </li>
-                <li className="mt-1">
-                  <Link
-                    href="/shop"
-                    className="has-line-before caption1 text-secondary hover:text-black"
-                  >
-                    Prime Lenses
-                  </Link>
-                </li>
-                <li className="mt-1">
-                  <Link
-                    href="/shop"
-                    className="has-line-before caption1 text-secondary hover:text-black"
-                  >
-                    Macro Lenses
-                  </Link>
-                </li>
-              </ul>
-              <Link href="/shop" className="flex items-center gap-1.5 mt-4">
-                <span className="text-button has-line-before ">All Lenses</span>
-                <i className="ph-bold ph-caret-double-right text-sm"></i>
-              </Link>
-            </div>
-          </div>
-          {/* Tripods */}
-          <div className="item flex gap-3 px-5 py-6 border border-line rounded-2xl">
-            <Link
-              href="/shop"
-              className="img-product w-[100px] h-[100px] flex-shrink-0"
-            >
-              <Image
-                width={5000}
-                height={5000}
-                src="/images/collection/marketplace3.png"
-                className="w-full h-full object-cover"
-                alt="Tripods"
-              />
-            </Link>
-            <div className="text-content w-full">
-              <div className="heading6 pb-4">Tripods</div>
-              <ul>
-                <li>
-                  <Link
-                    href="/shop"
-                    className="has-line-before caption1 text-secondary hover:text-black"
-                  >
-                    Travel Tripods
-                  </Link>
-                </li>
-                <li className="mt-1">
-                  <Link
-                    href="/shop"
-                    className="has-line-before caption1 text-secondary hover:text-black"
-                  >
-                    Professional Tripods
-                  </Link>
-                </li>
-                <li className="mt-1">
-                  <Link
-                    href="/shop"
-                    className="has-line-before caption1 text-secondary hover:text-black"
-                  >
-                    Flexible Tripods
-                  </Link>
-                </li>
-                <li className="mt-1">
-                  <Link
-                    href="/shop"
-                    className="has-line-before caption1 text-secondary hover:text-black"
-                  >
-                    Mini Tripods
-                  </Link>
-                </li>
-              </ul>
-              <Link href="/shop" className="flex items-center gap-1.5 mt-4">
-                <span className="text-button has-line-before ">All Tripods</span>
-                <i className="ph-bold ph-caret-double-right text-sm"></i>
-              </Link>
-            </div>
-          </div>
-          {/* Camera Accessories */}
-          <div className="item flex gap-3 px-5 py-6 border border-line rounded-2xl">
-            <Link
-              href="/shop"
-              className="img-product w-[100px] h-[100px] flex-shrink-0"
-            >
-              <Image
-                width={5000}
-                height={5000}
-                src="/images/collection/marketplace4.png"
-                className="w-full h-full object-contain"
-                alt="Camera Accessories"
-              />
-            </Link>
-            <div className="text-content w-full">
-              <div className="heading6 pb-4">Camera Accessories</div>
-              <ul>
-                <li>
-                  <Link
-                    href="/shop"
-                    className="has-line-before caption1 text-secondary hover:text-black"
-                  >
-                    Batteries
-                  </Link>
-                </li>
-                <li className="mt-1">
-                  <Link
-                    href="/shop"
-                    className="has-line-before caption1 text-secondary hover:text-black"
-                  >
-                    Chargers
-                  </Link>
-                </li>
-                <li className="mt-1">
-                  <Link
-                    href="/shop"
-                    className="has-line-before caption1 text-secondary hover:text-black"
-                  >
-                    Straps
-                  </Link>
-                </li>
-                <li className="mt-1">
-                  <Link
-                    href="/shop"
-                    className="has-line-before caption1 text-secondary hover:text-black"
-                  >
-                    Cleaning Kits
-                  </Link>
-                </li>
-              </ul>
-              <Link href="/shop" className="flex items-center gap-1.5 mt-4">
-                <span className="text-button has-line-before ">All Accessories</span>
-                <i className="ph-bold ph-caret-double-right text-sm"></i>
-              </Link>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

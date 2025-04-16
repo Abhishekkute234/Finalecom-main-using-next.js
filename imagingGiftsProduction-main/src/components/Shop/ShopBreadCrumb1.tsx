@@ -8,6 +8,7 @@ import React, {
   ChangeEvent,
   KeyboardEvent,
   useCallback,
+  useRef,
 } from "react";
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 import axios from "axios";
@@ -42,7 +43,7 @@ interface QueryParams {
   sortField?: string;
   sortOrder?: string;
   page: number;
-  limit: number;
+
 }
 
 const ShopBreadCrumb1: React.FC = () => {
@@ -77,13 +78,18 @@ const ShopBreadCrumb1: React.FC = () => {
   const [products, setProducts] = useState<ProductType[]>([]);
   const [totalProducts, setTotalProducts] = useState<number>(0);
   const [pageCount, setPageCount] = useState<number>(0);
-  const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Debounced Inputs
-  const debouncedPriceRange = useDebounce(priceRange, 500); // 500ms debounce
 
-  // CATEGORY_DATA as provided
+  const debouncedPriceRange = useDebounce(priceRange, 300); // 500ms debounce
+
+  const abortControllerRef = useRef<AbortController | null>(null);
+  const prevParams = useRef<string>('');
+
+
+
+
   const CATEGORY_DATA: Record<string, Record<string, string[]>> = {
     Photography: {
       Cameras: [
@@ -306,134 +312,74 @@ const ShopBreadCrumb1: React.FC = () => {
     },
   };
 
-  /**
-   * **Effect to Parse and Set State Based on Query Parameters**
-   * - This effect runs whenever the URL's search parameters change.
-   * - It decodes and validates the `category`, `subcategory`, and `subSubCategory`.
-   * - Sets the corresponding state variables if they exist in `CATEGORY_DATA`.
-   */
   useEffect(() => {
-    if (!searchParams) return; // Ensure searchParams are available
-
-    // Extract and decode query parameters
+    if (!searchParams) return;
+  
     const category = searchParams.get("category");
     const subcategory = searchParams.get("subcategory");
     const subSubCategory = searchParams.get("subSubCategory");
     const minPriceParam = searchParams.get("minPrice");
     const maxPriceParam = searchParams.get("maxPrice");
-
-    // Parse prices
+  
     const minPrice = minPriceParam ? parseInt(minPriceParam, 10) : 0;
     const maxPrice = maxPriceParam ? parseInt(maxPriceParam, 10) : 100000;
-
-    // Initialize temporary variables to hold the selected categories
-    let newSelectedMain: string | null = null;
-    let newSelectedSub: string | null = null;
-    let newSelectedSubSub: string | null = null;
-
-    // Validate and set selectedMain
-    if (category && CATEGORY_DATA.hasOwnProperty(category)) {
-      newSelectedMain = category;
-    } else if (category) {
-      console.warn(`Category "${category}" not found in CATEGORY_DATA.`);
-    }
-
-    // Validate and set selectedSub
-    if (
+  
+    const newSelectedMain =
+      category && CATEGORY_DATA.hasOwnProperty(category) ? category : null;
+  
+    const newSelectedSub =
       subcategory &&
       newSelectedMain &&
-      CATEGORY_DATA[newSelectedMain].hasOwnProperty(subcategory)
-    ) {
-      newSelectedSub = subcategory;
-    } else if (subcategory) {
-      console.warn(
-        `Subcategory "${subcategory}" not found under "${newSelectedMain}".`
-      );
-    }
-
-    // Validate and set selectedSubSub
-    if (
+      CATEGORY_DATA[newSelectedMain]?.hasOwnProperty(subcategory)
+        ? subcategory
+        : null;
+  
+    const newSelectedSubSub =
       subSubCategory &&
       newSelectedMain &&
       newSelectedSub &&
-      CATEGORY_DATA[newSelectedMain][newSelectedSub].includes(subSubCategory)
-    ) {
-      newSelectedSubSub = subSubCategory;
-    } else if (subSubCategory) {
-      console.warn(
-        `SubSubCategory "${subSubCategory}" not found under "${newSelectedSub}".`
-      );
-    }
-
-    // Update state variables
+      CATEGORY_DATA[newSelectedMain]?.[newSelectedSub]?.includes(subSubCategory)
+        ? subSubCategory
+        : null;
+  
     setSelectedMain(newSelectedMain);
     setSelectedSub(newSelectedSub);
     setSelectedSubSub(newSelectedSubSub);
-
-    // Update price range
     setPriceRange({ min: minPrice, max: maxPrice });
-
-    // Mark filters as set
     setIsFiltersSet(true);
   }, [searchParams]);
-
-  /**
-   * **Function to Build Query Parameters for API Request**
-   * - Constructs the `QueryParams` object based on current state.
-   */
+  
+  // Build query parameters
   const buildQueryParams = useCallback((): QueryParams => {
-    const params: QueryParams = {
-      page: currentPage,
-      limit: 9, // Products per page
-    };
-
-    // Categories
+    const params: QueryParams = { page: currentPage };
+  
     if (selectedMain) params.category = selectedMain;
     if (selectedSub) params.subcategory = selectedSub;
     if (selectedSubSub) params.subSubCategory = selectedSubSub;
-
-    // Show only sale
+  
     if (showOnlySale) params.sale = true;
-
-    // Type
     if (type) params.type = type;
-
-    // Brand
     if (brand) params.brand = brand;
-
-    // Search Term
-    if (searchQuery.trim() !== "") params.search = searchQuery.trim();
-
-    // Price Range (use debounced values)
-    if (debouncedPriceRange.min !== 0)
-      params.minPrice = debouncedPriceRange.min;
-    if (debouncedPriceRange.max !== 100000)
-      params.maxPrice = debouncedPriceRange.max;
-
-    // Sorting
+  
+    if (searchQuery.trim()) params.search = searchQuery.trim();
+  
+    if (debouncedPriceRange.min !== 0) params.minPrice = debouncedPriceRange.min;
+    if (debouncedPriceRange.max !== 100000) params.maxPrice = debouncedPriceRange.max;
+  
     if (sortOption) {
-      switch (sortOption) {
-        case "bestSelling":
-          params.sortField = "soldQuantity";
-          params.sortOrder = "desc";
-          break;
-        case "bestDiscount":
-          params.sortField = "discount"; // Ensure backend can handle 'discount' field
-          params.sortOrder = "desc";
-          break;
-        case "priceHighToLow":
-          params.sortField = "priceDetails.offerPrice";
-          params.sortOrder = "desc";
-          break;
-        case "priceLowToHigh":
-          params.sortField = "priceDetails.offerPrice";
-          params.sortOrder = "asc";
-          break;
-        default:
-          break;
+      const sortConfig = {
+        bestSelling: { field: "soldQuantity", order: "desc" },
+        bestDiscount: { field: "discount", order: "desc" },
+        priceHighToLow: { field: "priceDetails.offerPrice", order: "desc" },
+        priceLowToHigh: { field: "priceDetails.offerPrice", order: "asc" },
+      }[sortOption];
+  
+      if (sortConfig) {
+        params.sortField = sortConfig.field;
+        params.sortOrder = sortConfig.order;
       }
     }
-
+  
     return params;
   }, [
     selectedMain,
@@ -447,57 +393,49 @@ const ShopBreadCrumb1: React.FC = () => {
     sortOption,
     currentPage,
   ]);
-
-  /**
-   * **Fetch Products from Backend**
-   * - Makes an Axios GET request to fetch products based on the built query parameters.
-   */
-  const fetchProducts = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-    try {
-      const params = buildQueryParams();
-
-      console.log("Fetching products with params:", params); // Debugging
-
-      const baseUrl =
-        process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
-
-      // Corrected Axios GET request without redundant '?limit=9'
-      const fetchPromise = axios.get<ApiResponse>(`${baseUrl}/api/products?limit=9`, {
-        params,
-      });
-
-      // Optional delay for demonstration or debouncing
-      // Removed the delay as it's unnecessary
-      const response = await fetchPromise;
-
-      console.log("API Response:", response.data); // Debugging
-
-      if (response.data.success) {
-        setProducts(response.data.data);
-        setTotalProducts(response.data.pagination.total);
-        setPageCount(response.data.pagination.pages);
-      } else {
-        setError("Failed to fetch products.");
-      }
-    } catch (err: any) {
-      console.error(err);
-      setError("An error occurred while fetching products.");
-    } finally {
-      setLoading(false);
-    }
-  }, [buildQueryParams]);
-
-  /**
-   * **Effect to Fetch Products When Dependencies Change**
-   * - Triggers `fetchProducts` whenever filters, sorting, pagination, or search queries change.
-   */
+  
+  // Fetch products based on filters
   useEffect(() => {
-    if (isFiltersSet) {
-      fetchProducts();
-    }
-  }, [fetchProducts, isFiltersSet]);
+    if (!isFiltersSet) return; // Only fetch when filters are set
+  
+    const fetchData = async () => {
+      try {
+        const params = buildQueryParams();
+        const paramsString = JSON.stringify(params);
+  
+        // Prevent redundant requests
+        if (prevParams.current === paramsString) return;
+        prevParams.current = paramsString; // Update the params
+  
+        setLoading(true);
+        setError(null);
+  
+        const baseUrl = process.env.NEXT_PUBLIC_API_URL;
+        const response = await axios.get<ApiResponse>(`${baseUrl}/api/products`, {
+          params,
+        });
+  
+        if (response.data.success) {
+          setProducts(response.data.data);
+          setTotalProducts(response.data.pagination.total);
+          setPageCount(response.data.pagination.pages);
+        } else {
+          throw new Error("Failed to fetch products.");
+        }
+      } catch (err: any) {
+        console.error("Fetch Error:", err.message || err);
+        setError("An error occurred while fetching products.");
+      } finally {
+        setLoading(false);
+      }
+    };
+  
+    fetchData();
+  }, [buildQueryParams, isFiltersSet]);
+  
+  
+  
+
 
   /**
    * **Handlers for Category Selection**
@@ -612,18 +550,23 @@ const ShopBreadCrumb1: React.FC = () => {
   );
 
   const handleSearchSubmit = useCallback(
-    (e: KeyboardEvent<HTMLInputElement>) => {
-      if (e.key === "Enter") {
+    (e: KeyboardEvent<HTMLInputElement> | React.FormEvent) => {
+      // Handle Enter key for desktop keyboards
+      if ((e as KeyboardEvent<HTMLInputElement>).key === "Enter" || e.type === "submit") {
         const trimmedSearchTerm = searchTerm.trim();
 
         if (trimmedSearchTerm !== "") {
           setSearchQuery(trimmedSearchTerm); // Update search query state
           setCurrentPage(1); // Reset to first page
         }
+
+        // Prevent form submission default behavior
+        e.preventDefault();
       }
     },
     [searchTerm]
   );
+
 
   return (
     <div className="shop-product breadcrumb1 py-2">
@@ -631,28 +574,30 @@ const ShopBreadCrumb1: React.FC = () => {
         <div className="flex max-md:flex-wrap max-md:flex-col-reverse gap-y-8">
           {/* SIDEBAR */}
           <div className="sidebar lg:w-1/4 md:w-1/3 w-full md:pr-12">
+
             {/* Filter Type */}
-            <div className="filter-type pb-8 border-b border-line">
-              <div className="heading6">Categories</div>
-              <div className="list-type-wrapper mt-4 max-h-80 overflow-y-auto pr-4 scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-gray-500 scrollbar-track-gray-200">
-                <div className="list-type">
+            <div className="filter-type pb-8 border-b border-gray-300">
+              <div className="heading6 font-semibold text-lg text-gray-700">Categories</div>
+              <div className="list-type-wrapper mt-4 max-h-80 overflow-y-auto pr-4 scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-gray-400 scrollbar-track-gray-100">
+                <div className="list-type space-y-4">
                   {/* Main Categories */}
                   {Object.keys(CATEGORY_DATA).map((mainCategory, mainIndex) => (
                     <div key={mainIndex} className="main-category">
                       <div
-                        className={`item flex items-center justify-between cursor-pointer p-2 ${
-                          selectedMain === mainCategory ? "bg-gray-200" : ""
-                        }`}
+                        className={`item flex items-center justify-between cursor-pointer p-3 rounded-lg transition-all duration-300 ease-in-out ${selectedMain === mainCategory
+                          ? "bg-gray-200 shadow-sm"
+                          : "hover:bg-gray-100"
+                          }`}
                         onClick={() => handleMainSelect(mainCategory)}
                       >
-                        <div className="text-secondary capitalize">
+                        <div className="text-secondary capitalize font-medium text-gray-800">
                           {mainCategory}
                         </div>
                         <div className="ml-2">
                           {selectedMain === mainCategory ? (
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
-                              className="h-4 w-4"
+                              className="h-5 w-5 text-gray-600"
                               fill="none"
                               viewBox="0 0 24 24"
                               stroke="currentColor"
@@ -667,7 +612,7 @@ const ShopBreadCrumb1: React.FC = () => {
                           ) : (
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
-                              className="h-4 w-4"
+                              className="h-5 w-5 text-gray-600"
                               fill="none"
                               viewBox="0 0 24 24"
                               stroke="currentColor"
@@ -685,26 +630,25 @@ const ShopBreadCrumb1: React.FC = () => {
 
                       {/* Subcategories */}
                       {selectedMain === mainCategory && (
-                        <div className="subcategories pl-4">
+                        <div className="subcategories pl-6 space-y-3">
                           {Object.keys(CATEGORY_DATA[mainCategory]).map(
                             (subCategory, subIndex) => (
                               <div key={subIndex} className="sub-category">
                                 <div
-                                  className={`item flex items-center justify-between cursor-pointer p-2 ${
-                                    selectedSub === subCategory
-                                      ? "bg-gray-200"
-                                      : ""
-                                  }`}
+                                  className={`item flex items-center justify-between cursor-pointer p-3 rounded-lg transition-all duration-300 ease-in-out ${selectedSub === subCategory
+                                    ? "bg-gray-200 shadow-sm"
+                                    : "hover:bg-gray-100"
+                                    }`}
                                   onClick={() => handleSubSelect(subCategory)}
                                 >
-                                  <div className="text-secondary capitalize">
+                                  <div className="text-secondary capitalize text-gray-700">
                                     {subCategory}
                                   </div>
                                   <div className="ml-2">
                                     {selectedSub === subCategory ? (
                                       <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        className="h-4 w-4"
+                                        className="h-5 w-5 text-gray-600"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke="currentColor"
@@ -719,7 +663,7 @@ const ShopBreadCrumb1: React.FC = () => {
                                     ) : (
                                       <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        className="h-4 w-4"
+                                        className="h-5 w-5 text-gray-600"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke="currentColor"
@@ -737,21 +681,19 @@ const ShopBreadCrumb1: React.FC = () => {
 
                                 {/* SubSubcategories */}
                                 {selectedSub === subCategory && (
-                                  <div className="subsubcategories pl-4">
-                                    <ul className="list-disc list-inside">
-                                      {CATEGORY_DATA[mainCategory][
-                                        subCategory
-                                      ].map((subSub, subSubIndex) => (
-                                        <li
-                                          key={subSubIndex}
-                                          className="text-secondary capitalize cursor-pointer p-1 hover:bg-gray-100 rounded"
-                                          onClick={() =>
-                                            handleSubSubSelect(subSub)
-                                          }
-                                        >
-                                          {subSub}
-                                        </li>
-                                      ))}
+                                  <div className="subsubcategories pl-6">
+                                    <ul className="list-disc list-inside space-y-2">
+                                      {CATEGORY_DATA[mainCategory][subCategory].map(
+                                        (subSub, subSubIndex) => (
+                                          <li
+                                            key={subSubIndex}
+                                            className="text-secondary capitalize cursor-pointer p-2 rounded-md text-gray-700 transition-all duration-200 hover:bg-gray-100"
+                                            onClick={() => handleSubSubSelect(subSub)}
+                                          >
+                                            {subSub}
+                                          </li>
+                                        )
+                                      )}
                                     </ul>
                                   </div>
                                 )}
@@ -765,33 +707,38 @@ const ShopBreadCrumb1: React.FC = () => {
                 </div>
               </div>
             </div>
+            <div className="filter-price pb-8 border-b border-gray-300 mt-8">
+  {/* Section Heading */}
+  <div className="heading6 font-semibold text-lg text-gray-800">
+    Price Range
+  </div>
 
-            {/* Filter Price */}
-            <div className="filter-price pb-8 border-b border-line mt-8">
-                  <div className="heading6">Price Range</div>
-                  <Slider
-                    range
-                    defaultValue={[0, 10000]}
-                    min={0}
-                    max={100000} // Adjust max as per your data
-                    onAfterChange={handlePriceChange} // Use onAfterChange to reduce API calls
-                    className="mt-5"
-                  />
-                  <div className="price-block flex items-center justify-between flex-wrap mt-4">
-                    <div className="min flex items-center gap-1">
-                      <div>Min price:</div>
-                      <div className="price-min">
-                        ₹<span>{priceRange.min}</span>
-                      </div>
-                    </div>
-                    <div className="min flex items-center gap-1">
-                      <div>Max price:</div>
-                      <div className="price-max">
-                        ₹<span>{priceRange.max}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+  {/* Slider */}
+  <Slider
+    range
+    defaultValue={[0, 10000]}
+    min={0}
+    max={100000} // Adjust max as per your data
+    onAfterChange={handlePriceChange} // Use onAfterChange to reduce API calls
+    className="mt-6"
+  />
+
+  {/* Price Display */}
+  <div className="price-block flex items-center justify-between flex-wrap mt-6 gap-4 bg-gray-50 p-4 rounded-lg shadow-sm">
+    <div className="min flex items-center gap-2 text-gray-700">
+      <span className="font-medium">Min Price:</span>
+      <span className="price-min font-semibold text-gray-900">
+        ₹{priceRange.min}
+      </span>
+    </div>
+    <div className="max flex items-center gap-2 text-gray-700">
+      <span className="font-medium">Max Price:</span>
+      <span className="price-max font-semibold text-gray-900">
+        ₹{priceRange.max}
+      </span>
+    </div>
+  </div>
+</div>
 
             {/* Filter Brand */}
             <div className="filter-brand mt-8">
@@ -810,7 +757,7 @@ const ShopBreadCrumb1: React.FC = () => {
                     key={index}
                     className="brand-item flex items-center justify-between"
                   >
-                    <div className="left flex items-center cursor-pointer">
+                    <div className="left flex items-center my-2 font-semibold cursor-pointer">
                       <div className="block-input">
                         <input
                           type="checkbox"
@@ -847,9 +794,9 @@ const ShopBreadCrumb1: React.FC = () => {
           {/* PRODUCT LIST */}
           <div className="list-product-block lg:w-3/4 md:w-2/3 w-full md:pl-3">
             {/* Filter heading and Search Bar */}
-            <div className="flex justify-between items-center flex-wrap gap-5">
+            <div className="flex justify-between items-center flex-wrap gap-6 bg-gray-50 p-4 rounded-lg shadow-sm">
               {/* SEARCH PRODUCTS */}
-              <div className="relative w-full max-w-xs">
+              <div className="relative w-full max-w-sm">
                 <label htmlFor="search" className="sr-only">
                   Search Products
                 </label>
@@ -861,12 +808,12 @@ const ShopBreadCrumb1: React.FC = () => {
                   onChange={handleSearchInputChange}
                   onKeyDown={handleSearchSubmit}
                   placeholder="Search products..."
-                  className="w-full border border-line rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="w-full  border border-gray-300 rounded-lg pl-12 pr-12 py-3  text-gray-700 placeholder-gray-400"
                   aria-label="Search Products"
                 />
                 <Icon.MagnifyingGlass
                   size={20}
-                  className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"
                 />
                 {searchTerm && (
                   <button
@@ -875,7 +822,7 @@ const ShopBreadCrumb1: React.FC = () => {
                       setSearchTerm("");
                       setSearchQuery(""); // Also clear the search query
                     }}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 focus:outline-none"
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 "
                     aria-label="Clear search"
                   >
                     <Icon.X size={20} />
@@ -884,14 +831,14 @@ const ShopBreadCrumb1: React.FC = () => {
               </div>
 
               {/* Sorting Dropdown */}
-              <div className="select-block relative">
+              <div className="relative">
                 <label htmlFor="select-filter" className="sr-only">
                   Sort Products
                 </label>
                 <select
                   id="select-filter"
                   name="select-filter"
-                  className="caption1 py-2 pl-3 md:pr-20 pr-10 rounded-lg border border-line appearance-none w-48"
+                  className="block w-48 bg-white border border-gray-300 rounded-lg py-3 px-4 text-gray-700 appearance-none"
                   onChange={(e) => handleSortChange(e.target.value)}
                   value={sortOption || ""}
                   aria-label="Sort Products"
@@ -905,11 +852,12 @@ const ShopBreadCrumb1: React.FC = () => {
                   <option value="priceLowToHigh">Price Low To High</option>
                 </select>
                 <Icon.CaretDown
-                  size={12}
-                  className="absolute top-1/2 -translate-y-1/2 md:right-4 right-2 pointer-events-none text-gray-500"
+                  size={16}
+                  className="absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-500 pointer-events-none"
                 />
               </div>
             </div>
+
 
             {/* List of applied filters (tags) */}
             <div className="list-filtered flex items-center gap-3 mt-4">
@@ -924,120 +872,126 @@ const ShopBreadCrumb1: React.FC = () => {
                 brand ||
                 type ||
                 searchQuery) && (
-                <>
-                  <div className="list flex items-center gap-3">
-                    <div className="w-px h-4 bg-line"></div>
+                  <>
+                    <div className="list flex items-center gap-3">
+                      <div className="w-px h-4 bg-line"></div>
 
-                    {selectedMain && (
-                      <div
-                        className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize cursor-pointer"
-                        onClick={() => setSelectedMain(null)}
-                      >
-                        <Icon.X className="cursor-pointer" />
-                        <span>{selectedMain}</span>
-                      </div>
-                    )}
-                    {selectedSub && (
-                      <div
-                        className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize cursor-pointer"
-                        onClick={() => setSelectedSub(null)}
-                      >
-                        <Icon.X className="cursor-pointer" />
-                        <span>{selectedSub}</span>
-                      </div>
-                    )}
-                    {selectedSubSub && (
-                      <div
-                        className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize cursor-pointer"
-                        onClick={() => setSelectedSubSub(null)}
-                      >
-                        <Icon.X className="cursor-pointer" />
-                        <span>{selectedSubSub}</span>
-                      </div>
-                    )}
-                    {brand && (
-                      <div
-                        className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize cursor-pointer"
-                        onClick={() => setBrand(null)}
-                      >
-                        <Icon.X className="cursor-pointer" />
-                        <span>{brand}</span>
-                      </div>
-                    )}
-                    {type && (
-                      <div
-                        className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize cursor-pointer"
-                        onClick={() => setType(null)}
-                      >
-                        <Icon.X className="cursor-pointer" />
-                        <span>{type}</span>
-                      </div>
-                    )}
-                    {searchQuery.trim() !== "" && (
-                      <div
-                        className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize cursor-pointer"
-                        onClick={() => {
-                          setSearchTerm("");
-                          setSearchQuery("");
-                        }}
-                      >
-                        <Icon.X className="cursor-pointer" />
-                        <span>Search: &quot;{searchQuery.trim()}&quot;</span>
-                      </div>
-                    )}
-                  </div>
+                      {selectedMain && (
+                        <div
+                          className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize cursor-pointer"
+                          onClick={() => setSelectedMain(null)}
+                        >
+                          <Icon.X className="cursor-pointer" />
+                          <span>{selectedMain}</span>
+                        </div>
+                      )}
+                      {selectedSub && (
+                        <div
+                          className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize cursor-pointer"
+                          onClick={() => setSelectedSub(null)}
+                        >
+                          <Icon.X className="cursor-pointer" />
+                          <span>{selectedSub}</span>
+                        </div>
+                      )}
+                      {selectedSubSub && (
+                        <div
+                          className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize cursor-pointer"
+                          onClick={() => setSelectedSubSub(null)}
+                        >
+                          <Icon.X className="cursor-pointer" />
+                          <span>{selectedSubSub}</span>
+                        </div>
+                      )}
+                      {brand && (
+                        <div
+                          className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize cursor-pointer"
+                          onClick={() => setBrand(null)}
+                        >
+                          <Icon.X className="cursor-pointer" />
+                          <span>{brand}</span>
+                        </div>
+                      )}
+                      {type && (
+                        <div
+                          className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize cursor-pointer"
+                          onClick={() => setType(null)}
+                        >
+                          <Icon.X className="cursor-pointer" />
+                          <span>{type}</span>
+                        </div>
+                      )}
+                      {searchQuery.trim() !== "" && (
+                        <div
+                          className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize cursor-pointer"
+                          onClick={() => {
+                            setSearchTerm("");
+                            setSearchQuery("");
+                          }}
+                        >
+                          <Icon.X className="cursor-pointer" />
+                          <span>Search: &quot;{searchQuery.trim()}&quot;</span>
+                        </div>
+                      )}
+                    </div>
 
-                  <div
-                    className="clear-btn flex items-center px-2 py-1 gap-1 rounded-full border border-red cursor-pointer"
-                    onClick={handleClearAll}
-                  >
-                    <Icon.X color="rgb(219, 68, 68)" />
-                    <span className="text-button-uppercase text-red">
-                      Clear All
-                    </span>
-                  </div>
-                </>
-              )}
+                    <div
+                      className="clear-btn flex items-center px-2 py-1 gap-1 rounded-full border border-red cursor-pointer"
+                      onClick={handleClearAll}
+                    >
+                      <Icon.X color="rgb(219, 68, 68)" />
+                      <span className="text-button-uppercase text-red">
+                        Clear All
+                      </span>
+                    </div>
+                  </>
+                )}
             </div>
 
             {/* List of products */}
-            <div className="list-product hide-product-sold grid lg:grid-cols-3 grid-cols-2 sm:gap-[30px] gap-[20px] mt-7">
-              {loading ? (
-                <div className="col-span-full text-center py-10">
-                  <svg
-                    className="animate-spin h-8 w-8 text-primary mx-auto"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle
-                      className="opacity-25"
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke="currentColor"
-                      strokeWidth="4"
-                    ></circle>
-                    <path
-                      className="opacity-75"
-                      fill="currentColor"
-                      d="M4 12a8 8 0 018-8v8H4z"
-                    ></path>
-                  </svg>
+            <div className="relative w-full ">
+
+              <div className="list-product hide-product-sold grid lg:grid-cols-3 grid-cols-2 sm:gap-[30px] gap-[20px] mt-7">
+                {loading ? (
+                  Array.from({ length: 6 }).map((_, index) => (
+                    <div
+                      key={index}
+                      className="skeleton-product bg-gray-200 rounded-md p-4 animate-pulse"
+                    >
+                      <div className="skeleton-image h-36 bg-gray-300 rounded-md mb-4"></div>
+                      <div className="skeleton-text h-4 bg-gray-300 rounded mb-2"></div>
+                      <div className="skeleton-text h-4 bg-gray-300 rounded w-3/4"></div>
+                    </div>
+                  ))
+                ) : error ? (
+                  <div className="col-span-full text-center text-red-500 py-10">
+                    {error}
+                  </div>
+                ) : products.length > 0 ? (
+                  products.map((item) => (
+                    <Product key={item.id} data={item} type="marketplace" />
+                  ))
+                ) : (
+                  <div className="no-data-product col-span-full text-center py-10  rounded-lg shadow-md border border-gray-300">
+                  <div className="flex flex-col items-center space-y-4">
+                    <h2 className="text-xl font-semibold text-gray-700">
+                      No Products Found
+                    </h2>
+                    <p className="text-gray-500 text-sm">
+                      We couldn’t find any products matching your criteria. Try adjusting your filters or search keywords.
+                    </p>
+                    <button
+                      onClick={handleClearAll} // Example function to reset filters
+                      className="mt-4 px-6 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:outline-none"
+                    >
+                      Reset Filters
+                    </button>
+                  </div>
                 </div>
-              ) : error ? (
-                <div className="col-span-full text-center text-red-500 py-10">
-                  {error}
-                </div>
-              ) : products.length > 0 ? (
-                products.map((item) => (
-                  <Product key={item.id} data={item} type="marketplace" />
-                ))
-              ) : (
-                <div className="no-data-product col-span-full text-center py-10">
-                  No products match the selected criteria.
-                </div>
-              )}
+                
+                )}
+              </div>;
+
             </div>
 
             {/* Pagination if more than 1 page */}

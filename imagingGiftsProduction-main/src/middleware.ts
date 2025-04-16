@@ -8,16 +8,44 @@ export async function middleware(req: NextRequest) {
     secret: process.env.NEXTAUTH_SECRET,
   });
 
+  const { pathname } = req.nextUrl;
+
   const loggedInRedirectRoutes = ["/login", "/register"];
+  const adminRestrictedRoutes = ["/admin", "/admin/settings"]; // Add routes restricted to admin
+  const authRestrictedRoutes = ["/checkout", "/cart" , "/orders"]; // Routes restricted for unauthenticated users
 
   // Redirect logged-in users trying to access login or register pages
-  if (token && loggedInRedirectRoutes.includes(req.nextUrl.pathname)) {
+  if (token && loggedInRedirectRoutes.includes(pathname)) {
     return NextResponse.redirect(new URL("/", req.url));
+  }
+
+  // Restrict access to admin routes
+  if (adminRestrictedRoutes.some((route) => pathname.startsWith(route))) {
+    if (!token || token.role !== process.env.ADMIN_ACCESS_CODE) {
+      return NextResponse.redirect(new URL("/?error=access-denied", req.url));
+    }
+  }
+
+  // Restrict access to auth-restricted routes (checkout and cart)
+  if (authRestrictedRoutes.some((route) => pathname.startsWith(route))) {
+    if (!token) {
+      return NextResponse.redirect(
+        new URL(`/login`, req.url) // Redirect to login with a query parameter
+      );
+    }
   }
 
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/login", "/register", "/shop"], // Apply middleware to these routes
+  matcher: [
+    "/login",
+    "/register",
+    "/admin/:path*",
+    "/shop-manager/:path*",
+    "/checkout",
+    "/cart",
+    "/orders",
+  ], // Apply middleware to these routes
 };

@@ -4,55 +4,51 @@ import React from "react";
 
 const BannerBelow = () => {
   return (
-    <div className="banner-block md:pt-[60px] pt-8">
-      <div className="container">
-        <div className="list-banner grid sm:grid-cols-2 lg:gap-[30px] gap-[20px]">
+    <div className="banner-block py-10 bg-gradient-to-b  to-white rounded-lg">
+      <div className="container mx-auto px-4">
+        <div className="grid sm:grid-cols-2 lg:gap-8 gap-6">
           {/* Banner 1: Camera Sale */}
           <Link
             href="/shop"
-            className="banner-item relative py-[53.5px] px-10 bg-[#848EFF] block duration-500 rounded-2xl overflow-hidden"
+            className="banner-item relative bg-blue-500 hover:bg-blue-600 transition-all duration-500 rounded-xl overflow-hidden shadow-md flex items-center justify-between px-8 py-10"
           >
-            <div className="banner-img w-[173px] absolute top-1/2 -translate-y-1/2 right-14">
-              <Image
-                width={10000}
-                height={10000}
-                src="/images/banner/camera-sale.png"
-                className="w-full duration-500"
-                alt="Camera Sale"
-              />
-            </div>
-            <div className="banner-content relative">
-              <div className="heading5 text-white">
+            <div className="banner-content">
+              <h3 className="text-2xl font-bold text-white leading-tight">
                 Super Sale <br /> Mirrorless Cameras
-              </div>
-              <div className="text-title text-white mt-2">Save $499.00</div>
-              <div className="text-button text-white relative inline-block pb-1 border-b-2 border-white duration-500 mt-2">
-                Shop Now
-              </div>
+              </h3>
+              <p className="text-lg text-white mt-2">Save ₹ 4499.00</p>
+              <span className="inline-block mt-4 text-sm font-medium text-white border-b-2 border-white">Shop Now</span>
+            </div>
+            <div className="banner-img w-40 h-40 relative">
+              <Image
+                src="/images/banner/camera-sale.png"
+                alt="Camera Sale"
+                layout="fill"
+                objectFit="contain"
+                className="duration-500"
+              />
             </div>
           </Link>
           {/* Banner 2: Accessories Discount */}
           <Link
             href="/shop"
-            className="banner-item relative py-[53.5px] px-10 bg-[#E7514A] block duration-500 rounded-2xl overflow-hidden"
+            className="banner-item bg-amber-700 lative bg-red-500 hover:bg-red-600 transition-all duration-500 rounded-xl overflow-hidden shadow-md flex items-center justify-between px-8 py-10"
           >
-            <div className="banner-img w-1/2 absolute top-1/2 -translate-y-1/2 right-10">
-              <Image
-                width={5000}
-                height={5000}
-                src="/images/banner/accessories-discount.png"
-                className="w-full duration-500"
-                alt="Camera Accessories Discount"
-              />
-            </div>
-            <div className="banner-content relative">
-              <div className="heading5 text-white">
+            <div className="banner-content">
+              <h3 className="text-2xl font-bold text-white leading-tight">
                 Deals On <br /> Camera Accessories
-              </div>
-              <div className="text-title text-white mt-2">Up to 30% Off</div>
-              <div className="text-button text-white relative inline-block pb-1 border-b-2 border-white duration-500 mt-2">
-                Shop Now
-              </div>
+              </h3>
+              <p className="text-lg text-white mt-2">Up to 30% Off</p>
+              <span className="inline-block mt-4 text-sm font-medium text-white border-b-2 border-white">Shop Now</span>
+            </div>
+            <div className="banner-img w-40 h-40 relative">
+              <Image
+                src="/images/banner/camera-sale.png"
+                alt="Camera Accessories Discount"
+                layout="fill"
+                objectFit="contain"
+                className="duration-500"
+              />
             </div>
           </Link>
         </div>

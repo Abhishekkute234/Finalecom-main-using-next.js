@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 import { ProductType } from "@/type/ProductType";
-import { useCart } from "@/context/CartContext";
 import { useModalCartContext } from "@/context/ModalCartContext";
 import { useWishlist } from "@/context/WishlistContext";
 import { useModalWishlistContext } from "@/context/ModalWishlistContext";
@@ -13,11 +12,15 @@ import { useCompare } from "@/context/CompareContext";
 import { useModalCompareContext } from "@/context/ModalCompareContext";
 import { useModalQuickviewContext } from "@/context/ModalQuickviewContext";
 import Rate from "../Other/Rate";
+import { useCart } from "@/context/CartsContext";
+import { useSession } from "next-auth/react";
+import { toast } from "react-toastify";
 
 interface ProductProps {
-  
+
   data: ProductType;
   type: string;
+  
 }
 
 
@@ -25,13 +28,13 @@ interface ProductProps {
 const Product: React.FC<ProductProps> = ({ data, type }) => {
   // Destructure fields, including the MongoDB _id
   const { _id, productName, priceDetails, thumbImage, rate } = data;
+  const { addToCart } = useCart();
 
   // Local states for color/size selection
-  const [activeColor, setActiveColor] = useState<string>("");
-  const [activeSize, setActiveSize] = useState<string>("");
+
 
   // Access your Cart Context
-  const { addToCart, updateCart, cartState } = useCart();
+
   const { openModalCart } = useModalCartContext();
 
   // Other contexts (wishlist, compare, etc.)
@@ -40,53 +43,37 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
   const { addToCompare, removeFromCompare, compareState } = useCompare();
   const { openModalCompare } = useModalCompareContext();
   const { openQuickview } = useModalQuickviewContext();
+  const { data: session } = useSession(); // Session check
 
   const router = useRouter();
 
-  // Transform _id -> id right before adding to cart
-  const handleAddToCart = () => {
-    const productToAdd = {
-      ...data,
-      id: _id, // Add a new "id" property for cart consistency
-    };
 
-    // Check if the item is already in the cart
-    if (!cartState.cartArray.find((item) => item.id === productToAdd.id)) {
-      // Not in cart: Add
-      addToCart(productToAdd);
-      updateCart(
-        productToAdd.id,
-        productToAdd.quantityPurchase || 1,
-        activeSize,
-        activeColor
-      );
-    } else {
-      // Already in cart: Update
-      updateCart(
-        productToAdd.id,
-        productToAdd.quantityPurchase || 5,
-        activeSize,
-        activeColor
-      );
+  const handleAddToCart = () => {
+    if (!session) {
+      // Redirect to /login if the user is not logged in
+      toast.error("Login required");
+      router.push("/login");
+      return;
     }
+
+    addToCart(_id, 1); // Add one product to the cart
     openModalCart();
   };
 
   const handleBuyNow = () => {
-    if (!_id) {
-      alert("Item not available.");
+    if (!session) { 
+      toast.error("Login required");
+      router.push("/login");
       return;
     }
-    // Same transform if you'd like consistency
-    const productToAdd = { ...data, id: _id };
-    addToCart(productToAdd);
-    // After adding, navigate to checkout
-    router.push("/checkout");
+
+    router.push(`/checkout?id=${_id}`); // Navigate to the checkout page
   };
+
 
   // Example: detail page
   const handleDetailProduct = () => {
-    router.push(`/product/default?id=${_id}`);
+    router.push(`/product?id=${_id}`);
   };
 
   // WishList logic
@@ -110,6 +97,7 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
       compareState.compareArray.length >= 3 &&
       !compareState.compareArray.some((item) => item.id === _id)
     ) {
+      openModalCompare();
       alert("Compare up to 3 products");
       return;
     }
@@ -138,7 +126,7 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
     <>
       {type === "marketplace" && (
         <div
-          className="product-item style-marketplace p-4 border border-line rounded-2xl"
+          className=" animate-fadeIn transition-opacity duration-500 ease-in-out product-item style-marketplace p-4 border border-line rounded-2xl"
           onClick={handleDetailProduct}
         >
           <div className="bg-img relative w-full">
@@ -155,11 +143,10 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
             <div className="list-action flex flex-col gap-1 absolute top-0 right-0">
               {/* Wishlist */}
               <span
-                className={`add-wishlist-btn w-8 h-8 bg-white flex items-center justify-center rounded-full box-shadow-sm duration-300 ${
-                  wishlistState.wishlistArray.some((item) => item.id === _id)
+                className={`add-wishlist-btn w-8 h-8 bg-white flex items-center justify-center rounded-full box-shadow-sm duration-300 ${wishlistState.wishlistArray.some((item) => item.id === _id)
                     ? "active"
                     : ""
-                }`}
+                  }`}
                 onClick={handleAddToWishlist}
               >
                 {wishlistState.wishlistArray.some((item) => item.id === _id) ? (
@@ -171,11 +158,10 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
 
               {/* Compare */}
               <span
-                className={`compare-btn w-8 h-8 bg-white flex items-center justify-center rounded-full box-shadow-sm duration-300 ${
-                  compareState.compareArray.some((item) => item.id === _id)
+                className={`compare-btn w-8 h-8 bg-white flex items-center justify-center rounded-full box-shadow-sm duration-300 ${compareState.compareArray.some((item) => item.id === _id)
                     ? "active"
                     : ""
-                }`}
+                  }`}
                 onClick={handleAddToCompare}
               >
                 <Icon.Repeat size={18} className="compare-icon" />
@@ -213,9 +199,9 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
             </span>
             {/* Example rating */}
             <div className="flex items-center mt-3">
-                <Rate currentRate={rate || 3} size={14} />
-                <span className="caption1 text-secondary">(1,234 reviews)</span>
-              </div>
+              <Rate currentRate={rate || 3} size={14} />
+              <span className="caption1 text-secondary">(1,234 reviews)</span>
+            </div>
 
             {/* Price */}
             <div className="flex">

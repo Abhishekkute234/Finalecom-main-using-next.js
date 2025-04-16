@@ -4,7 +4,6 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import * as Icon from "@phosphor-icons/react/dist/ssr";
 import Rate from "../Other/Rate";
 
 interface TopProductProps {
@@ -17,38 +16,40 @@ const TopProduct: React.FC<TopProductProps> = ({ products, loading }) => {
 
   const handleDetailProduct = (productId: string) => {
     // redirect to product detail page
-    router.push(`/product/default?id=${productId}`);
+    router.push(`/product?id=${productId}`);
   };
 
   return (
-    <div className="top-product bg-surface md:mt-[60px] mt-10 md:py-[60px] py-10">  
-      <div className="container">
-        <div className="heading flex items-center justify-between gap-5 flex-wrap">
-          <div className="heading3">Top Rated Products</div>
+    <div className="top-product bg-gradient-to-b  to-white rounded-lg md:mt-[60px] mt-10 md:py-[60px] py-10">
+      <div className="container mx-auto px-4">
+        <div className="heading flex items-center justify-between gap-5 flex-wrap mb-6">
+          <h2 className="text-2xl font-bold text-gray-800 tracking-wide uppercase border-b-4 border-blue-500 pb-2">
+            Top Rated
+          </h2>
           <Link
             href="/shop/breadcrumb-img"
-            className="text-button pb-0.5 border-b-2 border-black"
+            className="text-blue-600 font-medium hover:text-blue-800 transition border-b-2 border-transparent hover:border-blue-500"
           >
             View All
           </Link>
         </div>
 
         {/* List section */}
-        <div className="list grid xl:grid-cols-3 sm:grid-cols-2 gap-4 md:mt-10 mt-6">
+        <div className="grid xl:grid-cols-3 sm:grid-cols-2 gap-8">
           {loading ? (
             /* Loading state */
-            <div className="flex justify-center items-center w-full">
-              <span>Loading...</span>
+            <div className="flex justify-center items-center w-full py-10">
+              <span className="text-lg font-medium text-gray-500">Loading...</span>
             </div>
           ) : products.length > 0 ? (
             /* Map your backend data here */
             products.map((product) => (
               <div
                 key={product._id}
-                className="product-item style-marketplace-list flex items-center gap-2 bg-white py-5 px-[39px] rounded cursor-pointer"
+                className="product-item flex items-center gap-4 bg-white p-5 rounded-lg shadow-md transition cursor-pointer"
                 onClick={() => handleDetailProduct(product._id)}
               >
-                <div className="bg-img lg:w-[150px] w-[120px] flex-shrink-0 aspect-1/1">
+                <div className="bg-img w-[120px] lg:w-[150px] flex-shrink-0 aspect-square overflow-hidden rounded-lg">
                   <Image
                     width={5000}
                     height={5000}
@@ -57,26 +58,23 @@ const TopProduct: React.FC<TopProductProps> = ({ products, loading }) => {
                     alt={product.title || "Product"}
                   />
                 </div>
-                <div className="product-infor">
-                  <span className="caption2 uppercase block">
+                <div className="product-info">
+                  <span className="block text-sm font-semibold text-gray-600 uppercase">
                     {product.brand || "Unknown Brand"}
                   </span>
-                  <span className="caption2 mt-2">
+                  <h3 className="mt-1 text-lg font-bold text-gray-800">
                     {product.productName || "Untitled Product"}
-                  </span>
-                  <div className="flex gap-0.5 mt-2">
-                    {/* Example star rating; adjust logic as needed */}
-                 
+                  </h3>
+                  <div className="flex items-center gap-1 mt-2">
                     <Rate currentRate={product.rate || 5} size={14} />
-                 
                   </div>
                   <div className="flex items-center gap-3 mt-3">
-                    <span className="text-title inline-block">
-                    ₹{product.priceDetails.offerPrice ?? "0.00"}
+                    <span className="text-xl font-semibold">
+                      ₹{product.priceDetails.offerPrice ?? "0.00"}
                     </span>
-                    {product.oldPrice && (
-                      <del className="caption2 text-secondary">
-                        ${product.oldPrice}
+                    {product.priceDetails.mrp && (
+                      <del className="text-sm text-gray-400">
+                        ₹{product.priceDetails.mrp}
                       </del>
                     )}
                   </div>
@@ -85,8 +83,10 @@ const TopProduct: React.FC<TopProductProps> = ({ products, loading }) => {
             ))
           ) : (
             /* No Products */
-            <div className="flex justify-center items-center w-full">
-              <p>No top rated products available at the moment.</p>
+            <div className="flex justify-center items-center w-full py-10">
+              <p className="text-lg font-medium text-gray-500">
+                No top rated products available at the moment.
+              </p>
             </div>
           )}
         </div>

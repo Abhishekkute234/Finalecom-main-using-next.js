@@ -10,9 +10,9 @@ import React, {
 import { ProductType } from "@/type/ProductType";
 
 interface CartItem extends ProductType {
-  // The cart uses "id" to track items
+
   id: string;
-  // We'll store the user's chosen quantity in "quantity"
+
   quantity: number;
   selectedSize: string;
   selectedColor: string;
@@ -24,7 +24,7 @@ interface CartState {
 
 type CartAction =
   | { type: "ADD_TO_CART"; payload: ProductType }
-  | { type: "REMOVE_FROM_CART"; payload: string } // payload is item.id
+  | { type: "REMOVE_FROM_CART"; payload: string } 
   | {
       type: "UPDATE_CART";
       payload: {
@@ -54,18 +54,20 @@ const initialState: CartState = {
   cartArray: [],
 };
 
+
+
 const cartReducer = (state: CartState, action: CartAction): CartState => {
   switch (action.type) {
     case "ADD_TO_CART": {
       const payload = action.payload;
 
       // Create a new cart item. We'll use "id" = payload._id
-      // so the cart can identify it with item.id
+      // so the cart can identify it with the product
       const newItem: CartItem = {
         ...payload,
         id: payload._id,
         quantity: payload.quantityPurchase || 1,
-        selectedSize: "",
+        selectedSize: "",         
         selectedColor: "",
       };
 
@@ -102,7 +104,7 @@ const cartReducer = (state: CartState, action: CartAction): CartState => {
             selectedColor,
           };
         }
-        return item;
+        return item; 
       });
       localStorage.setItem("cart", JSON.stringify(updatedCart));
       return {

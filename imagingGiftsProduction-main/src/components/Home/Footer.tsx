@@ -1,271 +1,119 @@
-"use client";
+'use client';
 
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import * as Icon from "@phosphor-icons/react/dist/ssr";
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import * as Icon from '@phosphor-icons/react/dist/ssr';
 
 const Footer = () => {
   return (
-    <>
-      <div id="footer" className="footer">
-        <div className="footer-main bg-surface">
-          <div className="container">
-            <div className="content-footer py-[60px] flex justify-between flex-wrap gap-y-8">
-              <div className="company-infor basis-1/4 max-lg:basis-full pr-7">
-                <Link href={"/"} className="logo">
-                  <div className="heading4">ImagingGifts</div>
-                </Link>
-                <div className="flex gap-3 mt-3">
-                  <div className="flex flex-col ">
-                    <span className="text-button">Mail:</span>
-                    <span className="text-button mt-3">Phone:</span>
-                    <span className="text-button mt-3">Address:</span>
-                  </div>
-                  <div className="flex flex-col ">
-                    <span className="">support@imaginggifts.com</span>
-                    <span className="mt-3">1-800-555-1234</span>
-                    <span className="mt-3 pt-px">
-                      123 Photo Lane, Lens City, CA 90210
-                    </span>
-                  </div>
+    <div id="footer" className="footer mt-10 bg-gray-900 text-white">
+      <div className="footer-main py-10">
+        <div className="container mx-auto px-4">
+          <div className="content-footer flex flex-wrap justify-between gap-8">
+            <div className="company-infor w-full lg:w-1/4 pr-5">
+              <Link href="/" className="logo">
+                <h2 className="text-2xl font-bold">ImagingGifts</h2>
+              </Link>
+              <div className="flex gap-4 mt-4">
+                <div className="flex flex-col text-sm">
+                  <span className="font-bold">Mail:</span>
+                  <span className="mt-2 font-bold">Phone:</span>
+                  <span className="mt-2 font-bold">Address:</span>
                 </div>
-              </div>
-              <div className="right-content flex flex-wrap gap-y-8 basis-3/4 max-lg:basis-full">
-                <div className="list-nav flex justify-between basis-2/3 max-md:basis-full gap-4">
-                  <div className="item flex flex-col basis-1/3 ">
-                    <div className="text-button-uppercase pb-3">
-                      Information
-                    </div>
-                    <Link
-                      className="caption1 has-line-before duration-300 w-fit"
-                      href={"/pages/contact"}
-                    >
-                      Contact us
-                    </Link>
-                    <Link
-                      className="caption1 has-line-before duration-300 w-fit pt-2"
-                      href={"#!"}
-                    >
-                      Career
-                    </Link>
-                    <Link
-                      className="caption1 has-line-before duration-300 w-fit pt-2"
-                      href={"/my-account"}
-                    >
-                      My Account
-                    </Link>
-                    <Link
-                      className="caption1 has-line-before duration-300 w-fit pt-2"
-                      href={"/order-tracking"}
-                    >
-                      Order & Returns
-                    </Link>
-                    <Link
-                      className="caption1 has-line-before duration-300 w-fit pt-2"
-                      href={"/pages/faqs"}
-                    >
-                      FAQs
-                    </Link>
-                  </div>
-                  <div className="item flex flex-col basis-1/3 ">
-                    <div className="text-button-uppercase pb-3">
-                      Quick Links
-                    </div>
-                    <Link
-                      className="caption1 has-line-before duration-300 w-fit"
-                      href={"/shop/cameras"}
-                    >
-                      Cameras
-                    </Link>
-                    <Link
-                      className="caption1 has-line-before duration-300 w-fit pt-2"
-                      href={"/shop/accessories"}
-                    >
-                      Accessories
-                    </Link>
-                    <Link
-                      className="caption1 has-line-before duration-300 w-fit pt-2"
-                      href={"/shop/lenses"}
-                    >
-                      Lenses
-                    </Link>
-                    <Link
-                      className="caption1 has-line-before duration-300 w-fit pt-2"
-                      href={"/shop/tripods"}
-                    >
-                      Tripods
-                    </Link>
-                    <Link
-                      className="caption1 has-line-before duration-300 w-fit pt-2"
-                      href={"/blog"}
-                    >
-                      Blog
-                    </Link>
-                  </div>
-                  <div className="item flex flex-col basis-1/3 ">
-                    <div className="text-button-uppercase pb-3">
-                      Customer Services
-                    </div>
-                    <Link
-                      className="caption1 has-line-before duration-300 w-fit"
-                      href={"/pages/faqs"}
-                    >
-                      Orders FAQs
-                    </Link>
-                    <Link
-                      className="caption1 has-line-before duration-300 w-fit pt-2"
-                      href={"/pages/shipping"}
-                    >
-                      Shipping
-                    </Link>
-                    <Link
-                      className="caption1 has-line-before duration-300 w-fit pt-2"
-                      href={"/pages/privacy"}
-                    >
-                      Privacy Policy
-                    </Link>
-                    <Link
-                      className="caption1 has-line-before duration-300 w-fit pt-2"
-                      href={"/order-tracking"}
-                    >
-                      Return & Refund
-                    </Link>
-                  </div>
-                </div>
-                <div className="newsletter basis-1/3 pl-7 max-md:basis-full max-md:pl-0">
-                  <div className="text-button-uppercase">Newsletter</div>
-                  <div className="caption1 mt-3">
-                    Sign up for our newsletter and get updates on the latest
-                    photography gear and offers!
-                  </div>
-                  <div className="input-block w-full h-[52px] mt-4">
-                    <form className="w-full h-full relative" action="post">
-                      <input
-                        type="email"
-                        placeholder="Enter your e-mail"
-                        className="caption1 w-full h-full pl-4 pr-14 rounded-xl border border-line"
-                        required
-                      />
-                      <button className="w-[44px] h-[44px] bg-black flex items-center justify-center rounded-xl absolute top-1 right-1">
-                        <Icon.ArrowRight size={24} color="#fff" />
-                      </button>
-                    </form>
-                  </div>
-                  <div className="list-social flex items-center gap-6 mt-4">
-                    <Link href={"https://www.facebook.com/"} target="_blank">
-                      <div className="icon-facebook text-2xl text-black"></div>
-                    </Link>
-                    <Link href={"https://www.instagram.com/"} target="_blank">
-                      <div className="icon-instagram text-2xl text-black"></div>
-                    </Link>
-                    <Link href={"https://www.twitter.com/"} target="_blank">
-                      <div className="icon-twitter text-2xl text-black"></div>
-                    </Link>
-                    <Link href={"https://www.youtube.com/"} target="_blank">
-                      <div className="icon-youtube text-2xl text-black"></div>
-                    </Link>
-                    <Link href={"https://www.pinterest.com/"} target="_blank">
-                      <div className="icon-pinterest text-2xl text-black"></div>
-                    </Link>
-                  </div>
+                <div className="flex flex-col text-sm">
+                  <span>support@imaginggifts.com</span>
+                  <span className="mt-2">1-800-555-1234</span>
+                  <span className="mt-2">123 Photo Lane, Lens City, CA 90210</span>
                 </div>
               </div>
             </div>
-            <div className="footer-bottom py-3 flex items-center justify-between gap-5 max-lg:justify-center max-lg:flex-col border-t border-line">
-              <div className="left flex items-center gap-8">
-                <div className="copyright caption1 text-secondary">
-                  ©2023 ImagingGifts. All Rights Reserved.
+            <div className="right-content flex flex-wrap gap-8 w-full lg:w-3/4">
+              <div className="list-nav flex flex-wrap w-full gap-8">
+                <div className="w-1/3">
+                  <h3 className="text-lg font-semibold mb-4">Information</h3>
+                  <ul className="space-y-2 text-sm">
+                    <li><Link href="/pages/contact">Contact us</Link></li>
+                    <li><Link href="#">Career</Link></li>
+                    <li><Link href="/my-account">My Account</Link></li>
+                    <li><Link href="/order-tracking">Order & Returns</Link></li>
+                    <li><Link href="/pages/faqs">FAQs</Link></li>
+                  </ul>
                 </div>
-                <div className="select-block flex items-center gap-5 max-md:hidden">
-                  <div className="choose-language flex items-center gap-1.5">
-                    <select
-                      name="language"
-                      id="chooseLanguageFooter"
-                      className="caption2 bg-transparent"
-                    >
-                      <option value="English">English</option>
-                      <option value="Espana">Espana</option>
-                      <option value="France">France</option>
-                    </select>
-                    <Icon.CaretDown size={12} color="#1F1F1F" />
-                  </div>
-                  <div className="choose-currency flex items-center gap-1.5">
-                    <select
-                      name="currency"
-                      id="chooseCurrencyFooter"
-                      className="caption2 bg-transparent"
-                    >
-                      <option value="USD">USD</option>
-                      <option value="EUR">EUR</option>
-                      <option value="GBP">GBP</option>
-                    </select>
-                    <Icon.CaretDown size={12} color="#1F1F1F" />
-                  </div>
+                <div className="w-1/3">
+                  <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+                  <ul className="space-y-2 text-sm">
+                    <li><Link href="/shop/cameras">Cameras</Link></li>
+                    <li><Link href="/shop/accessories">Accessories</Link></li>
+                    <li><Link href="/shop/lenses">Lenses</Link></li>
+                    <li><Link href="/shop/tripods">Tripods</Link></li>
+                    <li><Link href="/blog">Blog</Link></li>
+                  </ul>
+                </div>
+                <div className="w-1/3">
+                  <h3 className="text-lg font-semibold mb-4">Customer Services</h3>
+                  <ul className="space-y-2 text-sm">
+                    <li><Link href="/pages/faqs">Orders FAQs</Link></li>
+                    <li><Link href="/pages/shipping">Shipping</Link></li>
+                    <li><Link href="/pages/privacy">Privacy Policy</Link></li>
+                    <li><Link href="/order-tracking">Return & Refund</Link></li>
+                  </ul>
                 </div>
               </div>
-              <div className="right flex items-center gap-2">
-                <div className="caption1 text-secondary">Payment:</div>
-                <div className="payment-img">
-                  <Image
-                    src={"/images/payment/Frame-0.png"}
-                    width={500}
-                    height={500}
-                    alt={"payment"}
-                    className="w-9"
+              <div className="newsletter w-full lg:w-1/3">
+                <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
+                <p className="text-sm mb-4">Sign up for our newsletter and get updates on the latest photography gear and offers!</p>
+                <form className="relative">
+                  <input
+                    type="email"
+                    placeholder="Enter your e-mail"
+                    className="w-full py-2 px-4 rounded border border-gray-300 focus:outline-none"
                   />
-                </div>
-                <div className="payment-img">
-                  <Image
-                    src={"/images/payment/Frame-1.png"}
-                    width={500}
-                    height={500}
-                    alt={"payment"}
-                    className="w-9"
-                  />
-                </div>
-                <div className="payment-img">
-                  <Image
-                    src={"/images/payment/Frame-2.png"}
-                    width={500}
-                    height={500}
-                    alt={"payment"}
-                    className="w-9"
-                  />
-                </div>
-                <div className="payment-img">
-                  <Image
-                    src={"/images/payment/Frame-3.png"}
-                    width={500}
-                    height={500}
-                    alt={"payment"}
-                    className="w-9"
-                  />
-                </div>
-                <div className="payment-img">
-                  <Image
-                    src={"/images/payment/Frame-4.png"}
-                    width={500}
-                    height={500}
-                    alt={"payment"}
-                    className="w-9"
-                  />
-                </div>
-                <div className="payment-img">
-                  <Image
-                    src={"/images/payment/Frame-5.png"}
-                    width={500}
-                    height={500}
-                    alt={"payment"}
-                    className="w-9"
-                  />
+                  <button className="absolute top-0 right-0 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                    <Icon.ArrowRight size={20} />
+                  </button>
+                </form>
+                <div className="list-social flex gap-4 mt-4">
+                  <Link href="https://www.facebook.com/" target="_blank"><Icon.FacebookLogo size={24} /></Link>
+                  <Link href="https://www.instagram.com/" target="_blank"><Icon.InstagramLogo size={24} /></Link>
+                  <Link href="https://www.twitter.com/" target="_blank"><Icon.TwitterLogo size={24} /></Link>
+                  <Link href="https://www.youtube.com/" target="_blank"><Icon.YoutubeLogo size={24} /></Link>
+                  <Link href="https://www.pinterest.com/" target="_blank"><Icon.PinterestLogo size={24} /></Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div className="footer-bottom py-4 border-t border-gray-700">
+          <div className="container mx-auto px-4 flex flex-wrap justify-between gap-4">
+            <p className="text-sm">©2025 ImagingGifts. All Rights Reserved.</p>
+            <div className="flex items-center gap-4">
+              <select className="bg-transparent text-sm">
+                <option value="English">English</option>
+                <option value="Espana">Espana</option>
+                <option value="France">France</option>
+              </select>
+              <select className="bg-transparent text-sm">
+                <option value="USD">INR</option>
+               
+              </select>
+            </div>
+            <div className="flex gap-4">
+              {[0, 1, 2, 3, 4].map((index) => (
+                <Image
+                  key={index}
+                  src={`/images/payment/Frame-${index}.png`}
+                  alt="payment"
+                  width={30}
+                  height={30}
+                  className="object-contain"
+                />
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 

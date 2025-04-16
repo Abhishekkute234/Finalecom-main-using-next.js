@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.imaginggifts.com
+
+# Sitemaps
+Sitemap: https://www.imaginggifts.com/sitemap.xml

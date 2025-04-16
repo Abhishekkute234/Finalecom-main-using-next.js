@@ -1,3 +1,5 @@
+// tailwind.config.ts
+
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -7,8 +9,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  mode: "jit",
-  jit: true,
+  // Remove deprecated 'mode' and 'jit' options as JIT is enabled by default in Tailwind v3+
   theme: {
     extend: {
       backgroundImage: {
@@ -62,30 +63,52 @@ const config: Config = {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
+        // Additional custom colors
+        transparent: "transparent",
+        green: "#D2EF9A",
+        black: "#1F1F1F",
+        secondary2: "#A0A0A0",
+        white: "#ffffff",
+        surface: "#F7F7F7",
+        red: "#DB4444",
+        purple: "#8684D4",
+        success: "#3DAB25",
+        yellow: "#ECB018",
+        pink: "#F4407D",
+        line: "#E9E9E9",
+        outline: "rgba(0, 0, 0, 0.15)",
+        surface2: "rgba(255, 255, 255, 0.2)",
+        surface1: "rgba(255, 255, 255, 0.1)",
       },
-    },
-    container: {
-      padding: {
-        DEFAULT: "16px",
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        fadeOut: {
+          "0%": { opacity: "1", transform: "translateY(0)" },
+          "100%": { opacity: "0", transform: "translateY(10px)" },
+        },
+        fadeInUp: {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        fadeOutDown: {
+          "0%": { opacity: "1", transform: "translateY(0)" },
+          "100%": { opacity: "0", transform: "translateY(20px)" },
+        },
       },
-    },
-    colors: {
-      transparent: "transparent",
-      green: "#D2EF9A",
-      black: "#1F1F1F",
-      secondary: "#696C70",
-      secondary2: "#A0A0A0",
-      white: "#ffffff",
-      surface: "#F7F7F7",
-      red: "#DB4444",
-      purple: "#8684D4",
-      success: "#3DAB25",
-      yellow: "#ECB018",
-      pink: "#F4407D",
-      line: "#E9E9E9",
-      outline: "rgba(0, 0, 0, 0.15)",
-      surface2: "rgba(255, 255, 255, 0.2)",
-      surface1: "rgba(255, 255, 255, 0.1)",
+      animation: {
+        fadeIn: "fadeIn 0.5s ease-in-out forwards",
+        fadeOut: "fadeOut 0.5s ease-in-out forwards",
+        fadeInUp: "fadeInUp 0.5s ease-in-out forwards",
+        fadeOutDown: "fadeOutDown 0.5s ease-in-out forwards",
+      },
+      container: {
+        padding: {
+          DEFAULT: "16px",
+        },
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

@@ -50,10 +50,13 @@ const ModalQuickview: React.FC = () => {
 
   const handleIncreaseQuantity = () => {
     if (!selectedProduct) return;
-
-    const updatedQuantity = currentQuantity + 1;
+  
+    // Ensure currentQuantity is treated as a number
+    const updatedQuantity = Number(currentQuantity) + 1;
+  
+    // Update the selected product's quantity
     selectedProduct.quantityPurchase = updatedQuantity;
-
+  
     // Update the cart if the item is already in the cart
     updateCart(
       selectedProduct.id,
@@ -62,6 +65,8 @@ const ModalQuickview: React.FC = () => {
       selectedProduct.categories?.main ?? "Uncategorized"
     );
   };
+  
+  
 
   const handleDecreaseQuantity = () => {
     if (!selectedProduct) return;

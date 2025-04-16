@@ -1,80 +1,77 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const BannerAbove = () => {
   return (
-    <div className="banner-block md:pt-10 pt-8">
-      <div className="container">
-        <div className="list-banner grid lg:grid-cols-3 sm:grid-cols-2 lg:gap-[30px] gap-[20px]">
-          <a
+    <div className="banner-block py-10 bg-gradient-to-b  to-white rounded-lg">
+      <div className="container mx-auto px-4">
+        <div className="grid lg:grid-cols-3 sm:grid-cols-2 lg:gap-8 gap-6">
+          {/* Banner 1 */}
+          <Link
             href="/shop"
-            className="banner-item relative py-[53.5px] px-10 bg-[#63B89F] block duration-500 rounded-2xl overflow-hidden"
+            className="banner-item relative bg-teal-500 hover:bg-teal-600 transition-all duration-500 rounded-xl overflow-hidden shadow-md flex items-center justify-between px-8 py-10"
           >
-            <div className="banner-img w-1/2 absolute top-1/2 -translate-y-1/2 right-10">
-              <Image 
-                width={5000}
-                height={5000}
+            <div className="banner-content">
+              <h3 className="text-2xl font-bold text-white leading-tight">
+                Camera <br /> Save Up To  ₹14,000  
+              </h3>
+              <span className="inline-block mt-4 text-sm font-medium text-white border-b-2 border-white">Shop Camera</span>
+            </div>
+            <div className="banner-img w-40 h-40 relative">
+              <Image
                 src="/images/banner/marketplace.png"
-                className="w-full duration-500"
-                alt="img"
+                alt="Camera Banner"
+                layout="fill"
+                objectFit="contain"
+                className="duration-500"
               />
             </div>
-            <div className="banner-content relative">
-              <div className="heading6 text-white">
-                Camera <br />
-                Save Up To $569
-              </div>
-              <div className="text-button text-white relative inline-block pb-1 border-b-2 border-white duration-500 mt-2">
-                Shop Camera
-              </div>
-            </div>
-          </a>
-          <a
+          </Link>
+
+          {/* Banner 2 */}
+          <Link
             href="/shop"
-            className="banner-item relative py-[53.5px] px-10 bg-[#8684D4] block duration-500 rounded-2xl overflow-hidden"
+            className="banner-item relative bg-indigo-500 hover:bg-indigo-600 transition-all duration-500 rounded-xl overflow-hidden shadow-md flex items-center justify-between px-8 py-10"
           >
-            <div className="banner-img w-1/2 absolute top-1/2 -translate-y-1/2 right-10">
+            <div className="banner-content">
+              <h3 className="text-2xl font-bold text-white leading-tight">
+                Speaker <br /> Save Up To  ₹6,900
+              </h3>
+              <span className="inline-block mt-4 text-sm font-medium text-white border-b-2 border-white">Shop Speaker</span>
+            </div>
+            <div className="banner-img w-40 h-40 relative">
               <Image
-                width={5000}
-                height={5000}
                 src="/images/banner/marketplace2.png"
-                className="w-full duration-500"
-                alt="img"
+                alt="Speaker Banner"
+                layout="fill"
+                objectFit="contain"
+                className="duration-500"
               />
             </div>
-            <div className="banner-content relative">
-              <div className="heading6 text-white">
-                Speacker <br />
-                Save Up To $69
-              </div>
-              <div className="text-button text-white relative inline-block pb-1 border-b-2 border-white duration-500 mt-2">
-                Shop Speacker
-              </div>
-            </div>
-          </a>
-          <a
+          </Link>
+
+          {/* Banner 3 */}
+          <Link
             href="/shop"
-            className="banner-item relative py-[53.5px] px-10 bg-[#BE4468] block duration-500 max-lg:hidden max-sm:block rounded-2xl overflow-hidden"
+            className="banner-item relative bg-rose-500 hover:bg-rose-600 transition-all duration-500 rounded-xl overflow-hidden shadow-md flex items-center justify-between px-8 py-10"
           >
-            <div className="banner-img w-1/2 absolute top-1/2 -translate-y-1/2 right-10">
+            <div className="banner-content">
+              <h3 className="text-2xl font-bold text-white leading-tight">
+                Cameras <br /> Save Up To  ₹1690
+              </h3>
+              <span className="inline-block mt-4 text-sm font-medium text-white border-b-2 border-white">Shop Deals</span>
+            </div>
+            <div className="banner-img w-40 h-40 relative">
               <Image
-                width={5000}
-                height={5000}
                 src="/images/banner/marketplace3.png"
-                className="w-full duration-500"
-                alt="img"
+                alt="Cameras Banner"
+                layout="fill"
+                objectFit="contain"
+                className="duration-500"
               />
             </div>
-            <div className="banner-content relative">
-              <div className="heading6 text-white">
-                Cameras <br />
-                Save Up To $169
-              </div>
-              <div className="text-button text-white relative inline-block pb-1 border-b-2 border-white duration-500 mt-2">
-                Shop Deals
-              </div>
-            </div>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

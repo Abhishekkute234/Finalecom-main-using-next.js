@@ -1,22 +1,22 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useCallback, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 import * as Icon from "@phosphor-icons/react/dist/ssr";
+import { useSession, signOut } from "next-auth/react";
 
-// Local state / context imports (adjust as needed)
+// Local state / context imports
 import useLoginPopup from "@/store/useLoginPopup";
 import useSubMenuDepartment from "@/store/useSubMenuDepartment";
 import useMenuMobile from "@/store/useMenuMobile";
 import { useModalCartContext } from "@/context/ModalCartContext";
 import { useModalWishlistContext } from "@/context/ModalWishlistContext";
-import { useCart } from "@/context/CartContext";
-import { useSession, signOut } from "next-auth/react";
+import { useCart } from "@/context/CartsContext";
 
-// 1) Put your category data here or import it from another file:
-const CATEGORY_DATA: Record<string, Record<string, string[]>> = {
+// Category data moved outside component to prevent recreation on each render
+const CATEGORY_DATA = {
   Photography: {
     Cameras: [
       "DSLR Cameras",
@@ -243,69 +243,145 @@ const ShopMainMenu = () => {
   const pathname = usePathname();
   const { data: session } = useSession();
 
-  // Replace with your actual store logic if needed
+  // Store hooks
   const { openLoginPopup, handleLoginPopup } = useLoginPopup();
   const { openSubMenuDepartment } = useSubMenuDepartment();
   const { openMenuMobile, handleMenuMobile } = useMenuMobile();
   const { openModalCart } = useModalCartContext();
-  const { cartState } = useCart();
+  const { cart } = useCart();
   const { openModalWishlist } = useModalWishlistContext();
 
+  // State management
   const [openSubNavMobile, setOpenSubNavMobile] = useState<number | null>(null);
   const [searchKeyword, setSearchKeyword] = useState("");
+  const [openDesktopMenu, setOpenDesktopMenu] = useState<string | null>(null);
 
-  // Sign-out
-  const handleSignOut = async () => {
+  // Memoized event handlers to prevent unnecessary re-renders
+  const handleSignOut = useCallback(async () => {
     await signOut({ redirect: false });
     router.push("/");
-  };
+  }, [router]);
 
-  const [openDesktopMenu, setOpenDesktopMenu] = useState<string | null>(null);
-  // Simple search
-  const handleSearch = (value: string) => {
+  const handleSearch = useCallback((value: string) => {
     router.push(`/search-result?query=${encodeURIComponent(value)}`);
     setSearchKeyword("");
-  };
+  }, [router]);
 
-  // Toggle sub-menu in Mobile
-  const handleOpenSubNavMobile = (index: number) => {
-    setOpenSubNavMobile(openSubNavMobile === index ? null : index);
-  };
-
-  const closeMenuMobile = () => {
+  const closeMenuMobile = useCallback(() => {
     if (openMenuMobile) {
-      handleMenuMobile(); // toggles it off
+      handleMenuMobile();
     }
-  };
+  }, [openMenuMobile, handleMenuMobile]);
 
-  /**
-   * Universal route handler for categories:
-   *   - main => ?category=...
-   *   - sub  => ?subcategory=...
-   *   - subSub => ?subSubCategory=...
-   */
-  const handleCategoryRoute = (main: string, sub?: string, subSub?: string) => {
-    // e.g. /shop?category=Photography&subcategory=Cameras&subSubCategory=Instant%20Cameras
+  const handleCategoryRoute = useCallback((main: string, sub?: string, subSub?: string) => {
     let url = `/shop?category=${encodeURIComponent(main)}`;
     if (sub) url += `&subcategory=${encodeURIComponent(sub)}`;
     if (subSub) url += `&subSubCategory=${encodeURIComponent(subSub)}`;
     router.push(url);
-
-    // Close mobile menu
     closeMenuMobile();
-
-    // Close desktop mega menu
     setOpenDesktopMenu(null);
-  };
+  }, [router, closeMenuMobile]);
+
+  const handleOpenSubNavMobile = useCallback((index: number) => {
+    setOpenSubNavMobile(prevState => prevState === index ? null : index);
+  }, []);
+
+  // Memoize desktop menu content to prevent unnecessary re-renders
+  const desktopMenuContent = useMemo(() => (
+    Object.entries(CATEGORY_DATA).map(
+      ([mainCategory, subCategories]) => (
+        <li
+          key={mainCategory}
+          onMouseEnter={() => setOpenDesktopMenu(mainCategory)}
+          onMouseLeave={() => setOpenDesktopMenu(null)}
+          className="h-full"
+        >
+          <Link
+            href="#!"
+            className="text-button-uppercase duration-300 h-full flex items-center justify-center"
+          >
+            {mainCategory}
+          </Link>
+
+          <div
+            className={`mega-menu absolute top-full left-0 bg-white w-full transition-all duration-300 ease-in-out transform ${
+              openDesktopMenu === mainCategory
+                ? 'opacity-100 scale-100 pointer-events-auto'
+                : 'opacity-0 scale-95 pointer-events-none'
+            }`}
+          >
+            <div className="container">
+              <div className="flex justify-between py-8">
+                <div className="nav-link basis-2/3 grid grid-cols-4 gap-y-8">
+                  {Object.entries(subCategories).map(
+                    ([subCategory, subSubArray]) => (
+                      <div className="nav-item" key={subCategory}>
+                        <div className="text-button-uppercase pb-2">
+                          {subCategory}
+                        </div>
+                        <ul>
+                          {subSubArray.map((subSubItem) => (
+                            <li key={subSubItem}>
+                              <div
+                                onClick={() =>
+                                  handleCategoryRoute(
+                                    mainCategory,
+                                    subCategory,
+                                    subSubItem
+                                  )
+                                }
+                                className="link text-secondary duration-300 cursor-pointer hover:text-red-500"
+                              >
+                                {subSubItem}
+                              </div>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )
+                  )}
+                </div>
+
+                <div className="banner-ads-block pl-2.5 basis-1/3">
+                  <div className="banner-ads-item bg-linear rounded-2xl relative overflow-hidden cursor-pointer">
+                    <Image
+                      src="/images/banner/marketplace2.jpeg"
+                      width={1000}
+                      height={800}
+                      alt="bg-img"
+                      className="absolute left-0 top-0 w-full h-full object-cover"
+                    />
+                    <div className="text-content py-14 pl-8 relative z-10 text-white">
+                      <div className="text-button-uppercase bg-red-500 px-2 py-0.5 inline-block rounded-sm">
+                        Save  ₹700
+                      </div>
+                      <div className="heading6 mt-2">
+                        Dive into Savings
+                      </div>
+                      <div className="body1 mt-3 text-secondary">
+                        Starting at{' '}
+                        <span className="text-red-500"> ₹ 4500</span>
+                      </div>
+                      <div className="button-main mt-5">
+                        Shop Now
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      )
+    )
+  ), [openDesktopMenu, handleCategoryRoute]);
 
   return (
     <>
-      {/* 1) HEADER NAVBAR */}
       <div className="header-menu bg-white w-full top-0 z-10 duration-500">
         <div className="header-menu-main style-marketplace relative bg-[#263587] w-full md:h-[74px] h-[56px]">
           <div className="container mx-auto h-full">
             <div className="header-main flex items-center justify-between h-full">
-              {/* Mobile Icon */}
               <div
                 className="menu-mobile-icon lg:hidden flex items-center"
                 onClick={handleMenuMobile}
@@ -313,12 +389,10 @@ const ShopMainMenu = () => {
                 <Icon.List className="text-white text-2xl" />
               </div>
 
-              {/* Logo */}
               <Link href="/" className="flex items-center">
                 <div className="heading4 text-white">ImagingGifts</div>
               </Link>
 
-              {/* Desktop Search Bar */}
               <div className="form-search w-2/3 pl-8 flex items-center h-[44px] max-lg:hidden">
                 <div className="w-full flex items-center h-full">
                   <input
@@ -350,9 +424,8 @@ const ShopMainMenu = () => {
                         onClick={handleLoginPopup}
                       />
                       <div
-                        className={`login-popup absolute top-[74px] w-[320px] p-7 rounded-xl bg-white box-shadow-sm ${
-                          openLoginPopup ? "open" : ""
-                        }`}
+                        className={`login-popup absolute top-[74px] w-[320px] p-7 rounded-xl bg-white box-shadow-sm ${openLoginPopup ? "open" : ""
+                          }`}
                       >
                         <Link
                           href={"/profile"}
@@ -384,9 +457,8 @@ const ShopMainMenu = () => {
                         onClick={handleLoginPopup}
                       />
                       <div
-                        className={`login-popup absolute top-[74px] w-[320px] p-7 rounded-xl bg-white box-shadow-sm ${
-                          openLoginPopup ? "open" : ""
-                        }`}
+                        className={`login-popup absolute top-[74px] w-[320px] p-7 rounded-xl bg-white box-shadow-sm ${openLoginPopup ? "open" : ""
+                          }`}
                       >
                         <Link
                           href={"/login"}
@@ -395,7 +467,7 @@ const ShopMainMenu = () => {
                           Login
                         </Link>
                         <div className="text-secondary text-center mt-3 pb-4">
-                          Don’t have an account?
+                          Dont have an account?
                           <Link
                             href={"/register"}
                             className="text-black pl-1 hover:underline"
@@ -422,7 +494,7 @@ const ShopMainMenu = () => {
                   >
                     <Icon.Handbag weight="bold" size={24} color="white" />
                     <span className="quantity cart-quantity absolute -right-1.5 -top-1.5 text-xs text-white bg-red w-4 h-4 flex items-center justify-center rounded-full">
-                      {cartState.cartArray.length}
+                      {cart.length}
                     </span>
                   </div>
                 </div>
@@ -431,107 +503,13 @@ const ShopMainMenu = () => {
           </div>
         </div>
 
-        {/* 2) DESKTOP MEGA MENU */}
         <div className="top-nav-menu relative bg-white border-b border-line h-[44px] max-lg:hidden z-10">
           <div className="container h-full">
             <div className="top-nav-menu-main h-full">
               <div className="h-full">
                 <div className="menu-main style-eight h-full max-lg:hidden">
-                  <ul className="flex  items-center gap-8 justify-between h-full">
-                    {Object.entries(CATEGORY_DATA).map(
-                      ([mainCategory, subCategories], index) => (
-                        <li
-                          key={mainCategory}
-                          onMouseEnter={() => setOpenDesktopMenu(mainCategory)}
-                          className="h-full "
-                        >
-                          {/* Top-level link (main category) */}
-                          <Link
-                            href="#!"
-                            className="text-button-uppercase  duration-300 h-full flex items-center justify-center"
-                          >
-                            {mainCategory}
-                          </Link>
-
-                          {/* Mega Menu Dropdown */}
-
-                          {openDesktopMenu === mainCategory && (
-                            <div className=" mega-menu absolute top-[44px]  left-0 bg-white w-screen">
-                              <div className="container ">
-                                <div className="flex justify-between py-8">
-                                  {/* Left side: sub categories */}
-                                  <div className="nav-link  basis-2/3 grid grid-cols-4 gap-y-8">
-                                    {Object.entries(subCategories).map(
-                                      ([subCategory, subSubArray]) => (
-                                        <div
-                                          className="nav-item"
-                                          key={subCategory}
-                                        >
-                                          <div className="text-button-uppercase pb-2">
-                                            {subCategory}
-                                          </div>
-                                          <ul>
-                                            {subSubArray.map((subSubItem) => (
-                                              <li key={subSubItem}>
-                                                <div
-                                                  onClick={() =>
-                                                    handleCategoryRoute(
-                                                      mainCategory,
-                                                      subCategory,
-                                                      subSubItem
-                                                    )
-                                                  }
-                                                  className="link text-secondary duration-300 cursor-pointer"
-                                                >
-                                                  {subSubItem}
-                                                </div>
-                                              </li>
-                                            ))}
-                                          </ul>
-                                        </div>
-                                      )
-                                    )}
-                                  </div>
-
-                                  {/* Right side: banner or ads (you can keep or change this as needed) */}
-                                  <div className="banner-ads-block pl-2.5 basis-1/3">
-                                    <div className="banner-ads-item bg-linear rounded-2xl relative overflow-hidden cursor-pointer">
-                                      <Image
-                                        src={
-                                          "/images/other/bg-feature-organic.png"
-                                        }
-                                        width={1000}
-                                        height={800}
-                                        alt="bg-img"
-                                        className="absolute left-0 top-0 w-full h-full object-cover"
-                                      />
-                                      <div className="text-content py-14 pl-8 relative z-[1] text-white">
-                                        <div className="text-button-uppercase bg-red px-2 py-0.5 inline-block rounded-sm">
-                                          Save $10
-                                        </div>
-                                        <div className="heading6 mt-2">
-                                          Dive into Savings
-                                        </div>
-                                        <div className="body1 mt-3 text-secondary">
-                                          Starting at{" "}
-                                          <span className="text-red">
-                                            $59.99
-                                          </span>
-                                        </div>
-                                        <div className="button-main mt-5">
-                                          Shop Now
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* end right side */}
-                                </div>
-                              </div>
-                            </div>
-                          )}
-                        </li>
-                      )
-                    )}
+                  <ul className="flex items-center gap-8 justify-between h-full">
+                    {desktopMenuContent}
                   </ul>
                 </div>
               </div>
@@ -539,113 +517,83 @@ const ShopMainMenu = () => {
           </div>
         </div>
       </div>
-      {/* end HEADER NAVBAR */}
 
-      {/* 3) MOBILE MENU */}
-      <div id="menu-mobile" className={openMenuMobile ? "open" : ""}>
-        <div className="menu-container bg-white h-full">
-          <div className="container h-full">
-            <div className="menu-main h-full overflow-hidden">
-              {/* Mobile Header */}
-              <div className="heading py-2 relative flex items-center justify-center">
-                <div
-                  className="close-menu-mobile-btn absolute left-0 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-surface flex items-center justify-center"
-                  onClick={handleMenuMobile}
-                >
-                  <Icon.X size={14} />
-                </div>
-                <Link
-                  href="/"
-                  className="logo text-3xl font-semibold text-center"
-                >
-                  ImagingGifts
-                </Link>
-              </div>
+      <div id="menu-mobile" className={`menu-mobile ${openMenuMobile ? "open" : ""}`}>
+        <div className="menu-container bg-white h-full overflow-y-auto">
+          <div className="container h-full flex flex-col">
+            <div className="header py-4 px-6 flex items-center justify-between border-b border-gray-200">
+              <button
+                className="close-menu-btn text-gray-600 hover:text-black transition duration-300"
+                onClick={handleMenuMobile}
+              >
+                Close
+              </button>
+              <h1 className="text-xl font-bold text-center">ImagingGifts</h1>
+              <div></div>
+            </div>
 
-              {/* Mobile Search */}
-              <div className="form-search relative mt-2 px-4">
-                <Icon.MagnifyingGlass
-                  size={20}
-                  className="absolute left-6 top-1/2 -translate-y-1/2 cursor-pointer"
-                />
+            <div className="search-section mt-4 px-6">
+              <div className="relative">
                 <input
-                  placeholder="What are you looking for?"
-                  className="h-12 rounded-lg border border-line text-sm w-full pl-10 pr-4"
+                  type="text"
+                  placeholder="Search for products..."
+                  className="w-full h-12 px-4 pr-12 rounded-lg border border-gray-300 focus:border-primary focus:outline-none transition duration-300"
                   value={searchKeyword}
                   onChange={(e) => setSearchKeyword(e.target.value)}
-                  onKeyDown={(e) =>
-                    e.key === "Enter" && handleSearch(searchKeyword)
-                  }
+                  onKeyDown={(e) => e.key === "Enter" && handleSearch(searchKeyword)}
                 />
+                <div 
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 cursor-pointer"
+                  onClick={() => handleSearch(searchKeyword)}
+                >
+                  Search
+                </div>
               </div>
+            </div>
 
-              {/* Mobile Nav List */}
-              <div className="list-nav mt-6 px-4">
-                <ul>
-                  {Object.entries(CATEGORY_DATA).map(
-                    ([mainCategory, subCategories], index) => (
-                      <li
-                        key={mainCategory}
-                        className={`${
-                          openSubNavMobile === index ? "open" : ""
-                        } mt-4`}
-                      >
-                        {/* Toggle Main Category */}
+            <div className="navigation mt-6 flex-1 overflow-y-auto">
+              <ul className="px-6 space-y-4">
+                {Object.entries(CATEGORY_DATA).map(([mainCategory, subCategories], index) => (
+                  <li key={mainCategory} className="category-item">
+                    <div
+                      className="main-category flex items-center justify-between py-3 border-b border-gray-200 cursor-pointer transition duration-300 hover:bg-gray-50"
+                      onClick={() => handleOpenSubNavMobile(index)}
+                    >
+                      <span className="text-lg font-medium">{mainCategory}</span>
+                      <span className="text-gray-500">+</span>
+                    </div>
+
+                    {openSubNavMobile === index && (
+                      <div className="sub-menu mt-4 space-y-4">
                         <div
-                          className="text-xl font-semibold flex items-center justify-between cursor-pointer"
+                          className="back-btn flex items-center gap-2 text-gray-600 cursor-pointer hover:text-black transition duration-300"
                           onClick={() => handleOpenSubNavMobile(index)}
                         >
-                          {mainCategory}
-                          <Icon.CaretRight size={20} />
+                          <span>Back</span>
                         </div>
 
-                        {/* Sub-Menu Mobile */}
-                        {openSubNavMobile === index && (
-                          <div className="sub-nav-mobile">
-                            <div
-                              className="back-btn flex items-center gap-3 mt-2 mb-4 cursor-pointer"
-                              onClick={() => handleOpenSubNavMobile(index)}
-                            >
-                              <Icon.CaretLeft />
-                              <span>Back</span>
-                            </div>
-                            <div className="list-nav-item w-full grid grid-cols-2 gap-4 pb-4">
-                              {/* For each subCategory */}
-                              {Object.entries(subCategories).map(
-                                ([subCategory, subSubArray]) => (
-                                  <ul key={subCategory}>
-                                    <li>
-                                      <div className="font-semibold mb-2">
-                                        {subCategory}
-                                      </div>
-                                    </li>
-                                    {subSubArray.map((item) => (
-                                      <li key={item}>
-                                        <div
-                                          onClick={() =>
-                                            handleCategoryRoute(
-                                              mainCategory,
-                                              subCategory,
-                                              item
-                                            )
-                                          }
-                                          className="nav-item-mobile text-secondary duration-300 cursor-pointer"
-                                        >
-                                          {item}
-                                        </div>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                )
-                              )}
-                            </div>
+                        {Object.entries(subCategories).map(([subCategory, subSubArray]) => (
+                          <div key={subCategory} className="sub-category">
+                            <h3 className="font-semibold text-gray-800 mb-2">{subCategory}</h3>
+                            <ul className="space-y-2">
+                              {subSubArray.map((item) => (
+                                <li key={item}>
+                                  <div
+                                    onClick={() => handleCategoryRoute(mainCategory, subCategory, item)}
+                                    className="nav-item text-gray-700 hover:text-primary transition duration-300 cursor-pointer"
+                                  >
+                                    {item}
+                                  </div>
+                                </li>
+                              ))}
+                            </ul>
                           </div>
-                        )}
-                      </li>
-                    )
-                  )}
-                </ul>
-              </div>
+                        ))}
+                      </div>
+                    )}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
@@ -654,4 +602,5 @@ const ShopMainMenu = () => {
   );
 };
 
-export default ShopMainMenu;
+// Use React.memo to prevent unnecessary re-renders of the whole component
+export default React.memo(ShopMainMenu);
