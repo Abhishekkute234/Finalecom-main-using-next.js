@@ -60,20 +60,31 @@ export async function GET(req: NextRequest) {
       await connectToDatabase();
   
       const cart = await Cart.findOne({ userEmail: email }).populate("items.productId");
-      if (!cart || cart.items.length === 0) {
+
+      if (!cart || !Array.isArray(cart.items) || cart.items.length === 0) {
         return NextResponse.json({ cart: [], message: "Cart is empty" });
       }
+      
   
-      const cartDetails = cart.items.map((item: any) => ({
-        productId: item.productId._id,
-        productName: item.productId.productName,
-        quantity: item.quantity,
-        price: item.productId.priceDetails.offerPrice || item.productId.priceDetails.mrp,
-        totalPrice: item.quantity * (item.productId.priceDetails.offerPrice || item.productId.priceDetails.mrp),
-        thumbImage: item.productId.thumbImage,
-        productSKU: item.productId.productSKU
-      }));
-  
+      const cartDetails = cart.items.map((item: any) => {
+        if (!item.productId) {
+          console.error('Product ID is missing for item:', item);
+          return null;  // Skip items with missing productId
+        }
+      
+        return {
+          productId: item.productId._id,
+          productName: item.productId.productName,
+          quantity: item.quantity,
+          price: item.productId.priceDetails.offerPrice || item.productId.priceDetails.mrp,
+          totalPrice: item.quantity * (item.productId.priceDetails.offerPrice || item.productId.priceDetails.mrp),
+          thumbImage: item.productId.thumbImage,
+          productSKU: item.productId.productSKU
+        };
+      }).filter((item: any) => item !== null); // Remove null items
+      
+      return NextResponse.json({ cart: cartDetails });
+      
       return NextResponse.json({ cart: cartDetails });
     } catch (error) {
       console.error("GET Error:", error);

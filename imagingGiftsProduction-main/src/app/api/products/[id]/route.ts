@@ -1,3 +1,4 @@
+// app/api/products/[id]/route.ts
 import { NextResponse } from "next/server";
 import Product from "@/models/Product";
 import connectToDatabase from "@/lib/mongodb";
@@ -10,8 +11,10 @@ interface PriceDetails {
 
 interface ProductDocument {
   _id: string;
-  name: string;
+  name?: string;          // This field may or may not be set
+  productName?: string;   // This field may or may not be set
   priceDetails: PriceDetails;
+  thumbImage: string;
 }
 
 const ensureDatabaseConnection = async () => {
@@ -48,7 +51,9 @@ export async function GET(
       );
     }
 
-    const product = (await Product.findById(id).lean()) as ProductDocument | null;
+    const product = (await Product.findById(id).lean()) as
+      | ProductDocument
+      | null;
 
     if (!product) {
       return NextResponse.json(
@@ -57,11 +62,18 @@ export async function GET(
       );
     }
 
+    // Ensure both fields are set and fallback to a default value if needed.
+    const standardizedName = product.name || product.productName || "Unknown Product";
+
     const formattedProduct = {
       ...product,
+      name: standardizedName,
+      productName: standardizedName,
       priceDetails: {
-        offerPrice: formatPrice(product.priceDetails.offerPrice),
-        mrp: formatPrice(product.priceDetails.mrp),
+        offerPrice: product.priceDetails.offerPrice, // raw number for calculations
+        formattedOfferPrice: formatPrice(product.priceDetails.offerPrice),
+        mrp: product.priceDetails.mrp,
+        formattedMrp: formatPrice(product.priceDetails.mrp),
       },
     };
 

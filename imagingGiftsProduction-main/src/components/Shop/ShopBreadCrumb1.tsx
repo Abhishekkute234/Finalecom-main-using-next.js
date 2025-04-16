@@ -86,6 +86,22 @@ const ShopBreadCrumb1: React.FC = () => {
 
   const abortControllerRef = useRef<AbortController | null>(null);
   const prevParams = useRef<string>('');
+  const FilterTag = ({
+    label,
+    onRemove,
+  }: {
+    label: string;
+    onRemove: () => void;
+  }) => (
+    <div
+      className="flex items-center gap-1 bg-gray-100 border border-gray-300 text-gray-700 px-3 py-1 rounded-full text-sm whitespace-nowrap cursor-pointer hover:bg-gray-200 transition"
+      onClick={onRemove}
+    >
+      <Icon.X size={12} />
+      <span className="capitalize">{label}</span>
+    </div>
+  );
+  
 
 
 
@@ -716,7 +732,7 @@ const ShopBreadCrumb1: React.FC = () => {
   {/* Slider */}
   <Slider
     range
-    defaultValue={[0, 10000]}
+    defaultValue={[0, 100000]}
     min={0}
     max={100000} // Adjust max as per your data
     onAfterChange={handlePriceChange} // Use onAfterChange to reduce API calls
@@ -793,206 +809,190 @@ const ShopBreadCrumb1: React.FC = () => {
 
           {/* PRODUCT LIST */}
           <div className="list-product-block lg:w-3/4 md:w-2/3 w-full md:pl-3">
-            {/* Filter heading and Search Bar */}
-            <div className="flex justify-between items-center flex-wrap gap-6 bg-gray-50 p-4 rounded-lg shadow-sm">
-              {/* SEARCH PRODUCTS */}
-              <div className="relative w-full max-w-sm">
-                <label htmlFor="search" className="sr-only">
-                  Search Products
-                </label>
-                <input
-                  type="text"
-                  id="search"
-                  name="search"
-                  value={searchTerm}
-                  onChange={handleSearchInputChange}
-                  onKeyDown={handleSearchSubmit}
-                  placeholder="Search products..."
-                  className="w-full  border border-gray-300 rounded-lg pl-12 pr-12 py-3  text-gray-700 placeholder-gray-400"
-                  aria-label="Search Products"
-                />
-                <Icon.MagnifyingGlass
-                  size={20}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"
-                />
-                {searchTerm && (
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setSearchTerm("");
-                      setSearchQuery(""); // Also clear the search query
-                    }}
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 "
-                    aria-label="Clear search"
-                  >
-                    <Icon.X size={20} />
-                  </button>
-                )}
-              </div>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6 bg-white p-4 rounded-xl">
+  {/* SEARCH PRODUCTS */}
+  <div className="relative w-full md:max-w-md">
+    <label htmlFor="search" className="sr-only">
+      Search Products
+    </label>
+    <input
+      type="text"
+      id="search"
+      name="search"
+      value={searchTerm}
+      onChange={handleSearchInputChange}
+      onKeyDown={handleSearchSubmit}
+      placeholder="Search for products, brands, categories..."
+      className="w-full border border-gray-300 rounded-full bg-white pl-14 pr-14 py-3 text-sm text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+      aria-label="Search Products"
+    />
+    <Icon.MagnifyingGlass
+      size={18}
+      className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"
+    />
+    {searchTerm && (
+      <button
+        type="button"
+        onClick={() => {
+          setSearchTerm("");
+          setSearchQuery("");
+        }}
+        className="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-red-500 transition-colors"
+        aria-label="Clear search"
+      >
+        <Icon.X size={18} />
+      </button>
+    )}
+  </div>
 
-              {/* Sorting Dropdown */}
-              <div className="relative">
-                <label htmlFor="select-filter" className="sr-only">
-                  Sort Products
-                </label>
-                <select
-                  id="select-filter"
-                  name="select-filter"
-                  className="block w-48 bg-white border border-gray-300 rounded-lg py-3 px-4 text-gray-700 appearance-none"
-                  onChange={(e) => handleSortChange(e.target.value)}
-                  value={sortOption || ""}
-                  aria-label="Sort Products"
-                >
-                  <option value="" disabled>
-                    Sorting
-                  </option>
-                  <option value="bestSelling">Best Selling</option>
-                  <option value="bestDiscount">Best Discount</option>
-                  <option value="priceHighToLow">Price High To Low</option>
-                  <option value="priceLowToHigh">Price Low To High</option>
-                </select>
-                <Icon.CaretDown
-                  size={16}
-                  className="absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-500 pointer-events-none"
-                />
-              </div>
-            </div>
+  {/* SORTING DROPDOWN */}
+  <div className="relative w-full md:w-auto">
+    <label htmlFor="select-filter" className="sr-only">
+      Sort Products
+    </label>
+    <select
+      id="select-filter"
+      name="select-filter"
+      className="w-full md:w-52 border border-gray-300 rounded-full py-3 px-5 pr-10 text-sm text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 appearance-none"
+      onChange={(e) => handleSortChange(e.target.value)}
+      value={sortOption || ""}
+      aria-label="Sort Products"
+    >
+      <option value="" disabled>
+        Sort by
+      </option>
+      <option value="bestSelling">Best Selling</option>
+      <option value="bestDiscount">Best Discount</option>
+      <option value="priceHighToLow">Price High To Low</option>
+      <option value="priceLowToHigh">Price Low To High</option>
+    </select>
+    <Icon.CaretDown
+      size={16}
+      className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none"
+    />
+  </div>
+</div>
+
 
 
             {/* List of applied filters (tags) */}
-            <div className="list-filtered flex items-center gap-3 mt-4">
-              <div className="total-product">
-                {totalProducts}
-                <span className="text-secondary pl-1">Products Found</span>
-              </div>
+       {/* Applied Filters */}
+<div className="mt-4 w-full">
+  <div className="flex flex-wrap justify-between items-center gap-3">
+    {/* Product Count */}
+    <div className="text-sm font-medium text-gray-700">
+      {totalProducts}
+      <span className="text-gray-500 pl-1">Products Found</span>
+    </div>
 
-              {(selectedMain ||
-                selectedSub ||
-                selectedSubSub ||
-                brand ||
-                type ||
-                searchQuery) && (
-                  <>
-                    <div className="list flex items-center gap-3">
-                      <div className="w-px h-4 bg-line"></div>
+    {/* Clear All Button */}
+    {(selectedMain || selectedSub || selectedSubSub || brand || type || searchQuery) && (
+      <button
+        onClick={handleClearAll}
+        className="flex items-center gap-1 text-red-600 border border-red-400 px-3 py-1 rounded-full hover:bg-red-50 transition"
+      >
+        <Icon.X size={14} />
+        <span className="text-sm font-medium">Clear All</span>
+      </button>
+    )}
+  </div>
 
-                      {selectedMain && (
-                        <div
-                          className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize cursor-pointer"
-                          onClick={() => setSelectedMain(null)}
-                        >
-                          <Icon.X className="cursor-pointer" />
-                          <span>{selectedMain}</span>
-                        </div>
-                      )}
-                      {selectedSub && (
-                        <div
-                          className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize cursor-pointer"
-                          onClick={() => setSelectedSub(null)}
-                        >
-                          <Icon.X className="cursor-pointer" />
-                          <span>{selectedSub}</span>
-                        </div>
-                      )}
-                      {selectedSubSub && (
-                        <div
-                          className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize cursor-pointer"
-                          onClick={() => setSelectedSubSub(null)}
-                        >
-                          <Icon.X className="cursor-pointer" />
-                          <span>{selectedSubSub}</span>
-                        </div>
-                      )}
-                      {brand && (
-                        <div
-                          className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize cursor-pointer"
-                          onClick={() => setBrand(null)}
-                        >
-                          <Icon.X className="cursor-pointer" />
-                          <span>{brand}</span>
-                        </div>
-                      )}
-                      {type && (
-                        <div
-                          className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize cursor-pointer"
-                          onClick={() => setType(null)}
-                        >
-                          <Icon.X className="cursor-pointer" />
-                          <span>{type}</span>
-                        </div>
-                      )}
-                      {searchQuery.trim() !== "" && (
-                        <div
-                          className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize cursor-pointer"
-                          onClick={() => {
-                            setSearchTerm("");
-                            setSearchQuery("");
-                          }}
-                        >
-                          <Icon.X className="cursor-pointer" />
-                          <span>Search: &quot;{searchQuery.trim()}&quot;</span>
-                        </div>
-                      )}
-                    </div>
+  {/* Active Filters Scroll Area */}
+  {(selectedMain || selectedSub || selectedSubSub || brand || type || searchQuery) && (
+    <div className="mt-3 overflow-x-auto w-full">
+      <div className="flex items-center gap-2 min-w-max">
+        {selectedMain && (
+          <FilterTag label={selectedMain} onRemove={() => setSelectedMain(null)} />
+        )}
+        {selectedSub && (
+          <FilterTag label={selectedSub} onRemove={() => setSelectedSub(null)} />
+        )}
+        {selectedSubSub && (
+          <FilterTag label={selectedSubSub} onRemove={() => setSelectedSubSub(null)} />
+        )}
+        {brand && (
+          <FilterTag label={brand} onRemove={() => setBrand(null)} />
+        )}
+        {type && (
+          <FilterTag label={type} onRemove={() => setType(null)} />
+        )}
+        {searchQuery.trim() !== "" && (
+          <FilterTag
+            label={`Search: "${searchQuery.trim()}"`}
+            onRemove={() => {
+              setSearchTerm("");
+              setSearchQuery("");
+            }}
+          />
+        )}
+      </div>
+    </div>
+  )}
+</div>
 
-                    <div
-                      className="clear-btn flex items-center px-2 py-1 gap-1 rounded-full border border-red cursor-pointer"
-                      onClick={handleClearAll}
-                    >
-                      <Icon.X color="rgb(219, 68, 68)" />
-                      <span className="text-button-uppercase text-red">
-                        Clear All
-                      </span>
-                    </div>
-                  </>
-                )}
-            </div>
 
-            {/* List of products */}
-            <div className="relative w-full ">
+  {/* List of Products */}
+<div className="relative w-full">
+  <div className="list-product hide-product-sold grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 gap-6 mt-8">
+  {loading ? (
+  Array.from({ length: 6 }).map((_, index) => (
+    <div
+      key={index}
+      className="animate-pulse p-4 border border-gray-200 rounded-2xl bg-white space-y-4"
+    >
+      {/* Image Skeleton */}
+      <div className="relative w-full aspect-square bg-gray-200 rounded-xl"></div>
 
-              <div className="list-product hide-product-sold grid lg:grid-cols-3 grid-cols-2 sm:gap-[30px] gap-[20px] mt-7">
-                {loading ? (
-                  Array.from({ length: 6 }).map((_, index) => (
-                    <div
-                      key={index}
-                      className="skeleton-product bg-gray-200 rounded-md p-4 animate-pulse"
-                    >
-                      <div className="skeleton-image h-36 bg-gray-300 rounded-md mb-4"></div>
-                      <div className="skeleton-text h-4 bg-gray-300 rounded mb-2"></div>
-                      <div className="skeleton-text h-4 bg-gray-300 rounded w-3/4"></div>
-                    </div>
-                  ))
-                ) : error ? (
-                  <div className="col-span-full text-center text-red-500 py-10">
-                    {error}
-                  </div>
-                ) : products.length > 0 ? (
-                  products.map((item) => (
-                    <Product key={item.id} data={item} type="marketplace" />
-                  ))
-                ) : (
-                  <div className="no-data-product col-span-full text-center py-10  rounded-lg shadow-md border border-gray-300">
-                  <div className="flex flex-col items-center space-y-4">
-                    <h2 className="text-xl font-semibold text-gray-700">
-                      No Products Found
-                    </h2>
-                    <p className="text-gray-500 text-sm">
-                      We couldn’t find any products matching your criteria. Try adjusting your filters or search keywords.
-                    </p>
-                    <button
-                      onClick={handleClearAll} // Example function to reset filters
-                      className="mt-4 px-6 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:outline-none"
-                    >
-                      Reset Filters
-                    </button>
-                  </div>
-                </div>
-                
-                )}
-              </div>;
+   
 
-            </div>
+      {/* Product Info Skeleton */}
+      <div className="space-y-2 mt-2">
+        <div className="h-4 w-3/4 bg-gray-300 rounded"></div>
+        <div className="flex items-center gap-2">
+          <div className="h-3 w-20 bg-gray-300 rounded"></div>
+          <div className="h-3 w-12 bg-gray-200 rounded"></div>
+        </div>
+      </div>
+
+      {/* Price Skeleton */}
+      <div className="flex gap-3 mt-2">
+        <div className="h-4 w-16 bg-gray-300 rounded"></div>
+        <div className="h-4 w-12 bg-gray-200 rounded"></div>
+      </div>
+
+      {/* Buttons Skeleton */}
+      <div className="flex gap-3 mt-4">
+        <div className="h-9 w-full bg-gray-300 rounded-lg"></div>
+        <div className="h-9 w-full bg-gray-300 rounded-lg"></div>
+      </div>
+    </div>
+  ))
+) : error ? (
+  <div className="col-span-full text-center text-red-500 py-10">{error}</div>
+) : products.length > 0 ? (
+  products.map((item) => (
+    <Product key={item.id} data={item} type="marketplace" />
+  ))
+) : (
+  <div className="no-data-product col-span-full text-center py-10 rounded-lg shadow-md border border-gray-300">
+    <div className="flex flex-col items-center space-y-4">
+      <h2 className="text-xl font-semibold text-gray-700">No Products Found</h2>
+      <p className="text-gray-500 text-sm">
+        We couldn’t find any products matching your criteria. Try adjusting your filters or search keywords.
+      </p>
+      <button
+        onClick={handleClearAll}
+        className="mt-4 px-6 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:outline-none"
+      >
+        Reset Filters
+      </button>
+    </div>
+  </div>
+)}
+
+  </div>
+</div>
+
 
             {/* Pagination if more than 1 page */}
             {pageCount > 1 && (

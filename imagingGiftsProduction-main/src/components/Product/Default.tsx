@@ -167,6 +167,7 @@ const Default: React.FC<Props> = ({ data, productId }) => {
                       height={1000}
                       alt="prd-img"
                       className="w-full aspect-[3/4] object-contain"
+                      unoptimized
                     />
                   </SwiperSlide>
                 ))}
@@ -192,6 +193,7 @@ const Default: React.FC<Props> = ({ data, productId }) => {
                         height={1000}
                         alt="Product Image"
                         className="w-full aspect-[3/4] object-contain"
+                        unoptimized
                       />
                     </SwiperSlide>
                   ))}
@@ -228,6 +230,7 @@ const Default: React.FC<Props> = ({ data, productId }) => {
                         alt="prd-img"
                         className="w-full aspect-[3/4] object-contain rounded-xl"
                         onClick={(e) => e.stopPropagation()}
+                        unoptimized
                       />
                     </SwiperSlide>
                   ))}

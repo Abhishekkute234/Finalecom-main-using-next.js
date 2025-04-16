@@ -49,16 +49,10 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
 
 
   const handleAddToCart = () => {
-    if (!session) {
-      // Redirect to /login if the user is not logged in
-      toast.error("Login required");
-      router.push("/login");
-      return;
-    }
-
     addToCart(_id, 1); // Add one product to the cart
     openModalCart();
-  };
+};
+
 
   const handleBuyNow = () => {
     if (!session) { 
@@ -136,7 +130,7 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
               height={5000}
               src={thumbImage || "/placeholder.jpg"}
               alt={productName || "Product Image"}
-              priority
+              unoptimized
             />
 
             {/* Action buttons (top-right) */}

@@ -10,6 +10,7 @@ import { useOrder } from '@/context/OrderContext';
 import { useCart } from '@/context/CartsContext';
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
+import Script from 'next/script';
 
 const Checkout = ({ searchParams }: { searchParams: { id?: string } }) => {
   const productId = searchParams?.id;
@@ -204,20 +205,23 @@ const Checkout = ({ searchParams }: { searchParams: { id?: string } }) => {
       console.error("Error during checkout:", error);
       alert("Payment failed. Please try again.");
     }
-  };
-
-
-
-
-
+  }
 
 
   return (
-    <div className="checkout-block bg-gray-50 min-h-screen">
+
+    <>
+    
+    <Script
+        src="https://checkout.razorpay.com/v1/checkout.js"
+        strategy="afterInteractive"
+      />
+ 
+    <div className="checkout-block  min-h-screen">
       <div className="container mx-auto px-4 lg:px-10 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Left Section - Form */}
-          <form className="bg-white shadow-lg rounded-lg p-6" onSubmit={handleCheckout}>
+          <form className="bg-white rounded-lg p-6" onSubmit={handleCheckout}>
             <h2 className="text-2xl font-semibold text-gray-800 mb-6">Shipping Information</h2>
             <div className="mb-6">
               <label htmlFor="email" className="block text-gray-700 mb-1">Email Address</label>
@@ -335,7 +339,7 @@ const Checkout = ({ searchParams }: { searchParams: { id?: string } }) => {
           </form>
 
           {/* Right Section - Order Summary */}
-          <div className="bg-white shadow-lg rounded-lg p-6">
+          <div className="bg-white  rounded-lg p-6">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6">Order Summary</h2>
             {items.map((item) => (
               <div key={item.productId} className="flex items-center gap-6 mb-6">
@@ -380,6 +384,7 @@ const Checkout = ({ searchParams }: { searchParams: { id?: string } }) => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

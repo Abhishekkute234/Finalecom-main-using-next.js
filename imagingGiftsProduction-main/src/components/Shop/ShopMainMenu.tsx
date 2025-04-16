@@ -390,7 +390,13 @@ const ShopMainMenu = () => {
               </div>
 
               <Link href="/" className="flex items-center">
-                <div className="heading4 text-white">ImagingGifts</div>
+             
+                <Image 
+                  src="/logo.png"
+                  width={150}
+                  height={150}
+                  alt="logo"
+                  className="ml-2" />
               </Link>
 
               <div className="form-search w-2/3 pl-8 flex items-center h-[44px] max-lg:hidden">

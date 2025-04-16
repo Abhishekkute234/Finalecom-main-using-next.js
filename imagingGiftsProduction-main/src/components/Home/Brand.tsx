@@ -27,7 +27,7 @@ const Brand = () => {
                     >
                         {[...Array(6)].map((_, index) => (
                             <SwiperSlide key={index}>
-                                <div className="brand-item flex items-center justify-center h-[60px] bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                                <div className="brand-item flex items-center justify-center h-[60px]  transition duration-300">
                                     <Image
                                         src={`/images/brand/${index + 1}.png`}
                                         width={150}

@@ -21,41 +21,51 @@ interface SideMenuProps {
 
 }
 
+const iconClass = "text-black"; // You can change this to any Tailwind text color class
+
 const categories = [
-  { name: "Photography", names: "Photography", icon: <PiGooglePhotosLogoThin />, href: "/shop" },
-  { name: "Videography", names: "Videography", icon: <CiVideoOn />, href: "/shop" },
-  { name: "Accessories", names: "Accessories", icon: <PiDroneThin />, href: "/shop" },
-  { name: "Lighting", names: "Lighting", icon: <BsSoundwave />, href: "/shop" },
+  { name: "Photography", names: "Photography", icon: <PiGooglePhotosLogoThin className={iconClass} />, href: "/shop" },
+  { name: "Videography", names: "Videography", icon: <CiVideoOn className={iconClass} />, href: "/shop" },
+  { name: "Accessories", names: "Accessories", icon: <PiDroneThin className={iconClass} />, href: "/shop" },
+  { name: "Lighting", names: "Lighting", icon: <BsSoundwave className={iconClass} />, href: "/shop" },
   {
     name: "Drones",
     names: "Drones",
-    icon: <PiHandbagSimpleThin />,
+    icon: <PiHandbagSimpleThin className={iconClass} />,
     main: "Photography",
     href: "/shop",
-    isSubCategory: true, // Mark this as a subcategory
+    isSubCategory: true,
   },
   {
     name: "Tripods",
     names: "Photo Tripod & Supports",
-    icon: <PiBabyCarriageThin />,
+    icon: <PiBabyCarriageThin className={iconClass} />,
     href: "/shop",
   },
-  { name: "Battery", names: "Battery & Power", main: "Accessories", isSubCategory: true, icon: <TfiLightBulb />, href: "/shop" },
+  {
+    name: "Battery",
+    names: "Battery & Power",
+    main: "Accessories",
+    isSubCategory: true,
+    icon: <TfiLightBulb className={iconClass} />,
+    href: "/shop",
+  },
   {
     name: "Adapters",
     names: "Cables & Adapters",
-    icon: <PiComputerTowerThin />,
+    icon: <PiComputerTowerThin className={iconClass} />,
     href: "/shop",
   },
   {
     name: "Memory Cards",
     names: "Memory & Storage",
-    isSubCategory: true, 
+    isSubCategory: true,
     main: "Photography",
-    icon: <PiHeadphonesThin />,
+    icon: <PiHeadphonesThin className={iconClass} />,
     href: "/shop",
   },
 ];
+
 
 const SideMenu: React.FC<SideMenuProps> = ({ className }) => {
   const [loadingCategory, setLoadingCategory] = useState<string | null>(null);

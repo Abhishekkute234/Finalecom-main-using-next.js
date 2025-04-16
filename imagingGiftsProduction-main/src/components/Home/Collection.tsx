@@ -8,12 +8,12 @@ const Collection = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="flex items-center justify-between flex-wrap mb-8">
-          <h2 className="text-2xl font-bold text-gray-800 tracking-wide uppercase border-b-4 border-blue-500 pb-2">
+        <h2 className="text-2xl font-bold text-gray-800 tracking-wide uppercase border-b-4 border-blue-500 pb-2">
             Our Collections
           </h2>
           <Link
             href="/shop"
-            className="text-blue-600 font-medium hover:text-blue-800 transition-all border-b-2 border-transparent hover:border-blue-500"
+            className="text-[#263587] font-medium hover:text-[#263587] transition-all border-b-2 border-transparent hover:border-[#263587]"
           >
             View All
           </Link>
@@ -54,7 +54,7 @@ const Collection = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className="flex gap-4 p-6 bg-white border border-gray-200 shadow-sm rounded-lg hover:shadow-lg transition-shadow"
+              className="flex gap-4 p-6 bg-white border border-gray-200  rounded-xl transition-shadow"
             >
               <Link href="/shop" className="w-24 h-24 flex-shrink-0">
                 <Image
@@ -74,7 +74,7 @@ const Collection = () => {
                     <li key={i}>
                       <Link
                         href="/shop"
-                        className="hover:text-blue-500 transition-colors"
+                        className="hover:text-[#263587] transition-colors"
                       >
                         {link}
                       </Link>
@@ -83,7 +83,7 @@ const Collection = () => {
                 </ul>
                 <Link
                   href="/shop"
-                  className="flex items-center gap-2 mt-4 text-blue-600 font-medium hover:text-blue-800 transition-all"
+                  className="flex items-center gap-2 mt-4 text-[#263587] font-medium hover:text-blue-800 transition-all"
                 >
                   <span>{item.category}</span>
                   <i className="ph-bold ph-caret-double-right text-sm"></i>

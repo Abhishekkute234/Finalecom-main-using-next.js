@@ -1,1 +1,2289 @@
-{"div.widget_shopping_cart_content":"<div class=\"widget_shopping_cart_content\">\n<div class=\"shopping-cart-widget-body wd-scroll\">\n\t<div class=\"wd-scroll-content\">\n\n\t\t\t\t\t\n\t\t\t<ul class=\"cart_list product_list_widget woocommerce-mini-cart \">\n\n\t\t\t\t\t\t\t\t\t\t\t<li class=\"woocommerce-mini-cart-item mini_cart_item\" data-key=\"2974788b53f73e7950e8aa49f3a306db\">\n\t\t\t\t\t\t\t\t<a href=\"https://ebundletools.in/product/4000-motivational-stories-bundle/\" class=\"cart-item-link wd-fill\">Show</a>\n\t\t\t\t\t\t\t\t<a href=\"https://ebundletools.in/cart/?remove_item=2974788b53f73e7950e8aa49f3a306db&#038;_wpnonce=a987b68fe6\" class=\"remove remove_from_cart_button\" aria-label=\"Remove 4000 Motivational Stories Bundle from cart\" data-product_id=\"3472\" data-cart_item_key=\"2974788b53f73e7950e8aa49f3a306db\" data-product_sku=\"\" data-success_message=\"&ldquo;4000 Motivational Stories Bundle&rdquo; has been removed from your cart\">&times;</a>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"https://ebundletools.in/product/4000-motivational-stories-bundle/\" class=\"cart-item-image\">\n\t\t\t\t\t\t\t\t\t\t<img width=\"300\" height=\"300\" src=\"https://ebundletools.in/wp-content/uploads/2023/07/Products-Ebundle-4-300x300.jpg\" class=\"attachment-woocommerce_thumbnail size-woocommerce_thumbnail\" alt=\"\" decoding=\"async\" srcset=\"https://ebundletools.in/wp-content/uploads/2023/07/Products-Ebundle-4-300x300.jpg 300w, https://ebundletools.in/wp-content/uploads/2023/07/Products-Ebundle-4-150x150.jpg 150w, https://ebundletools.in/wp-content/uploads/2023/07/Products-Ebundle-4-600x600.jpg 600w, https://ebundletools.in/wp-content/uploads/2023/07/Products-Ebundle-4-1024x1024.jpg 1024w, https://ebundletools.in/wp-content/uploads/2023/07/Products-Ebundle-4-768x768.jpg 768w, https://ebundletools.in/wp-content/uploads/2023/07/Products-Ebundle-4.jpg 1080w\" sizes=\"(max-width: 300px) 100vw, 300px\" />\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div class=\"cart-info\">\n\t\t\t\t\t\t\t\t\t<span class=\"wd-entities-title\">\n\t\t\t\t\t\t\t\t\t\t4000 Motivational Stories Bundle\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n<div class=\"quantity\">\n\t\n\t\t\t<input type=\"button\" value=\"-\" class=\"minus btn\" />\n\t\n\t<label class=\"screen-reader-text\" for=\"quantity_67b188c10ae84\">4000 Motivational Stories Bundle quantity</label>\n\t<input\n\t\ttype=\"number\"\n\t\t\t\tid=\"quantity_67b188c10ae84\"\n\t\tclass=\"input-text qty text\"\n\t\tvalue=\"1\"\n\t\taria-label=\"Product quantity\"\n\t\t\t\tmin=\"0\"\n\t\tmax=\"\"\n\t\tname=\"cart[2974788b53f73e7950e8aa49f3a306db][qty]\"\n\n\t\t\t\t\tstep=\"1\"\n\t\t\tplaceholder=\"\"\n\t\t\tinputmode=\"numeric\"\n\t\t\tautocomplete=\"off\"\n\t\t\t>\n\n\t\t\t<input type=\"button\" value=\"+\" class=\"plus btn\" />\n\t\n\t</div>\n\n\t\t\t\t\t\t\t\t\t<span class=\"quantity\">1 &times; <span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&#8377;</span>14.00</bdi></span></span>\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<script>\n\t\t\twindow.wpmDataLayer.cart_item_keys                                          = window.wpmDataLayer.cart_item_keys || {};\n\t\t\twindow.wpmDataLayer.cart_item_keys['2974788b53f73e7950e8aa49f3a306db'] = {\"product_id\":3472,\"variation_id\":0};\n\t\t</script>\n\n\t\t\t\t\t</ul>\n\t\t\n\t</div>\n</div>\n\n<div class=\"shopping-cart-widget-footer\">\n\t\n\t\t\t\t\t<p class=\"woocommerce-mini-cart__total total\">\n\t\t\t\t<strong>Subtotal:</strong> <span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&#8377;</span>14.00</bdi></span>\t\t\t</p>\n\t\t\n\t\t\n\t\t<p class=\"woocommerce-mini-cart__buttons buttons\"><a href=\"https://ebundletools.in/cart/\" class=\"button btn-cart wc-forward\">View cart</a><a href=\"https://ebundletools.in/checkout/\" class=\"button checkout wc-forward\">Checkout</a></p>\n\n\t\t\n\t\n\t</div>\n</div>",".elementor-menu-cart__toggle_button span.elementor-button-text":"<span class=\"elementor-button-text\"><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&#8377;</span>14.00</bdi></span></span>",".elementor-menu-cart__toggle_button span.elementor-button-icon-qty":"<span class=\"elementor-button-icon-qty\" data-counter=1>1</span>","span.wd-cart-number_wd":"\t\t<span class=\"wd-cart-number wd-tools-count\">1 <span>item</span></span>\n\t\t","span.wd-cart-subtotal_wd":"\t\t<span class=\"wd-cart-subtotal\"><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&#8377;</span>14.00</bdi></span></span>\n\t\t"}
+[
+    {
+      "productName": "Canon EOS R5 Mirrorless Camera",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Body Only",
+      "categories": {
+        "main": "Photography",
+        "sub": "Cameras",
+        "subSub": "Mirrorless Cameras"
+      },
+      "productSKU": "EOSR5",
+      "brand": "Canon",
+      "priceDetails": {
+        "mrp": 389900,
+        "offerPrice": 349900
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 15
+      },
+      "shortDescription": "High-resolution 45MP full-frame mirrorless camera with 8K video recording.",
+      "detailedDescription": "The Canon EOS R5 is a professional-grade full-frame mirrorless camera featuring a 45MP CMOS sensor, in-body image stabilization, 8K video recording capabilities, and advanced autofocus with eye, face, and body detection. It's designed for professional photographers and videographers who demand the highest image quality and performance.",
+      "technicalSpecifications": {
+        "keySpecifications": "45MP Full-Frame CMOS Sensor\nDIGIC X Image Processor\n8K30 Raw and 4K120 10-Bit Video\nDual Pixel CMOS AF II with 1,053 Points\n5-Axis In-Body Image Stabilization\n0.5\" 5.76m-Dot OLED EVF\n3.2\" Vari-Angle Touchscreen LCD\nCF Express & SD UHS-II Memory Card Slots\n20fps Electronic Shutter, 12fps Mechanical",
+        "lens": "Compatible with RF Mount Lenses",
+        "powerDetails": "LP-E6NH Lithium-Ion Battery, 7.2 VDC, 2130 mAh",
+        "includedAccessories": "Battery Charger, Neck Strap, Body Cap"
+      },
+      "additionalFeatures": {
+        "warranty": "2 Years International Warranty",
+        "certification": "CE, FCC"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 138 x 97.5 x 88 mm\nWeight: 738g (Body Only)",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "7 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Canon+EOS+R5",
+      "images": [
+        "https://placehold.co/800x600?text=Canon+EOS+R5+Front",
+        "https://placehold.co/800x600?text=Canon+EOS+R5+Back",
+        "https://placehold.co/800x600?text=Canon+EOS+R5+Top"
+      ]
+    },
+    {
+      "productName": "Sony Alpha a7 III Mirrorless Camera",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Body with 28-70mm Lens",
+      "categories": {
+        "main": "Photography",
+        "sub": "Cameras",
+        "subSub": "Mirrorless Cameras"
+      },
+      "productSKU": "ILCE7M3K",
+      "brand": "Sony",
+      "priceDetails": {
+        "mrp": 219900,
+        "offerPrice": 196990
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 22
+      },
+      "shortDescription": "24.2MP full-frame mirrorless camera with outstanding image quality and versatility.",
+      "detailedDescription": "The Sony Alpha a7 III features a 24.2MP back-illuminated Exmor R CMOS sensor with excellent low-light performance. It offers 4K HDR video capability, 10fps continuous shooting, 5-axis in-body image stabilization, and an advanced 693-point phase-detection autofocus system covering 93% of the frame.",
+      "technicalSpecifications": {
+        "keySpecifications": "24.2MP Full-Frame Exmor R CMOS Sensor\nBIONZ X Image Processor\n693-Point Phase-Detection AF System\n5-Axis SteadyShot INSIDE Stabilization\n4K Video with HLG & S-Log3 Gammas\n3.0\" 922k-Dot Tilting Touchscreen LCD\n0.5\" 2.36m-Dot XGA OLED Tru-Finder EVF\nISO 100-51200, 10 fps Shooting",
+        "lens": "28-70mm f/3.5-5.6 OSS Lens",
+        "powerDetails": "NP-FZ100 Rechargeable Lithium-Ion, 7.2 VDC, 2280 mAh",
+        "includedAccessories": "Battery Charger, Power Cord, Neck Strap, Body Cap, Accessory Shoe Cap"
+      },
+      "additionalFeatures": {
+        "warranty": "2 Years Manufacturer Warranty",
+        "certification": "CE, FCC"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 126.9 x 95.6 x 73.7 mm\nWeight: 650g (Body Only)",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "10 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Sony+a7+III",
+      "images": [
+        "https://placehold.co/800x600?text=Sony+a7+III+Front",
+        "https://placehold.co/800x600?text=Sony+a7+III+Back",
+        "https://placehold.co/800x600?text=Sony+a7+III+Side"
+      ]
+    },
+    {
+      "productName": "Nikon Z6 II Mirrorless Camera",
+      "quantityPurchase": "1",
+      "rate": 4,
+      "variation": "Body Only",
+      "categories": {
+        "main": "Photography",
+        "sub": "Cameras",
+        "subSub": "Mirrorless Cameras"
+      },
+      "productSKU": "Z6II",
+      "brand": "Nikon",
+      "priceDetails": {
+        "mrp": 196990,
+        "offerPrice": 169990
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 18
+      },
+      "shortDescription": "24.5MP full-frame mirrorless camera with dual processors and improved autofocus.",
+      "detailedDescription": "The Nikon Z6 II is a versatile 24.5MP FX-format mirrorless camera with a BSI CMOS sensor and dual EXPEED 6 processors. It offers 4K UHD video with 60p, 14 fps continuous shooting, 5-axis in-body stabilization, and a 273-point phase-detection autofocus system with improved low-light performance and eye detection.",
+      "technicalSpecifications": {
+        "keySpecifications": "24.5MP BSI CMOS FX-Format Sensor\nDual EXPEED 6 Image Processors\n14 fps Continuous Shooting\n273-Point Phase-Detect AF System\n4K UHD Video at 60p, 30p, 24p\n3.6m-Dot OLED Electronic Viewfinder\n3.2\" 2.1m-Dot Tilting Touchscreen LCD\nDual Memory Card Slots (CFexpress/XQD & SD)\n5-Axis In-Body Vibration Reduction",
+        "lens": "Compatible with Z-Mount Lenses",
+        "powerDetails": "EN-EL15c Rechargeable Lithium-Ion Battery",
+        "includedAccessories": "Battery Charger, USB Cable, Neck Strap, Body Cap"
+      },
+      "additionalFeatures": {
+        "warranty": "2 Years Manufacturer Warranty",
+        "certification": "CE, FCC"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 134 x 100.5 x 69.5 mm\nWeight: 705g (Body Only with Battery and Memory)",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "7 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Nikon+Z6+II",
+      "images": [
+        "https://placehold.co/800x600?text=Nikon+Z6+II+Front",
+        "https://placehold.co/800x600?text=Nikon+Z6+II+Back",
+        "https://placehold.co/800x600?text=Nikon+Z6+II+Top"
+      ]
+    },
+    {
+      "productName": "Fujifilm X-T4 Mirrorless Camera",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Silver",
+      "categories": {
+        "main": "Photography",
+        "sub": "Cameras",
+        "subSub": "Mirrorless Cameras"
+      },
+      "productSKU": "XT4SILVER",
+      "brand": "Fujifilm",
+      "priceDetails": {
+        "mrp": 175990,
+        "offerPrice": 149990
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 12
+      },
+      "shortDescription": "26.1MP APS-C mirrorless camera with in-body image stabilization and advanced video features.",
+      "detailedDescription": "The Fujifilm X-T4 features a 26.1MP X-Trans CMOS 4 sensor and X-Processor 4 with quad-core CPU. It includes 5-axis in-body image stabilization (up to 6.5 stops), 4K video at 60p, 15fps mechanical shutter, and a new vari-angle touchscreen LCD. The camera offers enhanced autofocus performance, Film Simulation modes, and improved battery life.",
+      "technicalSpecifications": {
+        "keySpecifications": "26.1MP APS-C X-Trans BSI CMOS 4 Sensor\nX-Processor 4 Image Processor\n5-Axis In-Body Image Stabilization\n3.0\" 1.62m-Dot Vari-Angle Touchscreen\n0.5\" 3.69m-Dot OLED Electronic Viewfinder\n4K60p Video; F-Log Gamma\n240fps High-Speed HD Recording\n15fps Mechanical Shutter\nWeather-Sealed Magnesium-Alloy Body",
+        "lens": "Compatible with X-Mount Lenses",
+        "powerDetails": "NP-W235 Lithium-Ion Battery, 7.2 VDC, 2200 mAh",
+        "includedAccessories": "Battery Charger, USB Cable, Shoulder Strap, Body Cap"
+      },
+      "additionalFeatures": {
+        "warranty": "2 Years Manufacturer Warranty",
+        "certification": "CE, FCC"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 134.6 x 92.8 x 63.8 mm\nWeight: 607g (Including Battery and Memory Card)",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "7 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Fujifilm+X-T4",
+      "images": [
+        "https://placehold.co/800x600?text=Fujifilm+X-T4+Front",
+        "https://placehold.co/800x600?text=Fujifilm+X-T4+Back",
+        "https://placehold.co/800x600?text=Fujifilm+X-T4+Side"
+      ]
+    },
+    {
+      "productName": "Sigma 24-70mm f/2.8 DG DN Art Lens",
+      "quantityPurchase": "1",
+      "rate": 4,
+      "variation": "Sony E-Mount",
+      "categories": {
+        "main": "Photography",
+        "sub": "Lenses",
+        "subSub": "Zoom Lenses"
+      },
+      "productSKU": "578965",
+      "brand": "Sigma",
+      "priceDetails": {
+        "mrp": 119990,
+        "offerPrice": 89990
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 25
+      },
+      "shortDescription": "Professional standard zoom lens with f/2.8 constant aperture for mirrorless cameras.",
+      "detailedDescription": "The Sigma 24-70mm f/2.8 DG DN Art is designed specifically for full-frame mirrorless cameras. This versatile standard zoom offers outstanding optical performance throughout the zoom range with a constant f/2.8 aperture. It features a sophisticated optical design with special low dispersion elements, aspherical elements, and Super Multi-Layer Coating to minimize aberrations and flare.",
+      "technicalSpecifications": {
+        "keySpecifications": "Aperture Range: f/2.8 to f/22\nSix Special Low Dispersion Elements\nThree Aspherical Elements\nSuper Multi-Layer Coating\nHyper Sonic Motor AF System\nWeather-Sealed Construction\nRounded 11-Blade Diaphragm\nZoom Lock Switch\nMinimum Focus Distance: 18-38 cm",
+        "lens": "Full-Frame Format, E-Mount Lens",
+        "powerDetails": "None",
+        "includedAccessories": "Front and Rear Lens Caps, Lens Hood, Lens Case"
+      },
+      "additionalFeatures": {
+        "warranty": "3 Years Manufacturer Warranty",
+        "certification": "CE"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 87.8 x 122.9 mm\nWeight: 835g",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "7 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Sigma+24-70mm",
+      "images": [
+        "https://placehold.co/800x600?text=Sigma+24-70mm+Side",
+        "https://placehold.co/800x600?text=Sigma+24-70mm+Mount",
+        "https://placehold.co/800x600?text=Sigma+24-70mm+Front"
+      ]
+    },
+    {
+      "productName": "Tamron 70-180mm f/2.8 Di III VXD Lens",
+      "quantityPurchase": "1",
+      "rate": 4,
+      "variation": "Sony E-Mount",
+      "categories": {
+        "main": "Photography",
+        "sub": "Lenses",
+        "subSub": "Telephoto Zoom Lenses"
+      },
+      "productSKU": "A056S",
+      "brand": "Tamron",
+      "priceDetails": {
+        "mrp": 139900,
+        "offerPrice": 99900
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 17
+      },
+      "shortDescription": "Compact, lightweight telephoto zoom with constant f/2.8 aperture for full-frame mirrorless cameras.",
+      "detailedDescription": "The Tamron 70-180mm f/2.8 Di III VXD is a telephoto zoom lens designed for full-frame Sony E-mount mirrorless cameras. It features a bright f/2.8 constant aperture in a remarkably compact and lightweight design. The lens incorporates VXD (Voice-coil eXtreme-torque Drive) linear motor focus mechanism for fast, precise, and quiet autofocus performance, making it ideal for both still photography and video recording.",
+      "technicalSpecifications": {
+        "keySpecifications": "Aperture Range: f/2.8 to f/22\nVXD Linear Motor Focus System\nLow Dispersion and Glass Molded Aspherical Elements\nBOAD Anti-Reflection Coating\nMoisture-Resistant Construction\nFloating Focus Mechanism\nRounded 9-Blade Diaphragm\nMinimum Focus Distance: 0.85m\nFilter Size: 67mm",
+        "lens": "Full-Frame Format, E-Mount Lens",
+        "powerDetails": "None",
+        "includedAccessories": "Front and Rear Lens Caps, Lens Hood"
+      },
+      "additionalFeatures": {
+        "warranty": "6 Years Manufacturer Warranty",
+        "certification": "CE"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 81 x 149 mm\nWeight: 810g",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "7 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Tamron+70-180mm",
+      "images": [
+        "https://placehold.co/800x600?text=Tamron+70-180mm+Side",
+        "https://placehold.co/800x600?text=Tamron+70-180mm+Mount",
+        "https://placehold.co/800x600?text=Tamron+70-180mm+Front"
+      ]
+    },
+    {
+      "productName": "Gitzo GT3543XLS Systematic Carbon Fiber Tripod",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Black",
+      "categories": {
+        "main": "Photo Tripod & Supports",
+        "sub": "Tripods",
+        "subSub": "Professional Tripods"
+      },
+      "productSKU": "GT3543XLS",
+      "brand": "Gitzo",
+      "priceDetails": {
+        "mrp": 119900,
+        "offerPrice": 104900
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 8
+      },
+      "shortDescription": "Professional-grade carbon fiber tripod for demanding photography applications.",
+      "detailedDescription": "The Gitzo GT3543XLS Systematic Series 3 Carbon Fiber Tripod is an extra-long, 4-section support system designed for professional photographers. It features Carbon eXact tubes with stiffer and larger diameter for improved stability. The G-Lock Ultra mechanism ensures fast and secure leg lock operation, while the redesigned top casting provides enhanced reliability and rigidity.",
+      "technicalSpecifications": {
+        "keySpecifications": "Maximum Height: 204 cm\nMinimum Height: 10 cm\nFolded Length: 65 cm\nLoad Capacity: 25 kg\nLeg Sections: 4\nCarbon eXact Tubes\nG-Lock Ultra Twist Locks\nRemovable Flat Top Plate\nReversible 1/4\"-20 & 3/8\"-16 Screw\nIndependent Leg Spread",
+        "lens": "None",
+        "powerDetails": "None",
+        "includedAccessories": "Carrying Bag, Tools"
+      },
+      "additionalFeatures": {
+        "warranty": "Limited Lifetime Warranty",
+        "certification": "None"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 65 x 16 x 16 cm (folded)\nWeight: 2.09 kg",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "7 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Gitzo+GT3543XLS",
+      "images": [
+        "https://placehold.co/800x600?text=Gitzo+GT3543XLS+Extended",
+        "https://placehold.co/800x600?text=Gitzo+GT3543XLS+Folded",
+        "https://placehold.co/800x600?text=Gitzo+GT3543XLS+Detail"
+      ]
+    },
+    {
+      "productName": "Peak Design Travel Tripod Carbon Fiber",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Carbon Fiber",
+      "categories": {
+        "main": "Photo Tripod & Supports",
+        "sub": "Tripods",
+        "subSub": "Travel Tripods"
+      },
+      "productSKU": "TT-CB-5-150-CF-1",
+      "brand": "Peak Design",
+      "priceDetails": {
+        "mrp": 69990,
+        "offerPrice": 59990
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 10
+      },
+      "shortDescription": "Ultralight, compact carbon fiber travel tripod with innovative design.",
+      "detailedDescription": "The Peak Design Travel Tripod Carbon Fiber is an ultralight and compact support solution that packs down to the diameter of a water bottle. Despite its small packed size, it deploys to 152 cm tall and can support up to 9.1 kg of gear. The innovative design eliminates dead space when folded, and the precision-engineered components provide stability and ease of use.",
+      "technicalSpecifications": {
+        "keySpecifications": "Maximum Height: 152 cm\nMinimum Height: 14 cm\nFolded Length: 39.1 cm\nFolded Diameter: 8.3 cm\nWeight: 1.27 kg\nLoad Capacity: 9.1 kg\nBall Head with Single-Handed Operation\nIntegrated Mobile Phone Mount\nLow-Profile Omnidirectional Ball Head\nWeather and Impact-Resistant Construction",
+        "lens": "None",
+        "powerDetails": "None",
+        "includedAccessories": "Weatherproof Soft Case, Hex Tool, Mobile Phone Mount, Hook"
+      },
+      "additionalFeatures": {
+        "warranty": "Lifetime Warranty",
+        "certification": "None"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 39.1 x 8.3 cm (folded)\nWeight: 1.27 kg",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "30 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Peak+Design+Tripod",
+      "images": [
+        "https://placehold.co/800x600?text=Peak+Design+Tripod+Extended",
+        "https://placehold.co/800x600?text=Peak+Design+Tripod+Folded",
+        "https://placehold.co/800x600?text=Peak+Design+Tripod+Head"
+      ]
+    },
+    {
+      "productName": "Sony WH-1000XM5 Wireless Noise Cancelling Headphones",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Silver",
+      "categories": {
+        "main": "Audio",
+        "sub": "Headphones",
+        "subSub": "Wireless Headphones"
+      },
+      "productSKU": "WH1000XM5",
+      "brand": "Sony",
+      "priceDetails": {
+        "mrp": 34990,
+        "offerPrice": 29990
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 35
+      },
+      "shortDescription": "Premium wireless headphones with industry-leading noise cancellation and Hi-Res Audio support.",
+      "detailedDescription": "The Sony WH-1000XM5 features industry-leading noise cancellation powered by two processors and eight microphones. These premium headphones deliver exceptional sound quality with LDAC codec support and DSEE Extreme upscaling. The redesigned lightweight build offers all-day comfort, while the 30-hour battery life ensures extended listening sessions. Advanced features include Speak-to-Chat, Quick Attention mode, and multipoint connection.",
+      "technicalSpecifications": {
+        "keySpecifications": "Driver Unit: 30mm\nFrequency Response: 4Hz-40,000Hz\nBluetooth Version: 5.2\nBattery Life: 30 hours (NC ON), 40 hours (NC OFF)\nQuick Charging: 3 hours playback with 3 min charge\nNoise Cancellation: Dual Noise Sensor Technology\nAudio Formats: LDAC, AAC, SBC\nDSEE Extreme Upscaling\nMultipoint Connection\nTouch Controls\nBuilt-in Alexa and Google Assistant",
+        "lens": "None",
+        "powerDetails": "Built-in Rechargeable Lithium-ion Battery, 3.7V",
+        "includedAccessories": "Carrying Case, USB-C Cable, 3.5mm Audio Cable, Airplane Adapter"
+      },
+      "additionalFeatures": {
+        "warranty": "1 Year Manufacturer Warranty",
+        "certification": "Bluetooth SIG, Hi-Res Audio"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 254 x 187 x 48 mm\nWeight: 250g",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "7 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Sony+WH-1000XM5",
+      "images": [
+        "https://placehold.co/800x600?text=Sony+WH-1000XM5+Side",
+        "https://placehold.co/800x600?text=Sony+WH-1000XM5+Folded",
+        "https://placehold.co/800x600?text=Sony+WH-1000XM5+Case"
+      ]
+    },
+    {
+      "productName": "Bose QuietComfort Ultra Headphones",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Black",
+      "categories": {
+        "main": "Audio",
+        "sub": "Headphones",
+        "subSub": "Wireless Headphones"
+      },
+      "productSKU": "QCULTRABLK",
+      "brand": "Bose",
+      "priceDetails": {
+        "mrp": 37900,
+        "offerPrice": 32900
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 22
+      },
+      "shortDescription": "Premium wireless headphones with advanced noise cancellation and spatial audio.",
+      "detailedDescription": "The Bose QuietComfort Ultra Headphones deliver Bose's most advanced noise cancellation technology paired with immersive spatial audio. These premium wireless headphones feature CustomTune technology that personalizes the audio to your ears, while the adjustable EQ allows you to fine-tune your listening experience. The comfortable design is perfect for all-day wear, and the 24-hour battery life keeps the music going for extended listening sessions.",
+      "technicalSpecifications": {
+        "keySpecifications": "Advanced Noise Cancellation Technology\nBose Immersive Audio with CustomTune Technology\nBluetooth 5.3 with Multipoint Connection\nBattery Life: Up to 24 hours\nQuick Charge: 15 min for 2.5 hours playback\nCapacitive Touch Controls\nAdjustable EQ via Bose Music App\nBuilt-in Voice Assistants: Alexa, Google Assistant, Siri\nBeamforming Microphone Array for Clear Calls",
+        "lens": "None",
+        "powerDetails": "Rechargeable Lithium-ion Battery",
+        "includedAccessories": "Carrying Case, USB-C Charging Cable, 3.5mm Audio Cable, Airplane Adapter"
+      },
+      "additionalFeatures": {
+        "warranty": "1 Year Manufacturer Warranty",
+        "certification": "Bluetooth SIG"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 7.7 x 6.1 x 3.2 inches\nWeight: 251g",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "30 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Bose+QC+Ultra",
+      "images": [
+        "https://placehold.co/800x600?text=Bose+QC+Ultra+Side",
+        "https://placehold.co/800x600?text=Bose+QC+Ultra+Folded",
+        "https://placehold.co/800x600?text=Bose+QC+Ultra+Case"
+      ]
+    },
+    {
+      "productName": "Apple AirPods Pro (2nd Generation)",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "White",
+      "categories": {
+        "main": "Audio",
+        "sub": "Headphones",
+        "subSub": "True Wireless Earbuds"
+      },
+      "productSKU": "MQD83AM/A",
+      "brand": "Apple",
+      "priceDetails": {
+        "mrp": 26900,
+        "offerPrice": 23900
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 50
+      },
+      "shortDescription": "Premium true wireless earbuds with adaptive active noise cancellation and spatial audio.",
+      "detailedDescription": "The 2nd generation Apple AirPods Pro feature H2 chip technology for smarter noise cancellation and more immersive sound. These premium earbuds offer personalized spatial audio with dynamic head tracking, adaptive transparency mode, and touch control with swipe gestures. The redesigned charging case includes a built-in speaker for Find My functionality, a lanyard loop, and multiple charging options.",
+      "technicalSpecifications": {
+        "keySpecifications": "Apple H2 Chip\nActive Noise Cancellation\nAdaptive Transparency Mode\nPersonalized Spatial Audio with Dynamic Head Tracking\nTouch Control with Swipe Gestures\nSweat and Water Resistant (IPX4)\nBattery Life: 6 hours (30 hours with case)\nMagSafe Charging Case with Built-in Speaker\nUSB-C Connector\nPreset and Custom Ear Tips",
+        "lens": "None",
+        "powerDetails": "Rechargeable Lithium-ion Batteries in Earbuds and Case",
+        "includedAccessories": "MagSafe Charging Case, USB-C to C Cable, Silicone Ear Tips (XS, S, M, L)"
+      },
+      "additionalFeatures": {
+        "warranty": "1 Year Manufacturer Warranty",
+        "certification": "IPX4 Water Resistance"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "AirPods (each): 5.4g\nCharging Case: 50.8g\nCase Dimensions: 45.2 x 60.6 x 21.7 mm",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "7 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=AirPods+Pro+2",
+      "images": [
+        "https://placehold.co/800x600?text=AirPods+Pro+2+Earbuds",
+        "https://placehold.co/800x600?text=AirPods+Pro+2+Case",
+        "https://placehold.co/800x600?text=AirPods+Pro+2+Fit"
+      ]
+    },
+    {
+      "productName": "Sennheiser MOMENTUM 4 Wireless Headphones",
+      "quantityPurchase": "1",
+      "rate": 4,
+      "variation": "Black",
+      "categories": {
+        "main": "Audio",
+        "sub": "Headphones",
+        "subSub": "Wireless Headphones"
+      },
+      "productSKU": "M4WRLS",
+      "brand": "Sennheiser",
+      "priceDetails": {
+        "mrp": 34990,
+        "offerPrice": 26990
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 20
+      },
+      "shortDescription": "Premium wireless headphones with exceptional sound quality and 60-hour battery life.",
+      "detailedDescription": "The Sennheiser MOMENTUM 4 Wireless headphones combine superior sound quality with extraordinary battery life and exceptional comfort. Featuring Sennheiser's audiophile-inspired 42mm transducer system, adaptive noise cancellation, and intuitive touch controls, these headphones deliver an outstanding listening experience. The sleek, modern design provides exceptional wearing comfort, while smart features like Sound Personalization and Sound Zones enhance the user experience.",
+      "technicalSpecifications": {
+        "keySpecifications": "Driver Size: 42mm\nFrequency Response: 6Hz - 22kHz\nBluetooth Version: 5.2\nCodecs: SBC, AAC, aptX, aptX HD, LDAC\nBattery Life: Up to 60 hours with ANC on\nAdaptive Noise Cancellation\nTransparency Mode\nMultipoint Connection\nTouch Controls\nApp Control via Sennheiser Smart Control",
+        "lens": "None",
+        "powerDetails": "Rechargeable Lithium-ion Battery, Fast Charging: 5 min for 4 hours playback",
+        "includedAccessories": "Carrying Case, USB-C Cable, 3.5mm Audio Cable, Airplane Adapter"
+      },
+      "additionalFeatures": {
+        "warranty": "2 Years International Warranty",
+        "certification": "Bluetooth SIG"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 7.6 x 6.7 x 1.8 inches\nWeight: 293g",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "30 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Sennheiser+MOMENTUM+4",
+      "images": [
+        "https://placehold.co/800x600?text=Sennheiser+MOMENTUM+4+Side",
+        "https://placehold.co/800x600?text=Sennheiser+MOMENTUM+4+Folded",
+        "https://placehold.co/800x600?text=Sennheiser+MOMENTUM+4+Controls"
+      ]
+    },
+    {
+      "productName": "Sonos Arc Premium Smart Soundbar",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Black",
+      "categories": {
+        "main": "Audio",
+        "sub": "Speakers",
+        "subSub": "Soundbars"
+      },
+      "productSKU": "ARCG1US1BLK",
+      "brand": "Sonos",
+      "priceDetails": {
+        "mrp": 89999,
+        "offerPrice": 79999
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 15
+      },
+      "shortDescription": "Premium smart soundbar with Dolby Atmos and voice assistant integration.",
+      "detailedDescription": "The Sonos Arc is a premium smart soundbar that delivers immersive home theater audio with Dolby Atmos support. Eleven high-performance drivers produce crisp dialogue, impressive bass, and an expansive soundstage. The elliptical design features precisely-designed acoustic components that direct sound up and outward for a truly immersive experience. With built-in voice assistants, AirPlay 2 support, and the Sonos app, it offers seamless control and streaming options.",
+      "technicalSpecifications": {
+        "keySpecifications": "11 Class-D Digital Amplifiers\nEight Elliptical Woofers\nThree Precisely-Angled Silk-Dome Tweeters\nDolby Atmos Support\nBuilt-in Voice Assistants (Amazon Alexa, Google Assistant)\nTrueplay Tuning Technology\nSpeech Enhancement\nNight Sound Mode\nAirPlay 2 Compatible\nHDMI eARC Connection",
+        "lens": "None",
+        "powerDetails": "Auto-Detecting Power Supply: 100-240V, 50-60Hz",
+        "includedAccessories": "Power Cable, HDMI Cable, Optical Audio Adapter"
+      },
+      "additionalFeatures": {
+        "warranty": "1 Year Manufacturer Warranty",
+        "certification": "Energy Star Certified"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 45 x 4.5 x 3.4 inches\nWeight: 6.25 kg",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "45 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Sonos+Arc",
+      "images": [
+        "https://placehold.co/800x600?text=Sonos+Arc+Front",
+        "https://placehold.co/800x600?text=Sonos+Arc+Side",
+        "https://placehold.co/800x600?text=Sonos+Arc+Top"
+      ]
+    },
+    {
+      "productName": "Shure SM7B Cardioid Dynamic Microphone",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Standard",
+      "categories": {
+        "main": "Audio",
+        "sub": "Microphones",
+        "subSub": "Dynamic Microphones"
+      },
+      "productSKU": "SM7B",
+      "brand": "Shure",
+      "priceDetails": {
+        "mrp": 42999,
+        "offerPrice": 36999
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 22
+      },
+      "shortDescription": "Professional-grade dynamic microphone ideal for broadcasting, podcasting, and studio recording.",
+      "detailedDescription": "The Shure SM7B is a dynamic microphone with a smooth, flat, wide-range frequency response appropriate for music and speech applications. It features excellent shielding against electromagnetic hum generated by computer monitors, neon lights, and other electrical devices. The microphone includes air suspension shock isolation and pop filter, eliminating both mechanical noise and breathiness. Bass roll-off and mid-range emphasis controls provide additional flexibility in tone shaping.",
+      "technicalSpecifications": {
+        "keySpecifications": "Type: Dynamic Microphone\nPolar Pattern: Cardioid\nFrequency Response: 50 to 20,000 Hz\nOutput Impedance: 150 ohms\nSensitivity: -59 dB (1.12 mV)\nHum Bucking Coil\nInternal Air Suspension Shock Isolation\nYoke Mounting with Captive Stand Nut\nRemovable Windscreen\nSwitch-Selectable Bass Roll-off and Mid-range Emphasis Controls",
+        "lens": "None",
+        "powerDetails": "None (Passive Dynamic Microphone)",
+        "includedAccessories": "Windscreen, Close-Talk Windscreen, Yoke Mount"
+      },
+      "additionalFeatures": {
+        "warranty": "2 Years Manufacturer Warranty",
+        "certification": "CE, FCC"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 7.5 x 2.5 inches\nWeight: 766g",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "30 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Shure+SM7B",
+      "images": [
+        "https://placehold.co/800x600?text=Shure+SM7B+Front",
+        "https://placehold.co/800x600?text=Shure+SM7B+Side",
+        "https://placehold.co/800x600?text=Shure+SM7B+Mounted"
+      ]
+    },
+    {
+      "productName": "Rode NT1-A Condenser Microphone Package",
+      "quantityPurchase": "1",
+      "rate": 4,
+      "variation": "Complete Studio Kit",
+      "categories": {
+        "main": "Audio",
+        "sub": "Microphones",
+        "subSub": "Condenser Microphones"
+      },
+      "productSKU": "NT1A",
+      "brand": "Rode",
+      "priceDetails": {
+        "mrp": 23999,
+        "offerPrice": 16999
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 30
+      },
+      "shortDescription": "Large-diaphragm condenser microphone with ultra-low noise and complete studio kit.",
+      "detailedDescription": "The Rode NT1-A is a large-diaphragm condenser microphone known for its incredibly low self-noise, making it ideal for recording vocal and acoustic performances, voiceovers, and streaming. This complete studio kit includes the microphone along with a professional shock mount, pop filter, dust cover, and XLR cable. The gold-sputtered 1-inch capsule delivers warm, clear sound with excellent dynamic range, while the premium electronics ensure minimal handling noise.",
+      "technicalSpecifications": {
+        "keySpecifications": "Type: 1\" Condenser Microphone\nPolar Pattern: Cardioid\nFrequency Range: 20Hz to 20kHz\nOutput Impedance: 100 ohms\nSensitivity: -31.9 dB re 1 Volt/Pascal\nEquivalent Noise: 5dBA (one of the world's quietest)\nMaximum SPL: 137dB\nDynamic Range: 132dB\nSignal-to-Noise Ratio: 88dB\nRequires 48V Phantom Power",
+        "lens": "None",
+        "powerDetails": "Requires 48V Phantom Power",
+        "includedAccessories": "SM6 Shock Mount with Integrated Pop Shield, Dust Cover, 20' XLR Cable, Instructional DVD"
+      },
+      "additionalFeatures": {
+        "warranty": "10 Years Manufacturer Warranty (with registration)",
+        "certification": "CE, FCC"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Microphone Dimensions: 190 x 50 mm\nMicrophone Weight: 326g",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "30 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Rode+NT1-A",
+      "images": [
+        "https://placehold.co/800x600?text=Rode+NT1-A+Front",
+        "https://placehold.co/800x600?text=Rode+NT1-A+Kit",
+        "https://placehold.co/800x600?text=Rode+NT1-A+Mounted"
+      ]
+    },
+    {
+      "productName": "Focusrite Scarlett 2i2 3rd Gen USB Audio Interface",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Standard",
+      "categories": {
+        "main": "Audio",
+        "sub": "Audio Interfaces",
+        "subSub": "USB Audio Interfaces"
+      },
+      "productSKU": "SCARLETT2I23",
+      "brand": "Focusrite",
+      "priceDetails": {
+        "mrp": 18999,
+        "offerPrice": 14999
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 40
+      },
+      "shortDescription": "Popular 2-in, 2-out USB audio interface with high-performance preamps for music production.",
+      "detailedDescription": "The Focusrite Scarlett 2i2 (3rd Gen) is a compact USB audio interface featuring two renowned Scarlett mic preamps with switchable Air mode that provides brighter, more open sound. The interface offers high-headroom instrument inputs for plugging in guitars or bass, and professional conversion that ensures your recordings sound exactly as you intended. With quick start support, low-latency performance, and a comprehensive software bundle, it's perfect for musicians, producers, and content creators.",
+      "technicalSpecifications": {
+        "keySpecifications": "2 Scarlett Mic Preamps with Air mode\n2 Line/Instrument Inputs with High-Headroom Design\n2 Balanced Line Outputs\nSample Rates: Up to 192kHz / 24-bit\nUSB-C Connectivity\nDirect Monitor Circuit\nProfessional Conversion for Studio Quality Sound\nLow-Latency Performance\n+48V Phantom Power\nMetal Chassis Construction",
+        "lens": "None",
+        "powerDetails": "Bus-Powered via USB",
+        "includedAccessories": "USB-C to USB-A Cable, Software Download Information"
+      },
+      "additionalFeatures": {
+        "warranty": "3 Years Manufacturer Warranty",
+        "certification": "CE, FCC"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 175 x 98 x 44 mm\nWeight: 520g",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "30 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Focusrite+Scarlett+2i2",
+      "images": [
+        "https://placehold.co/800x600?text=Scarlett+2i2+Front",
+        "https://placehold.co/800x600?text=Scarlett+2i2+Back",
+        "https://placehold.co/800x600?text=Scarlett+2i2+Setup"
+      ]
+    },
+    {
+      "productName": "Apple MacBook Pro 16\" M3 Pro Chip",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Space Black, 36GB RAM, 1TB SSD",
+      "categories": {
+        "main": "Computers",
+        "sub": "Laptops",
+        "subSub": "Professional Laptops"
+      },
+      "productSKU": "MRX33LL/A",
+      "brand": "Apple",
+      "priceDetails": {
+        "mrp": 339900,
+        "offerPrice": 319900
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 12
+      },
+      "shortDescription": "Powerful professional laptop with M3 Pro chip, 36GB unified memory, and stunning Liquid Retina XDR display.",
+      "detailedDescription": "The MacBook Pro 16-inch with M3 Pro delivers exceptional performance for demanding professional workloads. The M3 Pro chip features a 12-core CPU and 18-core GPU, paired with 36GB of unified memory for smooth multitasking. The stunning 16.2-inch Liquid Retina XDR display supports up to 1000 nits sustained brightness and ProMotion technology. With up to 22 hours of battery life, an advanced camera and audio system, and a comprehensive array of ports, it's the ultimate pro laptop for creative professionals.",
+      "technicalSpecifications": {
+        "keySpecifications": "Apple M3 Pro Chip with 12-core CPU, 18-core GPU, 16-core Neural Engine\n36GB Unified Memory\n1TB SSD Storage\n16.2-inch Liquid Retina XDR Display (3456 x 2234)\nProMotion Technology (120Hz)\n1000 nits Sustained Brightness, 1600 nits Peak (HDR)\nThree Thunderbolt 4 Ports\nHDMI Port\nSDXC Card Slot\nMagSafe 3 Charging Port\n1080p FaceTime HD Camera\nSix-Speaker Sound System with Spatial Audio\nBacklit Magic Keyboard with Touch ID\nForce Touch Trackpad\nWi-Fi 6E (802.11ax) and Bluetooth 5.3",
+        "lens": "None",
+        "powerDetails": "100Wh Lithium-Polymer Battery\nUp to 22 Hours Battery Life\n140W USB-C Power Adapter",
+        "includedAccessories": "140W USB-C Power Adapter, USB-C to MagSafe 3 Cable"
+      },
+      "additionalFeatures": {
+        "warranty": "1 Year Limited Warranty",
+        "certification": "Energy Star"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Height: 1.68 cm\nWidth: 35.57 cm\nDepth: 24.81 cm\nWeight: 2.16 kg",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "14 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=MacBook+Pro+16",
+      "images": [
+        "https://placehold.co/800x600?text=MacBook+Pro+16+Front",
+        "https://placehold.co/800x600?text=MacBook+Pro+16+Side",
+        "https://placehold.co/800x600?text=MacBook+Pro+16+Open"
+      ]
+    },
+    {
+      "productName": "Dell XPS 15 9530 Laptop",
+      "quantityPurchase": "1",
+      "rate": 4,
+      "variation": "Platinum Silver, i9-13900H, 32GB RAM, 1TB SSD, RTX 4070",
+      "categories": {
+        "main": "Computers",
+        "sub": "Laptops",
+        "subSub": "Premium Laptops"
+      },
+      "productSKU": "XPS9530-7000SLV",
+      "brand": "Dell",
+      "priceDetails": {
+        "mrp": 294990,
+        "offerPrice": 249990
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 8
+      },
+      "shortDescription": "Premium 15.6-inch laptop with 4K OLED display, powerful Intel Core i9 processor, and NVIDIA RTX graphics.",
+      "detailedDescription": "The Dell XPS 15 9530 combines exceptional performance with a stunning design. Featuring a 13th Gen Intel Core i9 processor, NVIDIA GeForce RTX 4070 graphics, and 32GB of DDR5 RAM, it handles demanding professional applications with ease. The 15.6-inch 4K OLED InfinityEdge display delivers stunning visuals with 100% DCI-P3 color coverage, making it perfect for creative work. Crafted from CNC-machined aluminum with a carbon fiber composite palm rest, the XPS 15 offers both durability and premium aesthetics.",
+      "technicalSpecifications": {
+        "keySpecifications": "13th Gen Intel Core i9-13900H Processor (24MB Cache, up to 5.4GHz)\nNVIDIA GeForce RTX 4070 8GB GDDR6\n32GB DDR5 RAM (Dual Channel, 5200MHz)\n1TB PCIe NVMe SSD\n15.6\" 4K UHD+ (3840 x 2400) OLED Touch Display\n100% DCI-P3, 400-nit, Anti-Reflective\nKiller Wi-Fi 6 AX1675 (2x2) and Bluetooth 5.3\n2x Thunderbolt 4 Ports\n1x USB-C 3.2 Gen 2 Port\nSD Card Reader v4.0\n3.5mm Headphone/Microphone Jack\nWindows 11 Pro",
+        "lens": "None",
+        "powerDetails": "86WHr Battery\n130W USB-C Power Adapter",
+        "includedAccessories": "130W Power Adapter, USB-C to USB-A Adapter"
+      },
+      "additionalFeatures": {
+        "warranty": "1 Year Premium Support",
+        "certification": "Energy Star, EPEAT Gold"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Height: 0.71\" (18 mm)\nWidth: 13.57\" (344.7 mm)\nDepth: 9.06\" (230.1 mm)\nWeight: 4.23 lbs (1.92 kg)",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "30 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Dell+XPS+15",
+      "images": [
+        "https://placehold.co/800x600?text=Dell+XPS+15+Front",
+        "https://placehold.co/800x600?text=Dell+XPS+15+Open",
+        "https://placehold.co/800x600?text=Dell+XPS+15+Side"
+      ]
+    },
+    {
+      "productName": "Asus ROG Zephyrus G14 Gaming Laptop",
+      "quantityPurchase": "1",
+      "rate": 4,
+      "variation": "Eclipse Gray, Ryzen 9 7940HS, RTX 4090, 32GB RAM, 1TB SSD",
+      "categories": {
+        "main": "Computers",
+        "sub": "Laptops",
+        "subSub": "Gaming Laptops"
+      },
+      "productSKU": "G14-GA402NZ",
+      "brand": "Asus",
+      "priceDetails": {
+        "mrp": 259990,
+        "offerPrice": 229990
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 7
+      },
+      "shortDescription": "Powerful 14-inch gaming laptop with high-end performance in a compact form factor.",
+      "detailedDescription": "The Asus ROG Zephyrus G14 combines exceptional power with portability. Featuring AMD's Ryzen 9 7940HS processor and NVIDIA's GeForce RTX 4090 mobile GPU, it delivers outstanding gaming and creative performance. The 14-inch Mini-LED display offers stunning visuals with QHD resolution, 165Hz refresh rate, and 100% DCI-P3 color coverage. Despite its compact size, the G14 includes advanced cooling, immersive audio, and long battery life, making it ideal for both gaming and professional use on the go.",
+      "technicalSpecifications": {
+        "keySpecifications": "AMD Ryzen 9 7940HS Processor (8 cores, 16 threads, up to 5.2GHz)\nNVIDIA GeForce RTX 4090 Laptop GPU (12GB GDDR6)\n32GB DDR5 RAM (4800MHz)\n1TB PCIe 4.0 NVMe SSD\n14\" Mini-LED QHD Display (2560 x 1600)\n165Hz Refresh Rate, 3ms Response Time\n100% DCI-P3, Pantone Validated\nROG Intelligent Cooling with Liquid Metal\nDolby Atmos 6-speaker System\n2x USB 4.0 Type-C\n2x USB 3.2 Gen 2 Type-A\n1x HDMI 2.1\n1x MicroSD Card Reader\nWi-Fi 6E and Bluetooth 5.3\nWindows 11 Pro",
+        "lens": "None",
+        "powerDetails": "76WHr Battery\n240W Power Adapter\nUSB-C Power Delivery Support (100W)",
+        "includedAccessories": "240W Power Adapter, ROG Sleeve"
+      },
+      "additionalFeatures": {
+        "warranty": "1 Year Global Warranty",
+        "certification": "Energy Star, MIL-STD-810H"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Height: 1.95 cm\nWidth: 31.2 cm\nDepth: 22.7 cm\nWeight: 1.7 kg",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "30 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=ROG+Zephyrus+G14",
+      "images": [
+        "https://placehold.co/800x600?text=ROG+Zephyrus+G14+Front",
+        "https://placehold.co/800x600?text=ROG+Zephyrus+G14+Open",
+        "https://placehold.co/800x600?text=ROG+Zephyrus+G14+Side"
+      ]
+    },
+    {
+      "productName": "LG UltraGear 34GN850-B Curved Gaming Monitor",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Black",
+      "categories": {
+        "main": "Computers",
+        "sub": "Monitors",
+        "subSub": "Gaming Monitors"
+      },
+      "productSKU": "34GN850-B",
+      "brand": "LG",
+      "priceDetails": {
+        "mrp": 89990,
+        "offerPrice": 69990
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 15
+      },
+      "shortDescription": "34-inch ultrawide curved gaming monitor with QHD resolution, 144Hz refresh rate, and 1ms response time.",
+      "detailedDescription": "The LG UltraGear 34GN850-B is a premium 34-inch ultrawide curved gaming monitor featuring a 21:9 Nano IPS display with QHD resolution. With a 144Hz refresh rate (overclockable to 160Hz) and 1ms response time, it ensures smooth gameplay with minimal motion blur. The monitor is NVIDIA G-SYNC Compatible and supports AMD FreeSync Premium Pro for tear-free gaming. HDR support, 98% DCI-P3 color coverage, and VESA DisplayHDR 400 certification deliver vivid, lifelike visuals perfect for both gaming and content creation.",
+      "technicalSpecifications": {
+        "keySpecifications": "34\" 21:9 Curved Nano IPS Display\nQHD Resolution (3440 x 1440)\n144Hz Refresh Rate (OC to 160Hz)\n1ms GtG Response Time\nNVIDIA G-SYNC Compatible\nAMD FreeSync Premium Pro\nVESA DisplayHDR 400\n98% DCI-P3 Color Gamut\nColor Calibrated at Factory\nHDR10 Support\nFlicker-Free and Reader Mode\nBlack Stabilizer\nDynamic Action Sync\nCrossHair Feature\nHeight, Tilt, and Pivot Adjustable Stand",
+        "lens": "None",
+        "powerDetails": "AC 100-240V, 50/60Hz, Power Consumption: 55W (Typical)",
+        "includedAccessories": "DisplayPort Cable, HDMI Cable, Power Cable"
+      },
+      "additionalFeatures": {
+        "warranty": "3 Years Manufacturer Warranty",
+        "certification": "TÜV Rheinland Eye Comfort"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions with Stand: 32.3 x 22.5 x 11.3 inches\nWeight with Stand: 15.9 lbs",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "14 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=LG+UltraGear+34GN850",
+      "images": [
+        "https://placehold.co/800x600?text=LG+UltraGear+34GN850+Front",
+        "https://placehold.co/800x600?text=LG+UltraGear+34GN850+Side",
+        "https://placehold.co/800x600?text=LG+UltraGear+34GN850+Back"
+      ]
+    },
+    {
+      "productName": "Samsung Odyssey G9 G95NC 57\" Dual 4K Gaming Monitor",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "White",
+      "categories": {
+        "main": "Computers",
+        "sub": "Monitors",
+        "subSub": "Ultrawide Monitors"
+      },
+      "productSKU": "LS57CG952NNXZA",
+      "brand": "Samsung",
+      "priceDetails": {
+        "mrp": 249990,
+        "offerPrice": 209990
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 5
+      },
+      "shortDescription": "Massive 57-inch ultrawide curved monitor with dual 4K resolution and 240Hz refresh rate.",
+      "detailedDescription": "The Samsung Odyssey G9 G95NC represents the pinnacle of gaming monitor technology with its massive 57-inch 1000R curved DQHD display. Featuring Quantum Mini-LED technology, it delivers exceptional contrast and brightness with a peak brightness of 1000 nits and VESA DisplayHDR 1000 certification. The 240Hz refresh rate and 1ms response time ensure ultra-smooth gameplay, while AMD FreeSync Premium Pro and NVIDIA G-SYNC compatibility eliminate screen tearing. This professional-grade monitor offers an immersive 32:9 aspect ratio, perfect for gaming, content creation, and multitasking.",
+      "technicalSpecifications": {
+        "keySpecifications": "57\" 1000R Curved DQHD (7680 x 2160) Display\n32:9 Super Ultra-Wide Aspect Ratio\nQuantum Mini-LED Backlight Technology\n240Hz Refresh Rate\n1ms (GtG) Response Time\nVESA DisplayHDR 1000\nPeak Brightness: 1000 nits\nQuantum HDR 1000\nAMD FreeSync Premium Pro\nNVIDIA G-SYNC Compatible\nMatte Display Coating\nPicture-by-Picture and Picture-in-Picture\nEye Saver Mode and Flicker Free\nHeight Adjustable Stand with Tilt and Swivel",
+        "lens": "None",
+        "powerDetails": "Power Supply Type: Internal\nPower Consumption (Typical): 100W\nPower Consumption (Max): 450W",
+        "includedAccessories": "DisplayPort Cable, HDMI Cable, USB Cable, Power Cable"
+      },
+      "additionalFeatures": {
+        "warranty": "3 Years Manufacturer Warranty",
+        "certification": "TÜV Rheinland Eye Comfort"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions with Stand: 51.6 x 22.6 x 16.9 inches\nWeight with Stand: 41.9 lbs",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "14 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Samsung+Odyssey+G9",
+      "images": [
+        "https://placehold.co/800x600?text=Samsung+Odyssey+G9+Front",
+        "https://placehold.co/800x600?text=Samsung+Odyssey+G9+Side",
+        "https://placehold.co/800x600?text=Samsung+Odyssey+G9+Back"
+      ]
+    },
+    {
+      "productName": "Apple Studio Display - Standard Glass",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Standard Glass, Tilt-Adjustable Stand",
+      "categories": {
+        "main": "Computers",
+        "sub": "Monitors",
+        "subSub": "Professional Monitors"
+      },
+      "productSKU": "MJQK3LL/A",
+      "brand": "Apple",
+      "priceDetails": {
+        "mrp": 159900,
+        "offerPrice": 149900
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 10
+      },
+      "shortDescription": "27-inch 5K Retina display with exceptional color accuracy for professional work.",
+      "detailedDescription": "The Apple Studio Display features a brilliant 27-inch 5K Retina screen with P3 wide color and True Tone technology for an excellent viewing experience. This premium monitor includes a 12MP Ultra Wide camera with Center Stage technology, a six-speaker sound system with Spatial Audio support, and studio-quality three-mic array. Designed to complement Mac devices, it offers one Thunderbolt 3 port and three USB-C ports, providing a seamless connection experience.",
+      "technicalSpecifications": {
+        "keySpecifications": "27-inch 5K Retina Display (5120 x 2880)\n600 nits Brightness\nP3 Wide Color Gamut\nTrue Tone Technology\n12MP Ultra Wide Camera with Center Stage\nSix-Speaker Sound System with Spatial Audio\nStudio-Quality Three-Mic Array\nThunderbolt 3 Port (96W Host Charging)\nThree USB-C Ports\nTilt-Adjustable Stand\nA13 Bionic Chip",
+        "lens": "None",
+        "powerDetails": "Built-in Power Supply\nIntegrated 96W Charging\nThunderbolt Cable (1 m)",
+        "includedAccessories": "Thunderbolt Cable (1 m), Polishing Cloth"
+      },
+      "additionalFeatures": {
+        "warranty": "1 Year Limited Warranty",
+        "certification": "Energy Star"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Height: 18.8 inches (47.8 cm)\nWidth: 24.5 inches (62.3 cm)\nDepth: 6.6 inches (16.7 cm) (with stand)\nWeight: 13.9 pounds (6.3 kg)",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "14 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Apple+Studio+Display",
+      "images": [
+        "https://placehold.co/800x600?text=Apple+Studio+Display+Front",
+        "https://placehold.co/800x600?text=Apple+Studio+Display+Side",
+        "https://placehold.co/800x600?text=Apple+Studio+Display+Back"
+      ]
+    },
+    {
+      "productName": "Logitech MX Master 3S Wireless Mouse",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Graphite",
+      "categories": {
+        "main": "Computers",
+        "sub": "Accessories",
+        "subSub": "Mice"
+      },
+      "productSKU": "910-006556",
+      "brand": "Logitech",
+      "priceDetails": {
+        "mrp": 9995,
+        "offerPrice": 7995
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 50
+      },
+      "shortDescription": "Advanced wireless mouse with quiet clicks, 8K DPI tracking, and customizable buttons.",
+      "detailedDescription": "The Logitech MX Master 3S is an advanced wireless mouse that offers precision, comfort, and customization. It features quiet clicks that provide the same satisfying feel with 90% less noise, and an 8K DPI tracking sensor that works on any surface, including glass. The MagSpeed electromagnetic scrolling delivers remarkable speed and precision, while the ergonomic design ensures comfort during extended use. With Bluetooth and USB connectivity options and the ability to connect to multiple devices, it's the perfect productivity tool for professionals.",
+      "technicalSpecifications": {
+        "keySpecifications": "Sensor Technology: Darkfield High Precision\nResolution: 8000 DPI\nButtons: 7 (All Customizable)\nScrolling: MagSpeed Electromagnetic\nBattery Life: Up to 70 days on a full charge\nQuick Charge: 3 hours of use from 1-minute charge\nWireless Connectivity: Bluetooth Low Energy and Logi Bolt USB Receiver\nMulti-Device Control: Up to 3 devices\nQuiet Clicks: 90% noise reduction compared to MX Master 3\nCompatibility: Windows, macOS, Linux, iPadOS",
+        "lens": "None",
+        "powerDetails": "Rechargeable Li-Po Battery (500 mAh)\nUSB-C Charging",
+        "includedAccessories": "USB-C Charging Cable, Logi Bolt USB Receiver"
+      },
+      "additionalFeatures": {
+        "warranty": "2 Years Manufacturer Warranty",
+        "certification": "Bluetooth SIG"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Height: 4.92 in (124.9 mm)\nWidth: 3.32 in (84.3 mm)\nDepth: 2.01 in (51 mm)\nWeight: 4.97 oz (141 g)",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "30 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Logitech+MX+Master+3S",
+      "images": [
+        "https://placehold.co/800x600?text=MX+Master+3S+Top",
+        "https://placehold.co/800x600?text=MX+Master+3S+Side",
+        "https://placehold.co/800x600?text=MX+Master+3S+Bottom"
+      ]
+    },
+    {
+      "productName": "Keychron Q1 Pro Mechanical Keyboard",
+      "quantityPurchase": "1",
+      "rate": 4,
+      "variation": "Navy Blue, Gateron G Pro Red Switches, ANSI Layout",
+      "categories": {
+        "main": "Computers",
+        "sub": "Accessories",
+        "subSub": "Keyboards"
+      },
+      "productSKU": "Q1PRO-ANSI-RED",
+      "brand": "Keychron",
+      "priceDetails": {
+        "mrp": 18999,
+        "offerPrice": 15999
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 30
+      },
+      "shortDescription": "Premium 75% layout mechanical keyboard with wireless connectivity and customizable features.",
+      "detailedDescription": "The Keychron Q1 Pro is a premium 75% layout mechanical keyboard offering both wireless and wired connectivity options. It features a CNC-machined aluminum body with gasket mount design for a satisfying typing experience. The hot-swappable PCB allows for easy switch replacement without soldering, while the QMK/VIA compatibility offers extensive customization options. With RGB backlighting, double-shot PBT keycaps, and a rotary knob, it combines aesthetics, functionality, and performance in a premium package.",
+      "technicalSpecifications": {
+        "keySpecifications": "Layout: 75% (82 Keys)\nSwitches: Gateron G Pro Red (Linear)\nKeycaps: Double-shot PBT\nConnectivity: Bluetooth 5.1, USB-C Wired\nBattery: 4000mAh Rechargeable\nBattery Life: Up to 300 hours (RGB off)\nCNC Machined Aluminum Frame\nGasket Mount Design\nHot-swappable PCB (5-pin switch compatible)\nSouth-facing RGB LED\nQMK/VIA Compatibility\nProgrammable Rotary Knob\nRGB Backlight with Multiple Effects\nN-key Rollover\nWindows and macOS Compatibility\nANSI Layout",
+        "lens": "None",
+        "powerDetails": "4000mAh Rechargeable Li-ion Battery\nUSB-C Charging and Connection",
+        "includedAccessories": "USB-C Cable, Switch Puller, Keycap Puller, Hex Key, Extra Gaskets"
+      },
+      "additionalFeatures": {
+        "warranty": "1 Year Manufacturer Warranty",
+        "certification": "CE, FCC, UKCA"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 330 x 145 x 33 mm\nWeight: 1.9 kg",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "14 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Keychron+Q1+Pro",
+      "images": [
+        "https://placehold.co/800x600?text=Keychron+Q1+Pro+Top",
+        "https://placehold.co/800x600?text=Keychron+Q1+Pro+Side",
+        "https://placehold.co/800x600?text=Keychron+Q1+Pro+Angle"
+      ]
+    },
+    {
+      "productName": "Samsung Galaxy S24 Ultra",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Titanium Black, 12GB RAM, 512GB Storage",
+      "categories": {
+        "main": "Mobile Phones",
+        "sub": "Smartphones",
+        "subSub": "Android Phones"
+      },
+      "productSKU": "SM-S928B",
+      "brand": "Samsung",
+      "priceDetails": {
+        "mrp": 149999,
+        "offerPrice": 134999
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 20
+      },
+      "shortDescription": "Premium flagship smartphone with S Pen support, advanced AI features, and exceptional camera system.",
+      "detailedDescription": "The Samsung Galaxy S24 Ultra represents the pinnacle of smartphone technology with its titanium frame, stunning 6.8-inch QHD+ Dynamic AMOLED 2X display, and powerful Snapdragon 8 Gen 3 processor. The exceptional camera system includes a 200MP main sensor, 50MP periscope telephoto with 5x optical zoom, 10MP telephoto with 3x optical zoom, and 12MP ultra-wide, delivering professional-quality photos in any situation. Built-in S Pen functionality, Galaxy AI features, and a massive 5000mAh battery round out this premium flagship experience.",
+      "technicalSpecifications": {
+        "keySpecifications": "Display: 6.8-inch QHD+ Dynamic AMOLED 2X, 120Hz Adaptive Refresh Rate\nProcessor: Snapdragon 8 Gen 3 for Galaxy\nRAM: 12GB LPDDR5X\nStorage: 512GB UFS 4.0\nRear Cameras: 200MP Wide (f/1.7, OIS), 50MP Periscope Telephoto (5x, f/3.4, OIS), 10MP Telephoto (3x, f/2.4, OIS), 12MP Ultra-wide (f/2.2)\nFront Camera: 12MP (f/2.2, AF)\nBattery: 5000mAh\nCharging: 45W Wired, 15W Wireless, 4.5W Reverse Wireless\nOperating System: Android 14 with One UI 6.1\nBiometric Authentication: Ultrasonic Fingerprint Sensor, Face Recognition\nConnectivity: 5G, Wi-Fi 7, Bluetooth 5.3, UWB, NFC\nWater/Dust Resistance: IP68\nS Pen included (built-in slot)",
+        "lens": "None",
+        "powerDetails": "5000mAh Li-ion Battery\n45W Fast Charging (charger sold separately)",
+        "includedAccessories": "S Pen, USB-C Cable, Ejection Pin, Quick Start Guide"
+      },
+      "additionalFeatures": {
+        "warranty": "1 Year Manufacturer Warranty",
+        "certification": "IP68 Water and Dust Resistance"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 162.3 x 79.0 x 8.6 mm\nWeight: 232g",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "7 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Galaxy+S24+Ultra",
+      "images": [
+        "https://placehold.co/800x600?text=Galaxy+S24+Ultra+Front",
+        "https://placehold.co/800x600?text=Galaxy+S24+Ultra+Back",
+        "https://placehold.co/800x600?text=Galaxy+S24+Ultra+Side"
+      ]
+    },
+    {
+      "productName": "Apple iPhone 15 Pro Max",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Natural Titanium, 1TB",
+      "categories": {
+        "main": "Mobile Phones",
+        "sub": "Smartphones",
+        "subSub": "iOS Phones"
+      },
+      "productSKU": "MU793HN/A",
+      "brand": "Apple",
+      "priceDetails": {
+        "mrp": 184900,
+        "offerPrice": 174900
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 15
+      },
+      "shortDescription": "Apple's flagship smartphone with titanium design, A17 Pro chip, and professional camera system.",
+      "detailedDescription": "The iPhone 15 Pro Max features a durable and lightweight design with a titanium frame and textured matte glass back. The 6.7-inch Super Retina XDR display with ProMotion technology offers an immersive viewing experience. Powered by the A17 Pro chip with 6-core CPU and 6-core GPU, it delivers exceptional performance for demanding tasks. The pro camera system includes a 48MP main camera, 12MP ultra-wide, and 12MP telephoto with 5x optical zoom. New features include the customizable Action button, USB-C connectivity, and advanced computational photography capabilities.",
+      "technicalSpecifications": {
+        "keySpecifications": "Display: 6.7-inch Super Retina XDR OLED, 120Hz ProMotion\nResolution: 2796 x 1290 pixels at 460 ppi\nProcessor: A17 Pro chip with 6-core CPU, 6-core GPU, 16-core Neural Engine\nStorage: 1TB\nRear Cameras: 48MP Main (f/1.78), 12MP Ultra Wide (f/2.2), 12MP Telephoto with 5x optical zoom (f/2.8)\nFront Camera: 12MP TrueDepth (f/1.9)\nVideo Recording: 4K60 fps, 4K120 fps, 4K24 fps Dolby Vision HDR\nBattery: Up to 29 hours video playback\nCharging: USB-C, MagSafe wireless charging up to 15W\nConnectivity: 5G, Wi-Fi 6E, Bluetooth 5.3, Ultra Wideband chip\nWater/Dust Resistance: IP68\nOperating System: iOS 17",
+        "lens": "None",
+        "powerDetails": "Built-in rechargeable lithium-ion battery\nFast-charge capable: Up to 50% charge in around 30 minutes with 20W adapter or higher (sold separately)",
+        "includedAccessories": "USB-C Cable"
+      },
+      "additionalFeatures": {
+        "warranty": "1 Year Limited Warranty",
+        "certification": "IP68 Water and Dust Resistance"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Height: 159.9 mm\nWidth: 76.7 mm\nDepth: 8.25 mm\nWeight: 221g",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "7 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=iPhone+15+Pro+Max",
+      "images": [
+        "https://placehold.co/800x600?text=iPhone+15+Pro+Max+Front",
+        "https://placehold.co/800x600?text=iPhone+15+Pro+Max+Back",
+        "https://placehold.co/800x600?text=iPhone+15+Pro+Max+Side"
+      ]
+    },
+    {
+      "productName": "Google Pixel 8 Pro",
+      "quantityPurchase": "1",
+      "rate": 4,
+      "variation": "Obsidian, 16GB RAM, 512GB",
+      "categories": {
+        "main": "Mobile Phones",
+        "sub": "Smartphones",
+        "subSub": "Android Phones"
+      },
+      "productSKU": "GA04838-US",
+      "brand": "Google",
+      "priceDetails": {
+        "mrp": 119999,
+        "offerPrice": 99999
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 18
+      },
+      "shortDescription": "Google's flagship smartphone with advanced AI features, exceptional camera, and 7 years of updates.",
+      "detailedDescription": "The Google Pixel 8 Pro showcases Google's AI-first approach to smartphones. Powered by the Google Tensor G3 chip, it delivers advanced AI features including enhanced photo editing, real-time translation, and intelligent notifications. The camera system consists of a 50MP main sensor, 48MP ultra-wide, and 48MP telephoto with 5x optical zoom, all enhanced by Google's computational photography. The stunning 6.7-inch LTPO OLED display offers a 120Hz refresh rate, while the device is backed by Google's promise of 7 years of OS and security updates.",
+      "technicalSpecifications": {
+        "keySpecifications": "Display: 6.7-inch LTPO OLED, 1-120Hz Adaptive Refresh\nResolution: 2992 x 1344 pixels, 489 ppi\nProcessor: Google Tensor G3 with Titan M2 security\nRAM: 16GB LPDDR5X\nStorage: 512GB UFS 3.1\nRear Cameras: 50MP Octa PD Wide (f/1.68, OIS), 48MP Quad PD Ultra-wide (f/1.95), 48MP Quad PD Telephoto with 5x optical zoom (f/2.8, OIS)\nFront Camera: 10.5MP Dual PD (f/2.2)\nBattery: 5050mAh\nCharging: 30W Wired, 23W Wireless (Pixel Stand), 5W Reverse Wireless\nConnectivity: 5G, Wi-Fi 7, Bluetooth 5.3, NFC, Ultra-Wideband\nWater/Dust Resistance: IP68\nOperating System: Android 14 with 7 years of OS updates\nSpecial Features: Temperature Sensor, Titan M2 Security Chip",
+        "lens": "None",
+        "powerDetails": "5050mAh Battery\n30W Fast Charging (charger sold separately)",
+        "includedAccessories": "USB-C to USB-C Cable, Quick Switch Adapter, SIM Tool"
+      },
+      "additionalFeatures": {
+        "warranty": "2 Years Manufacturer Warranty",
+        "certification": "IP68 Water and Dust Resistance"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 162.6 x 76.5 x 8.8 mm\nWeight: 213g",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "15 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Pixel+8+Pro",
+      "images": [
+        "https://placehold.co/800x600?text=Pixel+8+Pro+Front",
+        "https://placehold.co/800x600?text=Pixel+8+Pro+Back",
+        "https://placehold.co/800x600?text=Pixel+8+Pro+Camera"
+      ]
+    },
+    {
+      "productName": "OnePlus 12",
+      "quantityPurchase": "1",
+      "rate": 4,
+      "variation": "Flowy Emerald, 16GB RAM, 512GB",
+      "categories": {
+        "main": "Mobile Phones",
+        "sub": "Smartphones",
+        "subSub": "Android Phones"
+      },
+      "productSKU": "5011102150",
+      "brand": "OnePlus",
+      "priceDetails": {
+        "mrp": 69999,
+        "offerPrice": 64999
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 25
+      },
+      "shortDescription": "Flagship smartphone with Snapdragon 8 Gen 3, Hasselblad camera system, and 100W fast charging.",
+      "detailedDescription": "The OnePlus 12 combines cutting-edge performance with premium design and imaging capabilities. Powered by the Snapdragon 8 Gen 3 processor and featuring up to 16GB of LPDDR5X RAM, it delivers exceptional speed for gaming and multitasking. The 4th Gen Hasselblad Camera System includes a 50MP main sensor, 48MP ultra-wide, and 64MP periscope telephoto with 3x optical zoom. The stunning 6.82-inch 2K 120Hz LTPO AMOLED display, 5400mAh battery with 100W wired and 50W wireless charging, and OxygenOS 14 complete this flagship package.",
+      "technicalSpecifications": {
+        "keySpecifications": "Display: 6.82-inch 2K (3168 x 1440) LTPO AMOLED, 1-120Hz Adaptive Refresh\nProcessor: Snapdragon 8 Gen 3 Mobile Platform\nRAM: 16GB LPDDR5X\nStorage: 512GB UFS 4.0\nRear Cameras: 50MP Sony LYT-808 (f/1.6, OIS), 48MP Ultra-wide (f/2.2), 64MP Periscope Telephoto with 3x optical zoom (f/2.6, OIS)\nFront Camera: 32MP (f/2.4)\nBattery: 5400mAh\nCharging: 100W SUPERVOOC wired, 50W AIRVOOC wireless\nOperating System: OxygenOS 14 based on Android 14\nBiometric Authentication: In-display Fingerprint Sensor, Face Unlock\nConnectivity: 5G, Wi-Fi 7, Bluetooth 5.4, NFC\nWater/Dust Resistance: IP65\nStereo Speakers with Dolby Atmos",
+        "lens": "None",
+        "powerDetails": "5400mAh Battery\n100W SUPERVOOC Charger included",
+        "includedAccessories": "100W SUPERVOOC Charger, USB-C Cable, Protective Case, Pre-applied Screen Protector, SIM Tray Ejector"
+      },
+      "additionalFeatures": {
+        "warranty": "1 Year Manufacturer Warranty",
+        "certification": "IP65 Water and Dust Resistance"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 164.3 x 75.8 x 9.2 mm\nWeight: 220g",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "7 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=OnePlus+12",
+      "images": [
+        "https://placehold.co/800x600?text=OnePlus+12+Front",
+        "https://placehold.co/800x600?text=OnePlus+12+Back",
+        "https://placehold.co/800x600?text=OnePlus+12+Camera"
+      ]
+    },
+    {
+      "productName": "Apple Watch Ultra 2",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Titanium Case with Orange Alpine Loop (Medium)",
+      "categories": {
+        "main": "Wearable Tech",
+        "sub": "Smartwatches",
+        "subSub": "Premium Smartwatches"
+      },
+      "productSKU": "MV7K3HN/A",
+      "brand": "Apple",
+      "priceDetails": {
+        "mrp": 89900,
+        "offerPrice": 84900
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 15
+      },
+      "shortDescription": "Rugged, high-performance smartwatch designed for extreme conditions and endurance athletes.",
+      "detailedDescription": "The Apple Watch Ultra 2 builds upon its predecessor with enhanced features for extreme athletes and adventurers. The lightweight yet durable titanium case houses the brightest Apple Watch display ever, making it readable in any conditions. Powered by the S9 SiP, it offers improved performance and new features like Double Tap gesture control. The customizable Action button, precise dual-frequency GPS, depth gauge with water temperature sensor, and up to 36 hours of battery life (72 hours in Low Power Mode) make it the ultimate companion for outdoor adventures and endurance sports.",
+      "technicalSpecifications": {
+        "keySpecifications": "Case: 49mm Titanium\nDisplay: Always-On Retina LTPO OLED, up to 3000 nits brightness\nProcessor: S9 SiP with 64-bit dual-core processor\nStorage: 64GB\nWater Resistance: 100m water resistance, EN13319 certified for scuba diving\nGPS: Precision dual-frequency GPS (L1 & L5)\nSensors: Blood Oxygen, ECG, Heart Rate, Temperature, Depth Gauge, Water Temperature, Compass, Altimeter, Accelerometer, Gyroscope, Ambient Light\nBattery Life: Up to 36 hours (72 hours in Low Power Mode)\nOperating System: watchOS 10\nSpecial Features: Customizable Action Button, 86-decibel Siren, Night Mode, Depth App, Oceanic+ App compatibility",
+        "lens": "None",
+        "powerDetails": "Built-in rechargeable lithium-ion battery\nFast charging (0-80% in about 45 minutes)",
+        "includedAccessories": "Magnetic Fast Charger to USB-C Cable, Orange Alpine Loop (Medium)"
+      },
+      "additionalFeatures": {
+        "warranty": "1 Year Limited Warranty",
+        "certification": "EN13319 (Diving), MIL-STD 810H"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Height: 49 mm\nWidth: 44 mm\nDepth: 14.4 mm\nWeight: 61.3g (without band)",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "14 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Apple+Watch+Ultra+2",
+      "images": [
+        "https://placehold.co/800x600?text=Apple+Watch+Ultra+2+Front",
+        "https://placehold.co/800x600?text=Apple+Watch+Ultra+2+Side",
+        "https://placehold.co/800x600?text=Apple+Watch+Ultra+2+Band"
+      ]
+    },
+    {
+      "productName": "Samsung Galaxy Watch6 Classic",
+      "quantityPurchase": "1",
+      "rate": 4,
+      "variation": "Black, 47mm, Bluetooth",
+      "categories": {
+        "main": "Wearable Tech",
+        "sub": "Smartwatches",
+        "subSub": "Android Smartwatches"
+      },
+      "productSKU": "SM-R960NZKAINS",
+      "brand": "Samsung",
+      "priceDetails": {
+        "mrp": 42999,
+        "offerPrice": 34999
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 22
+      },
+      "shortDescription": "Premium smartwatch with rotating bezel, advanced health tracking, and Wear OS capabilities.",
+      "detailedDescription": "The Samsung Galaxy Watch6 Classic combines timeless design with cutting-edge technology. The iconic rotating bezel offers intuitive navigation, while the vibrant Super AMOLED display provides exceptional visibility in all conditions. Powered by Samsung's BioActive Sensor, it offers comprehensive health and fitness tracking including Body Composition analysis, Advanced Sleep Coaching, and continuous heart rate monitoring. Running Wear OS Powered by Samsung, it provides access to a vast ecosystem of apps, enhanced notifications, and seamless integration with Galaxy smartphones.",
+      "technicalSpecifications": {
+        "keySpecifications": "Display: 1.5\" (47mm) Super AMOLED, 480 x 480 resolution\nProcessor: Exynos W930 Dual-Core 1.4GHz\nMemory: 2GB RAM + 16GB Storage\nBattery: 425mAh (Up to 40 hours)\nOperating System: Wear OS Powered by Samsung\nSensors: Samsung BioActive Sensor (Optical Heart Rate + Electrical Heart Signal + Bioelectrical Impedance Analysis), Temperature Sensor, Accelerometer, Barometer, Gyro Sensor, Geomagnetic Sensor, Light Sensor\nConnectivity: Bluetooth 5.3, Wi-Fi 2.4+5GHz, NFC, GPS/Glonass/Beidou/Galileo\nDurability: 5ATM + IP68 Water and Dust Resistance, MIL-STD-810H\nMaterial: Stainless Steel case, Sapphire Crystal glass\nCharging: Wireless charging",
+        "lens": "None",
+        "powerDetails": "425mAh Battery\nWireless Charging",
+        "includedAccessories": "Wireless Charger, Medium/Large Sport Band"
+      },
+      "additionalFeatures": {
+        "warranty": "1 Year Manufacturer Warranty",
+        "certification": "IP68, 5ATM Water Resistance, MIL-STD-810H"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 46.5 x 46.5 x 10.9 mm\nWeight: 59g (without band)",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "7 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Galaxy+Watch6+Classic",
+      "images": [
+        "https://placehold.co/800x600?text=Galaxy+Watch6+Classic+Front",
+        "https://placehold.co/800x600?text=Galaxy+Watch6+Classic+Side",
+        "https://placehold.co/800x600?text=Galaxy+Watch6+Classic+Band"
+      ]
+    },
+    {
+      "productName": "Garmin Fenix 7X Sapphire Solar",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Carbon Gray DLC Titanium with Black Band",
+      "categories": {
+        "main": "Wearable Tech",
+        "sub": "Smartwatches",
+        "subSub": "Sport Watches"
+      },
+      "productSKU": "010-02541-11",
+      "brand": "Garmin",
+      "priceDetails": {
+        "mrp": 104990,
+        "offerPrice": 89990
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 10
+      },
+      "shortDescription": "Premium multisport GPS watch with solar charging, built-in flashlight, and extensive fitness features.",
+      "detailedDescription": "The Garmin Fenix 7X Sapphire Solar is the ultimate outdoor adventure watch, offering exceptional battery life enhanced by solar charging capability. The rugged design features a scratch-resistant sapphire lens and titanium bezel for durability in extreme conditions. With multi-band GPS, topographic maps, and a built-in LED flashlight, it's designed for serious adventurers. The comprehensive fitness tracking capabilities include advanced metrics for running, cycling, swimming, and many other activities, while the extensive health monitoring features provide insights into your overall wellbeing.",
+      "technicalSpecifications": {
+        "keySpecifications": "Display: 1.4\" (35.56 mm) sunlight-visible, transflective MIP\nResolution: 280 x 280 pixels\nLens Material: Power Sapphire™\nBezel Material: Titanium with Diamond-Like Carbon (DLC) coating\nCase Material: Fiber-reinforced polymer with metal rear cover\nBattery Life: Up to 37 days in smartwatch mode with solar charging\nSolar Charging: Power Glass™ solar charging lens\nGPS: Multi-band GNSS with SatIQ™ technology\nStorage: 32 GB\nSensors: GPS, GLONASS, GALILEO, Heart Rate Monitor, Barometric Altimeter, Compass, Gyroscope, Accelerometer, Thermometer, Pulse Ox, Built-in Flashlight\nWater Rating: 10 ATM\nConnectivity: Bluetooth, ANT+, Wi-Fi\nMaps: TopoActive maps, Ski maps, Golf maps",
+        "lens": "None",
+        "powerDetails": "Rechargeable internal lithium battery\nSolar charging capability",
+        "includedAccessories": "Charging/Data Cable, Documentation"
+      },
+      "additionalFeatures": {
+        "warranty": "2 Years Manufacturer Warranty",
+        "certification": "10 ATM Water Rating"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 51 x 51 x 14.9 mm\nWeight: 89g",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "30 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Garmin+Fenix+7X",
+      "images": [
+        "https://placehold.co/800x600?text=Garmin+Fenix+7X+Front",
+        "https://placehold.co/800x600?text=Garmin+Fenix+7X+Side",
+        "https://placehold.co/800x600?text=Garmin+Fenix+7X+Maps"
+      ]
+    },
+    {
+      "productName": "Sony WF-1000XM5 Wireless Earbuds",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Black",
+      "categories": {
+        "main": "Audio",
+        "sub": "Headphones",
+        "subSub": "True Wireless Earbuds"
+      },
+      "productSKU": "WF1000XM5/B",
+      "brand": "Sony",
+      "priceDetails": {
+        "mrp": 24990,
+        "offerPrice": 21990
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 30
+      },
+      "shortDescription": "Premium noise-cancelling true wireless earbuds with exceptional sound quality and comfort.",
+      "detailedDescription": "The Sony WF-1000XM5 represents the latest in true wireless earbud technology, featuring Sony's most advanced noise cancellation thanks to the Integrated Processor V2 and new Dynamic Driver X. These compact earbuds are 25% smaller and 20% lighter than their predecessor, providing exceptional comfort for extended wear. With DSEE Extreme upscaling, LDAC codec support, and precise voice pickup technology, they deliver outstanding audio quality for both music and calls. Advanced features include Speak-to-Chat, Adaptive Sound Control, and multipoint connection capability.",
+      "technicalSpecifications": {
+        "keySpecifications": "Driver Unit: 8.4mm Dynamic Driver X\nFrequency Response: 20Hz-40,000Hz\nNoise Cancellation: Integrated Processor V2 with 4 microphones per earbud\nBattery Life: 8 hours (NC ON), 12 hours (NC OFF), 24 hours total with case\nQuick Charging: 1 hour playback with 3 min charge\nBluetooth Version: 5.3\nAudio Formats: LDAC, AAC, SBC\nDSEE Extreme Upscaling\nMultipoint Connection\nTouch Controls\nWater Resistance: IPX4\nBuilt-in Alexa and Google Assistant",
+        "lens": "None",
+        "powerDetails": "Built-in Rechargeable Lithium-ion Battery\nUSB-C Charging\nWireless Qi Charging Compatible",
+        "includedAccessories": "Charging Case, USB-C Cable, Hybrid Silicone Earbud Tips (SS, S, M, L)"
+      },
+      "additionalFeatures": {
+        "warranty": "1 Year Manufacturer Warranty",
+        "certification": "IPX4 Water Resistance, Hi-Res Audio Wireless"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Earbuds Dimensions: Approx. 15.8 x 24.5 x 17.6 mm\nEarbuds Weight: Approx. 5.9g each\nCase Dimensions: Approx. 64.6 x 40.0 x 26.5 mm\nCase Weight: Approx. 41g",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "7 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Sony+WF-1000XM5",
+      "images": [
+        "https://placehold.co/800x600?text=Sony+WF-1000XM5+Earbuds",
+        "https://placehold.co/800x600?text=Sony+WF-1000XM5+Case",
+        "https://placehold.co/800x600?text=Sony+WF-1000XM5+Wearing"
+      ]
+    },
+    {
+      "productName": "DJI Air 3 Fly More Combo",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Standard",
+      "categories": {
+        "main": "Photography",
+        "sub": "Drones",
+        "subSub": "Consumer Drones"
+      },
+      "productSKU": "CP.MA.00000886.01",
+      "brand": "DJI",
+      "priceDetails": {
+        "mrp": 159990,
+        "offerPrice": 139990
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 12
+      },
+      "shortDescription": "Versatile aerial photography drone with dual cameras, 46-minute flight time, and advanced features.",
+      "detailedDescription": "The DJI Air 3 Fly More Combo delivers exceptional aerial imaging capabilities with its dual-camera system featuring a 48MP wide-angle camera and a 70mm telephoto camera, both supporting 4K/60fps HDR video. With an impressive 46-minute maximum flight time, 20km transmission range, and omnidirectional obstacle sensing, it provides both professional-quality results and peace of mind. This Fly More Combo includes additional batteries, a charging hub, and various accessories to extend your shooting sessions.",
+      "technicalSpecifications": {
+        "keySpecifications": "Cameras: 48MP Wide-Angle (24mm equivalent, f/1.7) and 3x Telephoto (70mm equivalent, f/2.8)\nSensor: 1/1.3-inch CMOS\nVideo: 4K/60fps HDR, 10-bit D-Log M\nFlight Time: Up to 46 minutes\nMax Transmission Range: 20 km (FCC), 12 km (CE)\nMax Speed: 21 m/s (Sport Mode)\nOmnidirectional Obstacle Sensing\nFocusTrack Suite: ActiveTrack 5.0, Spotlight, Point of Interest\nWaypoint and 360° Intelligent Flight Modes\nADAS (Advanced Driver Assistance Systems)\nO4 Video Transmission\nWeight: 720g",
+        "lens": "Wide: 24mm equivalent, f/1.7\nTelephoto: 70mm equivalent, f/2.8",
+        "powerDetails": "Intelligent Flight Battery: 3,705 mAh\nMax Flight Time: 46 minutes",
+        "includedAccessories": "DJI Air 3 Aircraft, DJI RC-N2 Remote Controller, 3x Intelligent Flight Batteries, Charging Hub, Carrying Bag, Spare Propellers, ND Filter Set (ND4/8/16/32)"
+      },
+      "additionalFeatures": {
+        "warranty": "1 Year Manufacturer Warranty",
+        "certification": "CE, FCC"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Folded Dimensions: 207 × 100.5 × 91.1 mm\nUnfolded Dimensions: 278 × 244 × 89.9 mm\nWeight: 720g",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "7 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=DJI+Air+3",
+      "images": [
+        "https://placehold.co/800x600?text=DJI+Air+3+Front",
+        "https://placehold.co/800x600?text=DJI+Air+3+Folded",
+        "https://placehold.co/800x600?text=DJI+Air+3+Combo"
+      ]
+    },
+    {
+      "productName": "Insta360 X3 Action Camera",
+      "quantityPurchase": "1",
+      "rate": 4,
+      "variation": "Standard Package",
+      "categories": {
+        "main": "Photography",
+        "sub": "Cameras",
+        "subSub": "Action Cameras"
+      },
+      "productSKU": "INSX3",
+      "brand": "Insta360",
+      "priceDetails": {
+        "mrp": 44999,
+        "offerPrice": 39999
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 22
+      },
+      "shortDescription": "Versatile 360-degree action camera with 5.7K resolution and powerful reframing capabilities.",
+      "detailedDescription": "The Insta360 X3 is a versatile action camera that captures immersive 360-degree footage at 5.7K resolution, allowing you to reframe your shots after recording. With its 1/2\" 48MP sensors, it delivers excellent image quality even in challenging lighting conditions. The camera features a 2.29\" touchscreen for easy control, while the 4K Single-Lens Mode lets you use it as a traditional action camera. Advanced features include FlowState Stabilization, Horizon Lock, invisible selfie stick effect, and AI-powered editing tools through the Insta360 app.",
+      "technicalSpecifications": {
+        "keySpecifications": "Sensors: Dual 1/2\" 48MP\n360 Video: 5.7K@30fps, 4K@60fps\nSingle-Lens Video: 4K@30fps, 2.7K@60fps\n360 Photos: 72MP\nSingle-Lens Photos: 18MP\nTouchscreen: 2.29\" Tempered Glass\nStabilization: FlowState Stabilization with Horizon Lock\nBattery: 1800mAh (removable)\nRecording Time: Up to 81 minutes\nWaterproof: 33ft (10m) without case\nConnectivity: WiFi, Bluetooth, USB-C\nStorage: microSD Card (up to 1TB)\nInvisible Selfie Stick Effect\nAI Editing Features in Insta360 App\nPocketCast Live Streaming",
+        "lens": "Dual Fisheye Lenses with f/1.9 aperture",
+        "powerDetails": "1800mAh Removable Battery\nUSB-C Charging",
+        "includedAccessories": "Lens Cap, Lens Guard, Battery, Charging Cable, Invisible Selfie Stick"
+      },
+      "additionalFeatures": {
+        "warranty": "1 Year Manufacturer Warranty",
+        "certification": "Waterproof to 10m"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 114 x 46 x 33.1 mm\nWeight: 180g",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "7 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Insta360+X3",
+      "images": [
+        "https://placehold.co/800x600?text=Insta360+X3+Front",
+        "https://placehold.co/800x600?text=Insta360+X3+Side",
+        "https://placehold.co/800x600?text=Insta360+X3+Screen"
+      ]
+    },
+    {
+      "productName": "Zhiyun Crane 3S Gimbal Stabilizer",
+      "quantityPurchase": "1",
+      "rate": 4,
+      "variation": "Pro Package",
+      "categories": {
+        "main": "Photography",
+        "sub": "Camera Accessories",
+        "subSub": "Stabilizers"
+      },
+      "productSKU": "ZHC3S-PRO",
+      "brand": "Zhiyun",
+      "priceDetails": {
+        "mrp": 89999,
+        "offerPrice": 69999
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 8
+      },
+      "shortDescription": "Professional 3-axis gimbal stabilizer with modular design and high payload capacity.",
+      "detailedDescription": "The Zhiyun Crane 3S is a professional 3-axis gimbal stabilizer designed for filmmakers working with cinema cameras and DSLRs. Its innovative modular design allows for versatile configurations, while the powerful motors support a payload capacity of up to 6.5kg. The detachable handle provides flexible operation options, and the ViaTouch 2.0 control system allows for seamless camera control. With features like SmartFollow 2.0, Panorama, and Timelapse modes, plus an impressive 12-hour battery life, the Crane 3S is a comprehensive solution for professional video production.",
+      "technicalSpecifications": {
+        "keySpecifications": "Stabilization: 3-Axis (Pan, Tilt, Roll)\nPayload Capacity: Up to 6.5kg\nBattery Life: Up to 12 hours\nApplication: Cinema Cameras, DSLRs, Mirrorless\nOperation Modes: Pan Follow, Follow, Lock, POV, Vortex, Go\nFeature Modes: Panorama, Timelapse, Motion Control\nSmartFollow 2.0 Object Tracking\nViaTouch 2.0 Camera Control System\nModular Design with Detachable Handle\nTrans-mount Ecosystem Compatibility\nManual Focus/Zoom Control\n0.96\" OLED Display",
+        "lens": "None",
+        "powerDetails": "Three 18650 Batteries (Included)\nExternal Power Input",
+        "includedAccessories": "Crane 3S Gimbal, Detachable Handle, PowerPlus Battery Pack, Quick Release Plate, 3x Batteries, Charger, Tripod, Phone Holder, Carrying Case"
+      },
+      "additionalFeatures": {
+        "warranty": "1 Year Manufacturer Warranty",
+        "certification": "CE, FCC, RoHS"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 405 x 168 x 220 mm\nWeight: 1.9kg (without batteries)",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "7 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Zhiyun+Crane+3S",
+      "images": [
+        "https://placehold.co/800x600?text=Zhiyun+Crane+3S+Front",
+        "https://placehold.co/800x600?text=Zhiyun+Crane+3S+Side",
+        "https://placehold.co/800x600?text=Zhiyun+Crane+3S+Setup"
+      ]
+    },
+    {
+      "productName": "Elgato Stream Deck MK.2",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Black",
+      "categories": {
+        "main": "Computers",
+        "sub": "Accessories",
+        "subSub": "Streaming Equipment"
+      },
+      "productSKU": "10GAT9901",
+      "brand": "Elgato",
+      "priceDetails": {
+        "mrp": 17999,
+        "offerPrice": 14999
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 28
+      },
+      "shortDescription": "Customizable control panel with 15 LCD keys for streamers and content creators.",
+      "detailedDescription": "The Elgato Stream Deck MK.2 is a customizable control panel featuring 15 LCD keys that allow content creators to trigger actions with a tap. Perfect for streamers, video editors, and creative professionals, it enables instant control of apps, tools, and platforms. With the intuitive software, you can assign custom icons to keys, create multi-action commands, and switch between different key setups with profiles. The interchangeable faceplates and improved stand design make it both functional and personalized for your workspace.",
+      "technicalSpecifications": {
+        "keySpecifications": "Keys: 15 Customizable LCD Keys\nInterface: USB-C to USB-A Cable\nCompatibility: Windows 10/11, macOS 10.15 or later\nSoftware: Stream Deck App\nIntegrations: OBS Studio, Streamlabs, Twitch, YouTube, Twitter, Discord, Spotify, Philips Hue, and more\nFeatures: Multi-actions, Smart Profiles, Nested Folders\nInterchangeable Faceplates\nAdjustable Desktop Stand\nKey Icons: 72 x 72 pixels",
+        "lens": "None",
+        "powerDetails": "Bus-Powered via USB",
+        "includedAccessories": "USB-C to USB-A Cable, Adjustable Stand, Interchangeable Faceplate"
+      },
+      "additionalFeatures": {
+        "warranty": "2 Years Manufacturer Warranty",
+        "certification": "CE, FCC"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 118 x 84 x 25 mm\nWeight: 145g",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "30 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Elgato+Stream+Deck",
+      "images": [
+        "https://placehold.co/800x600?text=Stream+Deck+Top",
+        "https://placehold.co/800x600?text=Stream+Deck+Angle",
+        "https://placehold.co/800x600?text=Stream+Deck+Setup"
+      ]
+    },
+    {
+      "productName": "Elgato Facecam Pro",
+      "quantityPurchase": "1",
+      "rate": 4,
+      "variation": "Standard",
+      "categories": {
+        "main": "Computers",
+        "sub": "Accessories",
+        "subSub": "Webcams"
+      },
+      "productSKU": "10GAP9901",
+      "brand": "Elgato",
+      "priceDetails": {
+        "mrp": 29999,
+        "offerPrice": 24999
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 15
+      },
+      "shortDescription": "Professional 4K60 webcam with Sony STARVIS sensor and advanced customization options.",
+      "detailedDescription": "The Elgato Facecam Pro is a professional-grade webcam delivering exceptional 4K60 video quality through its premium Sony STARVIS CMOS sensor and all-glass lens. Designed for content creators, streamers, and remote professionals, it offers unparalleled control over your image with adjustable field of view, electronic pan/tilt, and comprehensive image customization through the Camera Hub software. The direct USB-C connection ensures uncompressed, low-latency video feed, while the permanent settings storage means your preferences remain intact between sessions.",
+      "technicalSpecifications": {
+        "keySpecifications": "Resolution: 4K60 (3840 x 2160 at 60fps)\nSensor: Sony STARVIS CMOS Sensor\nLens: Prime Lens with All-Glass Element Construction\nField of View: Adjustable from 90° to 20°\nFocus: Fixed Focus\nAperture: f/2.0\nConnection: USB 3.0 (USB-C)\nMounting: Standard 1/4\" Thread, Monitor Mount\nElectronic Pan/Tilt\nCamera Hub Software\nPermanent Settings Storage\nUncompressed Video\nNo Built-in Microphone (optimized for external audio)",
+        "lens": "All-Glass Prime Lens Element",
+        "powerDetails": "Bus-Powered via USB",
+        "includedAccessories": "USB-C to USB-A Cable, Privacy Cap, Monitor Mount"
+      },
+      "additionalFeatures": {
+        "warranty": "2 Years Manufacturer Warranty",
+        "certification": "CE, FCC"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 79 x 48 x 118 mm\nWeight: 96g (without mount)",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "30 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Elgato+Facecam+Pro",
+      "images": [
+        "https://placehold.co/800x600?text=Facecam+Pro+Front",
+        "https://placehold.co/800x600?text=Facecam+Pro+Angle",
+        "https://placehold.co/800x600?text=Facecam+Pro+Mount"
+      ]
+    },
+    {
+      "productName": "Philips Hue White and Color Ambiance Starter Kit",
+      "quantityPurchase": "1",
+      "rate": 4,
+      "variation": "3 Bulbs + Bridge",
+      "categories": {
+        "main": "Smart Home",
+        "sub": "Smart Lighting",
+        "subSub": "Smart Bulbs"
+      },
+      "productSKU": "929001257363",
+      "brand": "Philips",
+      "priceDetails": {
+        "mrp": 16999,
+        "offerPrice": 12999
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 25
+      },
+      "shortDescription": "Smart lighting starter kit with three color bulbs and Hue Bridge for complete home control.",
+      "detailedDescription": "The Philips Hue White and Color Ambiance Starter Kit provides everything you need to begin your smart lighting journey. The kit includes three E27 bulbs capable of producing 16 million colors and different shades of white light, from cool to warm. The included Hue Bridge connects up to 50 lights and enables advanced features like away-from-home control, routines, and third-party app integration. With voice control support and the intuitive Hue app, you can easily create the perfect ambiance for any moment.",
+      "technicalSpecifications": {
+        "keySpecifications": "Bulb Type: E27 (Edison Screw)\nWattage: 9W (60W Equivalent)\nLumens: 806lm at 4000K\nColor Range: 16 Million Colors + White Spectrum (2000K-6500K)\nLifespan: 25,000 Hours\nDimmable: Yes (via App/Voice)\nHue Bridge: Controls up to 50 Lights\nWireless Protocol: Zigbee\nVoice Control: Works with Amazon Alexa, Google Assistant, Apple HomeKit\nConnectivity: Wi-Fi (Bridge), Bluetooth (Limited Functionality without Bridge)\nApp Control: iOS and Android\nEnergy Efficiency Class: F",
+        "lens": "None",
+        "powerDetails": "Input: 220-240V, 50/60Hz\nBridge Power Adapter Included",
+        "includedAccessories": "3x Hue White and Color Ambiance Bulbs, Hue Bridge, Power Adapter, Ethernet Cable"
+      },
+      "additionalFeatures": {
+        "warranty": "2 Years Manufacturer Warranty",
+        "certification": "CE, RoHS"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Bulb Dimensions: 110 x 62 mm\nBridge Dimensions: 90 x 90 x 26 mm",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "14 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Philips+Hue+Starter+Kit",
+      "images": [
+        "https://placehold.co/800x600?text=Philips+Hue+Kit",
+        "https://placehold.co/800x600?text=Philips+Hue+Bulb",
+        "https://placehold.co/800x600?text=Philips+Hue+Bridge"
+      ]
+    },
+    {
+      "productName": "Amazon Echo Show 10 (3rd Gen)",
+      "quantityPurchase": "1",
+      "rate": 4,
+      "variation": "Charcoal",
+      "categories": {
+        "main": "Smart Home",
+        "sub": "Smart Speakers",
+        "subSub": "Smart Displays"
+      },
+      "productSKU": "B07VHZ41L8",
+      "brand": "Amazon",
+      "priceDetails": {
+        "mrp": 24999,
+        "offerPrice": 19999
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 18
+      },
+      "shortDescription": "Premium smart display with 10.1\" HD screen, motion tracking, and built-in Zigbee hub.",
+      "detailedDescription": "The Amazon Echo Show 10 (3rd Gen) redefines the smart display experience with its innovative motion capability that automatically keeps you in frame during video calls or while watching content. The 10.1-inch HD screen combined with premium directional speakers delivers an immersive entertainment experience. As a comprehensive smart home hub, it includes Zigbee compatibility and works with thousands of smart devices. With Alexa built-in, you can control your smart home, make video calls, watch shows, and more, all with simple voice commands.",
+      "technicalSpecifications": {
+        "keySpecifications": "Display: 10.1\" HD Screen (1280 x 800)\nMotor: Brushless, Silent Motion\nSpeakers: 2.1 System (2x 1\" Tweeters + 3\" Woofer)\nCamera: 13MP with Auto-framing\nSmart Home Hub: Built-in Zigbee\nConnectivity: Dual-band Wi-Fi, Bluetooth A2DP\nPrivacy Features: Camera Shutter, Microphone Off Button\nProcessors: MediaTek 8183 Main Processor + Second Processor with AZ1 Neural Edge\nAudio: Dolby Processing\nSensors: ALS, RGB Camera, Accelerometer\nAlexa Built-in\nVideo Calling: Supports Alexa, Skype, Zoom\nStreaming Services: Prime Video, Netflix, Hulu, and more",
+        "lens": "None",
+        "powerDetails": "30W Power Adapter (included)",
+        "includedAccessories": "Power Adapter, Quick Start Guide"
+      },
+      "additionalFeatures": {
+        "warranty": "1 Year Limited Warranty",
+        "certification": "Built-in Zigbee Hub"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 251 x 230 x 172 mm\nWeight: 2.56 kg",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "30 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Echo+Show+10",
+      "images": [
+        "https://placehold.co/800x600?text=Echo+Show+10+Front",
+        "https://placehold.co/800x600?text=Echo+Show+10+Side",
+        "https://placehold.co/800x600?text=Echo+Show+10+Motion"
+      ]
+    },
+    {
+      "productName": "Google Nest Learning Thermostat (3rd Generation)",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Stainless Steel",
+      "categories": {
+        "main": "Smart Home",
+        "sub": "Climate Control",
+        "subSub": "Smart Thermostats"
+      },
+      "productSKU": "T3007ES",
+      "brand": "Google Nest",
+      "priceDetails": {
+        "mrp": 23999,
+        "offerPrice": 18999
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 15
+      },
+      "shortDescription": "Energy-saving smart thermostat that learns your preferences and programs itself.",
+      "detailedDescription": "The Google Nest Learning Thermostat (3rd Generation) revolutionizes home climate control by learning your temperature preferences and creating an automatic schedule. Its elegant design features a high-resolution display that shows temperature, weather, and energy usage at a glance. With features like Auto-Away, which adjusts the temperature when you're not home, and Farsight, which lights up to show information when you're across the room, it combines convenience with energy efficiency. The thermostat works with most HVAC systems and can be controlled remotely via the Nest app.",
+      "technicalSpecifications": {
+        "keySpecifications": "Display: 24-bit Color LCD, 480 x 480 resolution at 229 PPI\nSensors: Temperature, Humidity, Near-field Activity, Far-field Activity, Ambient Light\nConnectivity: Wi-Fi 802.11b/g/n @ 2.4GHz, 5GHz, Bluetooth Low Energy\nPower: Built-in Rechargeable Lithium-Ion Battery\nWiring: Compatible with 24V heating and cooling systems\nSmart Features: Auto-Schedule, Auto-Away, Farsight, Energy History\nVoice Control: Works with Google Assistant, Amazon Alexa\nRemote Control: Nest App for iOS and Android\nEnergy Saving: ENERGY STAR certified",
+        "lens": "None",
+        "powerDetails": "Built-in Rechargeable Lithium-Ion Battery\nCharges through HVAC system wires",
+        "includedAccessories": "Base, Mounting Screws and Trim Plate, Installation Guide, Optional Trim Kit"
+      },
+      "additionalFeatures": {
+        "warranty": "2 Years Limited Warranty",
+        "certification": "ENERGY STAR Certified"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Diameter: 3.3 in (8.4 cm)\nHeight: 1.21 in (3.08 cm)\nWeight: 8.6 oz (243.7 g)",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "30 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Nest+Thermostat",
+      "images": [
+        "https://placehold.co/800x600?text=Nest+Thermostat+Front",
+        "https://placehold.co/800x600?text=Nest+Thermostat+Angle",
+        "https://placehold.co/800x600?text=Nest+Thermostat+App"
+      ]
+    },
+    {
+      "productName": "Ring Video Doorbell Pro 2",
+      "quantityPurchase": "1",
+      "rate": 4,
+      "variation": "Satin Nickel",
+      "categories": {
+        "main": "Smart Home",
+        "sub": "Security",
+        "subSub": "Video Doorbells"
+      },
+      "productSKU": "8VR1P7-0EU0",
+      "brand": "Ring",
+      "priceDetails": {
+        "mrp": 22999,
+        "offerPrice": 18999
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 20
+      },
+      "shortDescription": "Advanced video doorbell with head-to-toe HD+ video, 3D motion detection, and enhanced features.",
+      "detailedDescription": "The Ring Video Doorbell Pro 2 offers premium home security with its head-to-toe HD+ video view and advanced features. The 1536p resolution ensures crystal-clear video quality, while 3D Motion Detection with Bird's Eye View provides precise motion alerts and lets you see the path visitors took on your property. With enhanced dual-band Wi-Fi, two-way talk with audio+ noise cancellation, and customizable privacy zones, it delivers comprehensive front door monitoring. The slim design and included faceplate options allow it to complement any home exterior.",
+      "technicalSpecifications": {
+        "keySpecifications": "Video Resolution: 1536p HD+\nField of View: 150° horizontal, 150° vertical\nMotion Detection: 3D Motion Detection with Bird's Eye View\nNight Vision: Color Night Vision\nAudio: Two-Way Talk with Audio+ and Noise Cancellation\nConnectivity: Dual-Band Wi-Fi (2.4GHz and 5GHz)\nPower: Hardwired (16-24VAC)\nWeather Resistance: -20°C to 50°C operating range\nSmart Responses: Alexa Greetings, Quick Replies\nSmart Alerts: Person, Package Detection (with subscription)\nCompatibility: Works with Alexa",
+        "lens": "None",
+        "powerDetails": "Hardwired Installation (16-24VAC)\nExisting Doorbell Wiring Required",
+        "includedAccessories": "Ring Video Doorbell Pro 2, Interchangeable Faceplates, Installation Tools and Hardware, Power Kit, User Manual"
+      },
+      "additionalFeatures": {
+        "warranty": "1 Year Limited Warranty",
+        "certification": "Weather-Resistant"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 4.49 x 1.9 x 0.87 inches\nWeight: 130g",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "30 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Ring+Doorbell+Pro+2",
+      "images": [
+        "https://placehold.co/800x600?text=Ring+Doorbell+Pro+2+Front",
+        "https://placehold.co/800x600?text=Ring+Doorbell+Pro+2+Angle",
+        "https://placehold.co/800x600?text=Ring+Doorbell+Pro+2+App"
+      ]
+    },
+    {
+      "productName": "Oculus Quest 3 256GB",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "256GB",
+      "categories": {
+        "main": "Gaming",
+        "sub": "Virtual Reality",
+        "subSub": "VR Headsets"
+      },
+      "productSKU": "301-00197-01",
+      "brand": "Meta",
+      "priceDetails": {
+        "mrp": 69999,
+        "offerPrice": 59999
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 12
+      },
+      "shortDescription": "Advanced all-in-one VR headset with high-resolution display, powerful processor, and mixed reality capabilities.",
+      "detailedDescription": "The Meta Quest 3 represents the next generation of all-in-one virtual reality, offering both immersive VR and mixed reality experiences in a single device. Powered by the Snapdragon XR2 Gen 2 chipset, it delivers twice the graphical performance of Quest 2. The high-resolution display provides 30% more clarity, while the pancake lenses offer a 40% slimmer optical profile for enhanced comfort. With its advanced color passthrough cameras, the Quest 3 seamlessly blends digital content with your physical space, opening up new possibilities for gaming, fitness, productivity, and social experiences.",
+      "technicalSpecifications": {
+        "keySpecifications": "Storage: 256GB\nProcessor: Snapdragon XR2 Gen 2\nRAM: 8GB\nDisplay: LCD, 2064 x 2208 pixels per eye\nRefresh Rate: 90Hz - 120Hz\nField of View: ~110° horizontal\nLenses: Pancake Lenses (40% slimmer than Quest 2)\nTracking: Inside-out with no external sensors\nControllers: Meta Quest Touch Plus Controllers\nPassthrough: Full-color, high-resolution passthrough for mixed reality\nAudio: Integrated spatial audio speakers, 3.5mm headphone jack\nConnectivity: Wi-Fi 6E, Bluetooth 5.2\nBattery Life: 2-3 hours (depending on usage)",
+        "lens": "Pancake Lenses",
+        "powerDetails": "Built-in Rechargeable Battery\nUSB-C Charging",
+        "includedAccessories": "Meta Quest 3 Headset, 2 Touch Plus Controllers, Charging Cable, Power Adapter, 2 AA Batteries"
+      },
+      "additionalFeatures": {
+        "warranty": "1 Year Limited Warranty",
+        "certification": "CE, FCC"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Headset Dimensions: Approx. 184 x 160 x 98 mm\nHeadset Weight: 515g",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "30 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Meta+Quest+3",
+      "images": [
+        "https://placehold.co/800x600?text=Meta+Quest+3+Front",
+        "https://placehold.co/800x600?text=Meta+Quest+3+Side",
+        "https://placehold.co/800x600?text=Meta+Quest+3+Controllers"
+      ]
+    },
+    {
+      "productName": "PlayStation 5 Pro Console",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Disc Edition, 2TB",
+      "categories": {
+        "main": "Gaming",
+        "sub": "Consoles",
+        "subSub": "Home Consoles"
+      },
+      "productSKU": "PS5PRO2TB",
+      "brand": "Sony",
+      "priceDetails": {
+        "mrp": 84990,
+        "offerPrice": 79990
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 8
+      },
+      "shortDescription": "Enhanced PlayStation 5 console with upgraded GPU, ray tracing performance, and 2TB SSD storage.",
+      "detailedDescription": "The PlayStation 5 Pro delivers the ultimate gaming experience with significantly enhanced hardware capabilities. Featuring an upgraded GPU with 67% more Compute Units than the standard PS5, it offers improved frame rates, higher resolutions, and enhanced ray tracing performance. The console includes 2TB of ultra-high-speed SSD storage for fast loading and smooth gameplay. With support for 8K output, 4K gaming at up to 120fps, 3D audio technology, and the innovative DualSense controller with haptic feedback and adaptive triggers, it provides an immersive gaming experience across a vast library of titles.",
+      "technicalSpecifications": {
+        "keySpecifications": "CPU: Custom 8-core AMD Zen 2, variable frequency up to 3.5 GHz\nGPU: Custom AMD RDNA 3-based graphics engine with 60 CUs\nMemory: 16GB GDDR6\nStorage: 2TB SSD\nExpansion: NVMe SSD slot\nOptical Drive: Ultra HD Blu-ray Disc Drive\nVideo Output: HDMI 2.1 (4K@120Hz, 8K@60Hz)\nAudio: Tempest 3D AudioTech\nNetworking: Wi-Fi 6E (802.11ax), Bluetooth 5.1, Ethernet\nPorts: USB Type-A (Hi-Speed), USB Type-A (Super-Speed), USB Type-C (Super-Speed), HDMI Out\nBackward Compatibility: PS5, PS4 games\nRay Tracing: Enhanced Hardware Acceleration\nPower Consumption: Maximum 350W",
+        "lens": "None",
+        "powerDetails": "Internal Power Supply\nPower Consumption: Maximum 350W",
+        "includedAccessories": "DualSense Wireless Controller, HDMI Cable, Power Cord, USB-C Cable, Astro's Playroom (Pre-installed)"
+      },
+      "additionalFeatures": {
+        "warranty": "1 Year Manufacturer Warranty",
+        "certification": "Energy Star"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: Approx. 390 x 104 x 260 mm\nWeight: Approx. 4.5 kg",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "7 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=PS5+Pro",
+      "images": [
+        "https://placehold.co/800x600?text=PS5+Pro+Console",
+        "https://placehold.co/800x600?text=PS5+Pro+Standing",
+        "https://placehold.co/800x600?text=PS5+Pro+Controller"
+      ]
+    },
+    {
+      "productName": "Xbox Series X 2TB Console",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Black, 2TB Storage",
+      "categories": {
+        "main": "Gaming",
+        "sub": "Consoles",
+        "subSub": "Home Consoles"
+      },
+      "productSKU": "RRS-00005-2TB",
+      "brand": "Microsoft",
+      "priceDetails": {
+        "mrp": 74990,
+        "offerPrice": 69990
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 10
+      },
+      "shortDescription": "Microsoft's flagship gaming console with upgraded 2TB storage, powerful graphics, and quick resume functionality.",
+      "detailedDescription": "The Xbox Series X 2TB delivers Microsoft's most powerful gaming experience with enhanced storage capacity. Featuring 12 teraflops of raw graphical processing power, the console enables true 4K gaming at up to 120 frames per second. The custom 2TB NVME SSD offers lightning-fast load times and the innovative Quick Resume feature allows you to seamlessly switch between multiple games. With support for thousands of titles across four generations of Xbox consoles, Xbox Game Pass integration, and Smart Delivery technology, it provides exceptional value and performance for gamers.",
+      "technicalSpecifications": {
+        "keySpecifications": "CPU: 8-core AMD Zen 2 at 3.8 GHz\nGPU: AMD RDNA 2, 12 TFLOPS, 52 CUs at 1.825 GHz\nMemory: 16GB GDDR6\nStorage: 2TB Custom NVME SSD\nOptical Drive: 4K UHD Blu-ray Drive\nPerformance Target: 4K at 60 FPS, up to 120 FPS\nHDMI Features: HDMI 2.1, ALLM, VRR\nAudio: Dolby Digital 5.1, DTS 5.1, Dolby TrueHD with Atmos, DTS-HD Master Audio\nPorts: 3x USB 3.1 Gen 1, 1x HDMI 2.1, Ethernet\nWireless: Wi-Fi 6 (802.11ax), Bluetooth 5.0\nBackward Compatibility: Xbox One, Xbox 360, Original Xbox (selected titles)\nRay Tracing: Hardware Accelerated\nExpansion: 1TB Expansion Card slot",
+        "lens": "None",
+        "powerDetails": "Power Supply: Internal 315W\nPower Mode: Instant-on, Energy-saving",
+        "includedAccessories": "Xbox Wireless Controller, Ultra High-Speed HDMI Cable, Power Cable"
+      },
+      "additionalFeatures": {
+        "warranty": "1 Year Manufacturer Warranty",
+        "certification": "Energy Star"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 15.1 x 15.1 x 30.1 cm\nWeight: 4.45 kg",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "14 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Xbox+Series+X",
+      "images": [
+        "https://placehold.co/800x600?text=Xbox+Series+X+Front",
+        "https://placehold.co/800x600?text=Xbox+Series+X+Angle",
+        "https://placehold.co/800x600?text=Xbox+Series+X+Controller"
+      ]
+    },
+    {
+      "productName": "Nintendo Switch OLED Model",
+      "quantityPurchase": "1",
+      "rate": 4,
+      "variation": "White",
+      "categories": {
+        "main": "Gaming",
+        "sub": "Consoles",
+        "subSub": "Handheld Consoles"
+      },
+      "productSKU": "HADSKABAA",
+      "brand": "Nintendo",
+      "priceDetails": {
+        "mrp": 34999,
+        "offerPrice": 29999
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 25
+      },
+      "shortDescription": "Enhanced Nintendo Switch featuring a vibrant 7-inch OLED screen, improved audio, and enhanced design.",
+      "detailedDescription": "The Nintendo Switch OLED Model enhances the Nintendo Switch experience with a vibrant 7-inch OLED screen that delivers more vivid colors and higher contrast. The redesigned wide adjustable stand provides a solid foundation for tabletop mode, while the enhanced audio from the built-in speakers delivers clearer sound during handheld and tabletop play. With 64GB of internal storage, a wired LAN port in the dock, and a sleek white design, this model offers the ultimate way to experience the Nintendo Switch library of games at home or on the go.",
+      "technicalSpecifications": {
+        "keySpecifications": "Display: 7-inch OLED multi-touch capacitive screen (1280x720)\nCPU/GPU: Custom NVIDIA Tegra processor\nStorage: 64GB internal (expandable via microSD)\nBattery: 4.5-9 hours depending on usage\nConnectivity: Wi-Fi (802.11ac), Bluetooth 4.1, Wired LAN port in dock\nVideo Output: Up to 1080p via HDMI in TV mode\nAudio: Enhanced stereo speakers, 3.5mm headphone jack\nControls: Detachable Joy-Con controllers with HD rumble and IR motion camera\nSensors: Accelerometer, gyroscope, brightness sensor\nPlay Modes: TV, Tabletop, Handheld\nGame Media: Nintendo Switch cartridge, Digital (Nintendo eShop)",
+        "lens": "None",
+        "powerDetails": "Battery: Lithium-ion battery, 4310mAh\nBattery Life: Approximately 4.5-9 hours\nCharging: USB Type-C",
+        "includedAccessories": "Nintendo Switch OLED Console, Nintendo Switch Dock, Joy-Con (L) and Joy-Con (R), 2 Joy-Con Straps, Joy-Con Grip, HDMI Cable, AC Adapter"
+      },
+      "additionalFeatures": {
+        "warranty": "1 Year Manufacturer Warranty",
+        "certification": "CE, FCC"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 9.5 x 0.55 x 4 inches (with Joy-Con attached)\nWeight: Approximately 0.93 pounds (with Joy-Con attached)",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "7 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Switch+OLED",
+      "images": [
+        "https://placehold.co/800x600?text=Switch+OLED+Handheld",
+        "https://placehold.co/800x600?text=Switch+OLED+Tabletop",
+        "https://placehold.co/800x600?text=Switch+OLED+Dock"
+      ]
+    },
+    {
+      "productName": "SteelSeries Arctis Nova Pro Wireless Gaming Headset",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Black",
+      "categories": {
+        "main": "Gaming",
+        "sub": "Accessories",
+        "subSub": "Gaming Headsets"
+      },
+      "productSKU": "61552",
+      "brand": "SteelSeries",
+      "priceDetails": {
+        "mrp": 34999,
+        "offerPrice": 29999
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 15
+      },
+      "shortDescription": "Premium wireless gaming headset with dual wireless connectivity, active noise cancellation, and hot-swappable batteries.",
+      "detailedDescription": "The SteelSeries Arctis Nova Pro Wireless represents the pinnacle of gaming audio technology. It features premium hi-fi drivers that deliver high fidelity audio with 360° Spatial Audio for immersive gaming. The headset offers dual wireless connectivity (2.4GHz and Bluetooth) and active noise cancellation for an uninterrupted experience. The innovative base station provides a command center with OLED display and includes hot-swappable batteries for infinite play time. With its ComfortMAX System, featuring a lightweight design, adjustable headband, and rotating earcups, it ensures comfort during extended gaming sessions.",
+      "technicalSpecifications": {
+        "keySpecifications": "Audio: Premium Hi-Fi Drivers with 40mm Neodymium Drivers\nFrequency Response: 10-40,000 Hz\nSensitivity: 93 dBSPL\nImpedance: 38 Ohm\nMicrophone: AI-powered Noise Cancellation, Fully Retractable\nWireless: 2.4GHz Lossless Wireless + Bluetooth 5.0\nBattery Life: 22 hours per battery (44 hours total with swappable system)\nConnectivity: USB-C, Mobile 3.5mm, Optical In/Out\nCompatibility: PC, PlayStation, Nintendo Switch, Mobile\nBase Station: OLED Display, Game/Chat Audio Mix, Hot-Swap Battery System\nActive Noise Cancellation: Four-mic Hybrid ANC system\nSpatial Audio: 360° Spatial Audio with Sonar Software\nCustomization: SteelSeries GG Software with Sonar Audio Suite",
+        "lens": "None",
+        "powerDetails": "Dual Battery System: 22 hours per battery\nHot-Swap System for Infinite Play Time\nFast Charging: 15 minutes for 3 hours of use",
+        "includedAccessories": "Arctis Nova Pro Wireless Headset, Wireless Base Station, 2 Rechargeable Batteries, USB-C to USB-A Cable, USB-C to USB-C Cable, Mobile 3.5mm Cable, Optical Cable, Microphone Windscreen, Product Information Guide"
+      },
+      "additionalFeatures": {
+        "warranty": "2 Years Manufacturer Warranty",
+        "certification": "CE, FCC"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Headset Dimensions: 193 x 170 x 80 mm\nHeadset Weight: 338g\nBase Station Dimensions: 95 x 80 x 142 mm",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "30 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Arctis+Nova+Pro",
+      "images": [
+        "https://placehold.co/800x600?text=Arctis+Nova+Pro+Side",
+        "https://placehold.co/800x600?text=Arctis+Nova+Pro+Base",
+        "https://placehold.co/800x600?text=Arctis+Nova+Pro+Mic"
+      ]
+    },
+    {
+      "productName": "Razer Huntsman V2 Analog Gaming Keyboard",
+      "quantityPurchase": "1",
+      "rate": 4,
+      "variation": "US Layout",
+      "categories": {
+        "main": "Gaming",
+        "sub": "Accessories",
+        "subSub": "Gaming Keyboards"
+      },
+      "productSKU": "RZ03-03610100-R3U1",
+      "brand": "Razer",
+      "priceDetails": {
+        "mrp": 24999,
+        "offerPrice": 19999
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 12
+      },
+      "shortDescription": "Premium gaming keyboard with analog optical switches, adjustable actuation, and multi-function keys.",
+      "detailedDescription": "The Razer Huntsman V2 Analog delivers a revolutionary keyboard experience with analog optical switches that provide variable key press depth for precise control in games. Each key can be adjusted for custom actuation points between 1.5mm to 3.6mm, offering the flexibility to optimize for speed or precision. The keyboard features Doubleshot PBT keycaps, multi-function capabilities that allow a single key to perform multiple actions, and Razer Chroma RGB lighting with per-key illumination. Enhanced with sound dampening foam and a plush leatherette wrist rest, it combines premium comfort with advanced gaming performance.",
+      "technicalSpecifications": {
+        "keySpecifications": "Switch Type: Razer Analog Optical Switches\nActuation Force: 40g\nAdjustable Actuation: 1.5mm to 3.6mm\nKeycaps: Doubleshot PBT with Standard Bottom Row\nLighting: Razer Chroma RGB with 16.8 million colors\nPolling Rate: 1000Hz Ultrapolling\nMedia Keys: Dedicated Media Controls with Digital Dial\nWrist Rest: Plush Leatherette Magnetic Wrist Rest\nConnectivity: USB 3.0 with Cable Routing Options\nCable: Detachable USB-C\nOnboard Memory: Hybrid On-Board Memory and Cloud Storage\nProgrammable Keys: All Keys Programmable with Macro Recording\nN-key Rollover: Yes\nAnti-ghosting: Yes\nPass-through: USB 3.0",
+        "lens": "None",
+        "powerDetails": "Powered via USB 3.0",
+        "includedAccessories": "Plush Leatherette Wrist Rest, Detachable USB-C Cable"
+      },
+      "additionalFeatures": {
+        "warranty": "2 Years Manufacturer Warranty",
+        "certification": "CE, FCC"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 440 x 140 x 38 mm\nWeight: 1.1 kg",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "14 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Razer+Huntsman+V2",
+      "images": [
+        "https://placehold.co/800x600?text=Huntsman+V2+Top",
+        "https://placehold.co/800x600?text=Huntsman+V2+Side",
+        "https://placehold.co/800x600?text=Huntsman+V2+Wrist+Rest"
+      ]
+    },
+    {
+      "productName": "ASUS ROG Swift PG32UQX 32\" 4K HDR Gaming Monitor",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Black",
+      "categories": {
+        "main": "Gaming",
+        "sub": "Monitors",
+        "subSub": "Gaming Monitors"
+      },
+      "productSKU": "PG32UQX",
+      "brand": "ASUS",
+      "priceDetails": {
+        "mrp": 329990,
+        "offerPrice": 289990
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 5
+      },
+      "shortDescription": "Premium 32-inch 4K HDR gaming monitor with Mini-LED technology and 144Hz refresh rate.",
+      "detailedDescription": "The ASUS ROG Swift PG32UQX represents the pinnacle of gaming monitor technology, featuring a 32-inch 4K IPS panel with Mini-LED backlighting that delivers exceptional HDR performance. With 1152 local dimming zones, it achieves a peak brightness of 1400 nits and deep contrast for stunning visuals. The 144Hz refresh rate, NVIDIA G-SYNC ULTIMATE certification, and 1ms response time ensure smooth gameplay without tearing or stuttering. Professional-grade color accuracy with 98% DCI-P3 coverage, VESA DisplayHDR 1400 certification, and innovative features like the LiveDash OLED panel and AuraSync lighting make this monitor perfect for gamers and content creators demanding the absolute best.",
+      "technicalSpecifications": {
+        "keySpecifications": "Display: 32\" IPS Panel with Mini-LED Backlight\nResolution: 4K UHD (3840 x 2160)\nRefresh Rate: 144Hz\nResponse Time: 1ms (GtG)\nHDR: VESA DisplayHDR 1400 Certified\nLocal Dimming Zones: 1152\nPeak Brightness: 1400 nits\nColor Coverage: 98% DCI-P3, 160% sRGB\nAdaptive Sync: NVIDIA G-SYNC ULTIMATE\nConnectivity: 1x DisplayPort 1.4 DSC, 3x HDMI 2.0, 2x USB 3.0\nAudio: Built-in 2x 4W Speakers\nLiveDAsh OLED Panel\nAura Sync Lighting\nGamePlus and GameVisual Technologies\nTriPod Stand Design with Height, Tilt, and Swivel Adjustments\nKVM Switch",
+        "lens": "None",
+        "powerDetails": "Power Consumption (Typical): 60W\nPower Consumption (Max): 180W\nExternal Power Supply",
+        "includedAccessories": "DisplayPort Cable, HDMI Cable, USB Cable, Power Adapter, Cable Ties, ROG Sticker, Calibration Report"
+      },
+      "additionalFeatures": {
+        "warranty": "3 Years Manufacturer Warranty",
+        "certification": "VESA DisplayHDR 1400, NVIDIA G-SYNC ULTIMATE, Factory Calibrated"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions with Stand: 726.7 x 487.8 x 347.9 mm\nWeight with Stand: 9.7 kg",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "7 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=ROG+Swift+PG32UQX",
+      "images": [
+        "https://placehold.co/800x600?text=ROG+Swift+PG32UQX+Front",
+        "https://placehold.co/800x600?text=ROG+Swift+PG32UQX+Back",
+        "https://placehold.co/800x600?text=ROG+Swift+PG32UQX+Stand"
+      ]
+    },
+    {
+      "productName": "Bose Smart Soundbar 900",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Black",
+      "categories": {
+        "main": "Audio",
+        "sub": "Speakers",
+        "subSub": "Soundbars"
+      },
+      "productSKU": "865501-1100",
+      "brand": "Bose",
+      "priceDetails": {
+        "mrp": 104900,
+        "offerPrice": 89900
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 10
+      },
+      "shortDescription": "Premium soundbar with Dolby Atmos, voice assistants, and Bose spatial technologies for immersive sound.",
+      "detailedDescription": "The Bose Smart Soundbar 900 delivers the brand's most immersive sound experience with support for Dolby Atmos and proprietary Bose TrueSpace technology. Nine speakers, including two custom-engineered upward firing dipole transducers, create a multi-dimensional sound experience that places you in the center of your entertainment. The sleek design features a tempered glass top surface and metal grille, while built-in voice assistants, Wi-Fi, Bluetooth, and AirPlay 2 connectivity provide versatile control options. With the Bose Music app, SimpleSync technology, and expandability with additional speakers, it offers a complete home theater solution.",
+      "technicalSpecifications": {
+        "keySpecifications": "Audio Technology: Dolby Atmos support, Bose TrueSpace\nSpeakers: 9 speakers including upward firing dipole transducers\nVoice Assistants: Amazon Alexa and Google Assistant built-in\nConnectivity: Wi-Fi, Bluetooth 4.2, Apple AirPlay 2, Spotify Connect\nHDMI: 1x HDMI eARC\nOptical: 1x Optical Input\nExpandability: Compatible with Bose Bass Module, Surround Speakers\nApp Control: Bose Music App for iOS and Android\nADAPTiQ Audio Calibration\nQuietPort Technology for Distortion-Free Bass\nSimpleSync with Bose Headphones and Speakers\nDimensions: 5.8 x 104.5 x 10.7 cm (H x W x D)",
+        "lens": "None",
+        "powerDetails": "Power Supply: 100V-240V, 50/60 Hz, 125W maximum",
+        "includedAccessories": "Remote Control, Optical Cable, HDMI Cable, Power Cable, ADAPTiQ Headset"
+      },
+      "additionalFeatures": {
+        "warranty": "1 Year Manufacturer Warranty",
+        "certification": "Dolby Atmos Certified"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 5.8 x 104.5 x 10.7 cm (H x W x D)\nWeight: 5.75 kg",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "30 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Bose+Soundbar+900",
+      "images": [
+        "https://placehold.co/800x600?text=Bose+Soundbar+900+Front",
+        "https://placehold.co/800x600?text=Bose+Soundbar+900+Angle",
+        "https://placehold.co/800x600?text=Bose+Soundbar+900+App"
+      ]
+    },
+    {
+      "productName": "Dyson V15 Detect Absolute Cordless Vacuum Cleaner",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Nickel/Gold",
+      "categories": {
+        "main": "Home Appliances",
+        "sub": "Vacuum Cleaners",
+        "subSub": "Cordless Vacuum Cleaners"
+      },
+      "productSKU": "390697-01",
+      "brand": "Dyson",
+      "priceDetails": {
+        "mrp": 66900,
+        "offerPrice": 59900
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 12
+      },
+      "shortDescription": "Advanced cordless vacuum with laser dust detection, particle counting, and powerful suction technology.",
+      "detailedDescription": "The Dyson V15 Detect Absolute revolutionizes cleaning with innovative features including a laser dust detection system that reveals microscopic dust on hard floors. The piezo sensor counts and sizes particles, displaying them on the LCD screen to provide scientific proof of a deep clean. Powered by the Dyson Hyperdymium motor and Root Cyclone technology, it generates powerful suction while capturing 99.99% of particles as small as 0.3 microns. The Anti-tangle hair screw makes cleaning up hair effortless, while the intelligent optimization of suction and run time ensures efficient cleaning across different floor types.",
+      "technicalSpecifications": {
+        "keySpecifications": "Motor: Dyson Hyperdymium Motor, Up to 125,000 RPM\nSuction Power: Up to 230 AW\nFiltration: Whole-machine HEPA filtration, 99.99% of particles as small as 0.3 microns\nBattery: 7-cell Lithium-ion battery\nRun Time: Up to 60 minutes (Eco Mode, without motorized tools)\nCharging Time: 4.5 hours\nBin Volume: 0.76L\nDisplay: LCD Screen showing particle count, run time, power mode\nCleaner Head Technology: Laser Dust Detection, Anti-tangle Hair Screw\nIntelligent Sensors: Piezo sensor for particle counting and sizing\nWeight: 3.08 kg",
+        "lens": "None",
+        "powerDetails": "7-cell Lithium-ion battery\nRun Time: Up to 60 minutes\nCharging Time: 4.5 hours\nWall-mountable Dock & Charger",
+        "includedAccessories": "Laser Slim Fluffy Cleaner Head, High Torque Cleaner Head with Anti-tangle Comb, Hair Screw Tool, Combination Tool, Crevice Tool, Soft Dusting Brush, Stubborn Dirt Brush, Wall Dock, Charger"
+      },
+      "additionalFeatures": {
+        "warranty": "2 Years Parts and Labor",
+        "certification": "HEPA Filtration Certified"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 250 x 1261 x 261 mm\nWeight: 3.08 kg",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "30 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=Dyson+V15+Detect",
+      "images": [
+        "https://placehold.co/800x600?text=Dyson+V15+Detect+Full",
+        "https://placehold.co/800x600?text=Dyson+V15+Detect+Laser",
+        "https://placehold.co/800x600?text=Dyson+V15+Detect+Accessories"
+      ]
+    },
+    {
+      "productName": "GoPro HERO12 Black",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "Standard",
+      "categories": {
+        "main": "Photography",
+        "sub": "Cameras",
+        "subSub": "Action Cameras"
+      },
+      "productSKU": "CHDHX-121",
+      "brand": "GoPro",
+      "priceDetails": {
+        "mrp": 45999,
+        "offerPrice": 39999
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 20
+      },
+      "shortDescription": "Advanced action camera with 5.3K video, improved battery life, and enhanced HDR capabilities.",
+      "detailedDescription": "The GoPro HERO12 Black elevates action camera capabilities with its 5.3K60 video recording, 27MP photos, and improved low-light performance. It features enhanced HDR for both video and photos, delivering stunning detail and contrast in challenging lighting conditions. The revolutionary HyperSmooth 6.0 stabilization with AutoBoost ensures incredibly smooth footage while the updated Enduro Battery provides 70 minutes of continuous 5.3K recording. New features include support for wireless audio connections with AirPods, expanded slow-motion capabilities, and timecode sync for multi-camera setups. Built to withstand extreme conditions, it's waterproof to 33ft without a case and features a rugged, scratch-resistant lens cover.",
+      "technicalSpecifications": {
+        "keySpecifications": "Video: 5.3K60, 4K120, 2.7K240\nPhoto: 27MP with SuperPhoto + HDR\nProcessor: GP2 Processor\nStabilization: HyperSmooth 6.0 with AutoBoost\nBattery: Enduro Battery (70 min at 5.3K60)\nWaterproof: 33ft (10m) without case\nDisplay: Front 1.4\" LCD, Rear 2.27\" Touch LCD\nConnectivity: Wi-Fi, Bluetooth, GPS, Cloud Auto Upload\nWireless Audio: Support for AirPods and Bluetooth microphones\nAdditional Features: TimeWarp 3.0, 8X Slo-Mo, Scheduled Capture, HindSight, LiveBurst\nTimecode Sync for Multi-Camera Setup\nHDR for Videos and Photos\nDirectional Audio with 3 Microphones and Wind-Noise Reduction",
+        "lens": "Ultra Wide, Linear, Narrow Field of View Options",
+        "powerDetails": "1720mAh Enduro Battery\nUSB-C Charging\nDetachable Battery",
+        "includedAccessories": "HERO12 Black Camera, Enduro Battery, Curved Adhesive Mount, Mounting Buckle + Thumb Screw, USB-C Cable"
+      },
+      "additionalFeatures": {
+        "warranty": "1 Year Manufacturer Warranty",
+        "certification": "Waterproof to 33ft (10m)"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 71.8 x 50.8 x 33.6 mm\nWeight: 154g (with battery)",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "14 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=GoPro+HERO12+Black",
+      "images": [
+        "https://placehold.co/800x600?text=GoPro+HERO12+Front",
+        "https://placehold.co/800x600?text=GoPro+HERO12+Back",
+        "https://placehold.co/800x600?text=GoPro+HERO12+With+Mounts"
+      ]
+    },
+    {
+      "productName": "Samsung 65\" Class S95C OLED 4K Smart TV",
+      "quantityPurchase": "1",
+      "rate": 5,
+      "variation": "65 inch",
+      "categories": {
+        "main": "Home Entertainment",
+        "sub": "Televisions",
+        "subSub": "OLED TVs"
+      },
+      "productSKU": "QN65S95CAFXZA",
+      "brand": "Samsung",
+      "priceDetails": {
+        "mrp": 329990,
+        "offerPrice": 279990
+      },
+      "stock": {
+        "status": "In Stock",
+        "count": 7
+      },
+      "shortDescription": "Advanced action camera with 5.3K video, improved battery life, and enhanced HDR capabilities.",
+      "detailedDescription": "The GoPro HERO12 Black elevates action camera capabilities with its 5.3K60 video recording, 27MP photos, and improved low-light performance. It features enhanced HDR for both video and photos, delivering stunning detail and contrast in challenging lighting conditions. The revolutionary HyperSmooth 6.0 stabilization with AutoBoost ensures incredibly smooth footage while the updated Enduro Battery provides 70 minutes of continuous 5.3K recording. New features include support for wireless audio connections with AirPods, expanded slow-motion capabilities, and timecode sync for multi-camera setups. Built to withstand extreme conditions, it's waterproof to 33ft without a case and features a rugged, scratch-resistant lens cover.",
+      "technicalSpecifications": {
+        "keySpecifications": "Video: 5.3K60, 4K120, 2.7K240\nPhoto: 27MP with SuperPhoto + HDR\nProcessor: GP2 Processor\nStabilization: HyperSmooth 6.0 with AutoBoost\nBattery: Enduro Battery (70 min at 5.3K60)\nWaterproof: 33ft (10m) without case\nDisplay: Front 1.4\" LCD, Rear 2.27\" Touch LCD\nConnectivity: Wi-Fi, Bluetooth, GPS, Cloud Auto Upload\nWireless Audio: Support for AirPods and Bluetooth microphones\nAdditional Features: TimeWarp 3.0, 8X Slo-Mo, Scheduled Capture, HindSight, LiveBurst\nTimecode Sync for Multi-Camera Setup\nHDR for Videos and Photos\nDirectional Audio with 3 Microphones and Wind-Noise Reduction",
+        "lens": "Ultra Wide, Linear, Narrow Field of View Options",
+        "powerDetails": "1720mAh Enduro Battery\nUSB-C Charging\nDetachable Battery",
+        "includedAccessories": "HERO12 Black Camera, Enduro Battery, Curved Adhesive Mount, Mounting Buckle + Thumb Screw, USB-C Cable"
+      },
+      "additionalFeatures": {
+        "warranty": "1 Year Manufacturer Warranty",
+        "certification": "Waterproof to 33ft (10m)"
+      },
+      "shippingReturns": {
+        "weightAndDimensions": "Dimensions: 71.8 x 50.8 x 33.6 mm\nWeight: 154g (with battery)",
+        "shippingDetails": "Free Shipping",
+        "returnPolicy": "14 Days"
+      },
+      "thumbImage": "https://placehold.co/400x300?text=GoPro+HERO12+Black",
+      "images": [
+        "https://placehold.co/800x600?text=GoPro+HERO12+Front",
+        "https://placehold.co/800x600?text=GoPro+HERO12+Back",
+        "https://placehold.co/800x600?text=GoPro+HERO12+With+Mounts"
+      ]
+    }]

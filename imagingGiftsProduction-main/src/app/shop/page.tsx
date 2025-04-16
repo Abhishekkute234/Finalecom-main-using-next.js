@@ -6,8 +6,11 @@ import Breadcrumb from "@/components/Home/Heading";
 export default function ShopPage() {
   return (
     <>
-      <Breadcrumb heading="Shop" subHeading="Shop" />
+    <div className=" mt-8">
+
+      {/* <Breadcrumb heading="Shop" subHeading="Shop" /> */}
       <ShopBreadCrumb1 />
+    </div>
     </>
   );
 }
